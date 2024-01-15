@@ -29,26 +29,6 @@ const home = [
     name: "Home 3",
     routerPath: "/home-3",
   },
-  {
-    name: "Home 4",
-    routerPath: "/home-4",
-  },
-  {
-    name: "Home 5",
-    routerPath: "/home-5",
-  },
-  {
-    name: "Home 6",
-    routerPath: "/home-6",
-  },
-  {
-    name: "Home 7",
-    routerPath: "/home-7",
-  },
-  {
-    name: "Home 8",
-    routerPath: "/home-8",
-  },
 ];
 
 const listing = [
