@@ -17,7 +17,6 @@ const HeaderMenuContent = ({ float = "" }) => {
       name: "Home 1",
       routerPath: "/",
     },
-    { id: 2, name: "Home 2", routerPath: "/home-2" },
     {
       id: 3,
       name: "Home 3",

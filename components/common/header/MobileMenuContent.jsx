@@ -22,10 +22,6 @@ const home = [
     routerPath: "/",
   },
   {
-    name: "Home 2",
-    routerPath: "/home-2",
-  },
-  {
     name: "Home 3",
     routerPath: "/home-3",
   },
