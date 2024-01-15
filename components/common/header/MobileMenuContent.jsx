@@ -144,16 +144,6 @@ const listing = [
       },
     ],
   },
-  {
-    id: 7,
-    title: "Create Listing",
-    items: [
-      {
-        name: "Create Listing",
-        routerPath: "/create-listing",
-      },
-    ],
-  },
 ];
 
 const property = [
@@ -468,17 +458,7 @@ const MobileMenuContent = () => {
         </Menu>
         </div>
       {/* </Sidebar> */}
-
-      
-        <Link
-          href="/create-listing"
-          className="btn btn-block btn-lg btn-thm circle"
-          style={{width:'90%',margin:'0px auto'}}
-        >
-          <span className="flaticon-plus"></span> Create Listing
-        </Link></>
-     
-   
+      </>  
   );
 };
 
