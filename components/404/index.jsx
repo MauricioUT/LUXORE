@@ -2,7 +2,6 @@ import CopyrightFooter from "../common/footer/CopyrightFooter";
 import Footer from "../common/footer/Footer";
 import Header from "../common/header/DefaultHeader";
 import MobileMenu from "../common/header/MobileMenu";
-import PopupSignInUp from "../common/PopupSignInUp";
 import ErrorPageContent from "./ErrorPageContent";
 
 const index = () => {
@@ -13,9 +12,6 @@ const index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- Our Error Page --> */}
       <section className="our-error bgc-f7">

@@ -3,7 +3,6 @@ import CopyrightFooter from "../../components/common/footer/CopyrightFooter";
 import Footer from "../../components/common/footer/Footer";
 import Header from "../../components/common/header/DefaultHeader";
 import MobileMenu from "../../components/common/header/MobileMenu";
-import PopupSignInUp from "../../components/common/PopupSignInUp";
 import BreadCrumb2 from "./BreadCrumb2";
 import SidebarListings from "./SidebarListings";
 import TabDetailsContent from "./TabDetailsContent";
@@ -16,9 +15,6 @@ const index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- Agent Single Grid View --> */}
       <section className="our-agent-single bgc-f7 pb30-991 mt85 md-mt0">

@@ -1,11 +1,8 @@
 import MobileMenu from "../common/header/MobileMenu";
 import Header from "./Header";
-import GlobalHeroFilter from "../common/GlobalHeroFilter";
-import PopupVideo from "../common/PopupVideo";
 import FeaturedProperties from "./FeaturedProperties";
 import Footer from "../common/footer/Footer";
 import CopyrightFooter from "../common/footer/CopyrightFooter";
-import PopupSignInUp from "../common/PopupSignInUp";
 import Hero from "./Hero";
 
 const Home3 = () => {
@@ -16,9 +13,6 @@ const Home3 = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- Home Design --> */}
       <Hero />

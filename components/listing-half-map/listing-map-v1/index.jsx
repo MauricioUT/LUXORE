@@ -7,7 +7,6 @@ import GridListButton from "../../common/listing/GridListButton";
 import SearchBoxFilter from "../../common/listing/SearchBoxFilter";
 import ShowFilter from "../../common/listing/ShowFilter";
 import SidebarListing2 from "../../common/listing/SidebarListing2";
-import PopupSignInUp from "../../common/PopupSignInUp";
 import FeaturedItem from "./FeaturedItem";
 
 const index = () => {
@@ -18,9 +17,6 @@ const index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- Listing Grid View --> */}
       <section

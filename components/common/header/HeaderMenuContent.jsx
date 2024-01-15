@@ -214,8 +214,6 @@ const HeaderMenuContent = ({ float = "" }) => {
     { id: 4, name: "LogIn", routerPath: "/login" },
     { id: 5, name: "Compare", routerPath: "/compare" },
     { id: 6, name: "Membership", routerPath: "/membership" },
-
-    { id: 7, name: "Register", routerPath: "/register" },
     { id: 8, name: "Service", routerPath: "/service" },
     { id: 9, name: "404 Page", routerPath: "/404" },
     { id: 10, name: "Terms & Conditions", routerPath: "/terms" },
@@ -408,18 +406,6 @@ const HeaderMenuContent = ({ float = "" }) => {
         >
           Contact
         </Link>
-      </li>
-      {/* End .dropitem */}
-
-      <li className={`list-inline-item list_s ${float}`}>
-        <a
-          href="#"
-          className="btn flaticon-user"
-          data-bs-toggle="modal"
-          data-bs-target=".bd-example-modal-lg"
-        >
-          <span className="dn-lg">Login/Register</span>
-        </a>
       </li>
       {/* End .dropitem */}
     </ul>

@@ -4,7 +4,6 @@ import MobileMenu from "../common/header/MobileMenu";
 import FeaturedProperties from "./FeaturedProperties";
 import Header from "./Header";
 import Hero from "./Hero";
-import PopupSignInUp from "../common/PopupSignInUp";
 
 const Index = () => {
   return (
@@ -14,9 +13,6 @@ const Index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- Home Design --> */}
       <Hero />

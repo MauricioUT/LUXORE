@@ -1,7 +1,6 @@
 import Pagination from "../../common/blog/Pagination";
 import CopyrightFooter from "../../common/footer/CopyrightFooter";
 import Footer from "../../common/footer/Footer";
-import GlobalHeroFilter from "../../common/GlobalHeroFilter";
 import Header from "../../common/header/DefaultHeader";
 import FilterTopBar from "../../common/listing/FilterTopBar";
 import GridListButton from "../../common/listing/GridListButton";
@@ -11,7 +10,6 @@ import BreadCrumb from "./BreadCrumb2";
 import FeaturedItem from "./FeaturedItem";
 import GlobalFilter from "../../common/GlobalFilter";
 import MobileMenu from "../../common/header/MobileMenu";
-import PopupSignInUp from "../../common/PopupSignInUp";
 
 const index = () => {
   return (
@@ -21,9 +19,6 @@ const index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- Map --> */}
       <section className="home-two p0 mt85 md-mt0">

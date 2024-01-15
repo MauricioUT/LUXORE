@@ -8,7 +8,6 @@ import FilterTopBar from "../../common/listing/FilterTopBar";
 import GridListButton from "../../common/listing/GridListButton";
 import ShowFilter from "../../common/listing/ShowFilter";
 import SidebarListing3 from "../../common/listing/SidebarListing3";
-import PopupSignInUp from "../../common/PopupSignInUp";
 import BreadCrumb from "./BreadCrumb2";
 import FeaturedItem from "./FeaturedItem";
 import HeroSlider from "./HeroSlider";
@@ -21,9 +20,6 @@ const index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- 6th Home Design --> */}
       <section className="home-listing-slider hight-fx p0">

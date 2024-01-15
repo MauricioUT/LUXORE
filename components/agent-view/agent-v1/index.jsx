@@ -2,7 +2,6 @@ import SidebarListings from "../../common/agent-view/SidebarListings";
 import TopFilterBar from "../../common/agent-view/TopFilterBar";
 import Header from "../../common/header/DefaultHeader";
 import MobileMenu from "../../common/header/MobileMenu";
-import PopupSignInUp from "../../common/PopupSignInUp";
 import BreadCrumb2 from "./BreadCrumb2";
 import Team from "./Team";
 import Pagination from "../../common/blog/Pagination";
@@ -17,9 +16,6 @@ const index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- Listing Grid View --> */}
       <section className="our-listing bgc-f7 pb30-991 mt85 md-mt0 ">

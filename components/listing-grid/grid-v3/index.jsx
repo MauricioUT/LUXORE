@@ -7,7 +7,6 @@ import FilterTopBar from "../../common/listing/FilterTopBar";
 import GridListButton from "../../common/listing/GridListButton";
 import ShowFilter from "../../common/listing/ShowFilter";
 import SidebarListing2 from "../../common/listing/SidebarListing2";
-import PopupSignInUp from "../../common/PopupSignInUp";
 import BreadCrumb2 from "./BreadCrumb2";
 import FeaturedItem from "./FeaturedItem";
 
@@ -19,9 +18,6 @@ const index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- Listing Grid View --> */}
       <section className="our-listing bgc-f7 pb30-991 mt85 md-mt0 ">

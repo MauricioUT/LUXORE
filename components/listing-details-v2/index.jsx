@@ -3,7 +3,6 @@ import Footer from "../common/footer/Footer";
 import Header from "../common/header/DefaultHeader";
 import MobileMenu from "../common/header/MobileMenu";
 import ListingGallery2 from "../common/listing-details/ListingGallery2";
-import PopupSignInUp from "../common/PopupSignInUp";
 import DetailsContent from "./DetailsContent";
 import Sidebar from "./Sidebar";
 
@@ -15,9 +14,6 @@ const index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- Listing Single Property --> */}
       <section className="single_page_listing_style p0 mt85 md-mt0">

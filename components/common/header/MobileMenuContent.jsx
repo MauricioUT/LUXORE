@@ -227,17 +227,8 @@ const pages = [
     name: "Faq",
     routerPath: "/faq",
   },
-  {
-    name: "LogIn",
-    routerPath: "/login",
-  },
   { name: "Compare", routerPath: "/compare" },
   { name: "Membership", routerPath: "/membership" },
-
-  {
-    name: "Register",
-    routerPath: "/register",
-  },
   {
     name: "Service",
     routerPath: "/service",
@@ -431,28 +422,6 @@ const MobileMenuContent = () => {
               }
             >
               Contact
-            </div>
-          </MenuItem>
-
-          <MenuItem>
-            <div
-            onClick={()=>router.push("/login")}
-    
-              className={pathname === "/login" ? "ui-active" : 'inactive-mobile-menu'}
-            >
-              <span className="flaticon-user"></span> Login
-            </div>
-          </MenuItem>
-
-          <MenuItem>
-            <div
-            onClick={()=>router.push("/register")}
-        
-              className={
-                pathname === "/register" ? "ui-active" : 'inactive-mobile-menu'
-              }
-            >
-              <span className="flaticon-edit"></span> Register
             </div>
           </MenuItem>
         </Menu>

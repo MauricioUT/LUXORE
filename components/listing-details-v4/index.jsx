@@ -2,7 +2,6 @@ import CopyrightFooter from "../common/footer/CopyrightFooter";
 import Footer from "../common/footer/Footer";
 import Header from "../common/header/DefaultHeader";
 import MobileMenu from "../common/header/MobileMenu";
-import PopupSignInUp from "../common/PopupSignInUp";
 import DetailsContent from "./DetailsContent";
 import Sidebar from "./Sidebar";
 import SliderGalleryContent from "./SliderGalleryContent";
@@ -16,9 +15,6 @@ const index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
-      {/* <!-- Modal --> */}
-      <PopupSignInUp />
 
       {/* <!-- Listing Single Property --> */}
       <div className="home10-mainslider mt85 md-mt0">
