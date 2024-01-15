@@ -1,5 +1,4 @@
 import GlobalHeroFilter from "../common/GlobalHeroFilter";
-import PopupVideo from "../common/PopupVideo";
 
 const Hero = () => {
   return (
@@ -12,12 +11,6 @@ const Hero = () => {
               <h4>
                 From as low as $10 per day with limited time offer discounts
               </h4>
-            </div>
-          </div>
-
-          <div className="col-lg-4">
-            <div className="home3_home_content">
-              <PopupVideo />
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import PopupVideo from "../common/PopupVideo";
 
 const OurMission = () => {
   const missionContent = [
@@ -78,7 +77,6 @@ const OurMission = () => {
             src="/assets/images/about/1.jpg"
             alt="1.jpg"
           />
-          <PopupVideo />
         </div>
       </div>
     </>
