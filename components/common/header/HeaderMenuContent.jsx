@@ -213,16 +213,7 @@ const HeaderMenuContent = ({ float = "" }) => {
     },
   ];
 
-  const blog = [
-    { id: 1, name: "Blog List 1", routerPath: "/blog-list-1" },
-    { id: 2, name: "Blog List 2", routerPath: "/blog-list-2" },
-    { id: 3, name: "Blog List 3", routerPath: "/blog-list-3" },
-    {
-      id: 4,
-      name: "Blog Details",
-      routerPath: "/blog-details",
-    },
-  ];
+
 
   const pages = [
     { id: 1, name: "About Us", routerPath: "/about-us" },
@@ -416,41 +407,7 @@ const HeaderMenuContent = ({ float = "" }) => {
       </li>
       {/* End .dropitem */}
 
-      <li className="dropitem">
-        <a
-          href="#"
-          className={
-            blog.some(
-              (page) =>
-                page.routerPath?.split('/')[1] === pathname?.split('/')[1] 
-                // page.routerPath?.split('/')[1] + "/[id]" === pathname?.split('/')[1]
-            )
-              ? "ui-active"
-              : undefined
-          }
-        >
-          <span className="title">Blog</span>
-          <span className="arrow"></span>
-        </a>
-        <ul className="sub-menu ">
-          {blog.map((item) => (
-            <li key={item.id}>
-              <Link
-                href={item.routerPath}
-                className={
-                  pathname?.split('/')[1] === item.routerPath?.split('/')[1]
-                  // item.routerPath + "/[id]" === pathname?.split('/')[1]
-                    ? "ui-active"
-                    : undefined
-                }
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </li>
-      {/* End .dropitem */}
+
 
       <li className="last">
         <Link

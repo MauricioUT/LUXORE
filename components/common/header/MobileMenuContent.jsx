@@ -255,16 +255,6 @@ const property = [
   },
 ];
 
-const blog = [
-  { id: 1, name: "Blog List 1", routerPath: "/blog-list-1" },
-  { id: 2, name: "Blog List 2", routerPath: "/blog-list-2" },
-  { id: 3, name: "Blog List 3", routerPath: "/blog-list-3" },
-  {
-    id: 4,
-    name: "Blog Details",
-    routerPath: "/blog-details",
-  },
-];
 
 const pages = [
   {
@@ -450,36 +440,6 @@ const MobileMenuContent = () => {
             ))}
           </SubMenu>
           {/* End Pages Property */}
-
-          <SubMenu
-            label="Blog"
-            className={
-              blog.some(
-                (page) =>
-                  page.routerPath?.split('/')[1] === pathname.split('/')[1] 
-                  // page.routerPath?.split('/')[1] + "/[id]" === pathname.split('/')[1]
-              )
-                ? "parent-menu-active"
-                : 'inactive-mobile-menu'
-            }
-          >
-            {blog.map((val, i) => (
-              <MenuItem key={i}>
-                <div
-                  onClick={()=>router.push(val.routerPath)}
-                  className={
-                    pathname?.split('/')[1] === val.routerPath?.split('/')[1] 
-                    // val.routerPath + "/[id]" === pathname.split('/')[1]
-                      ? "ui-active"
-                      : 'inactive-mobile-menu'
-                  }
-                >
-                  {val.name}
-                </div>
-              </MenuItem>
-            ))}
-          </SubMenu>
-          {/* End pages Blog */}
 
           <SubMenu
             label="Pages"
