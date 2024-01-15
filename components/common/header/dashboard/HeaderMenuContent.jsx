@@ -29,7 +29,6 @@ const HeaderMenuContent = ({ float = "" }) => {
     { id: 7, name: "Home 7", routerPath: "/home-7" },
     { id: 8, name: "Home 8", routerPath: "/home-8" },
     { id: 9, name: "Home 9", routerPath: "/home-9" },
-    { id: 10, name: "Home 10", routerPath: "/home-10" },
   ];
 
   const listing = [
