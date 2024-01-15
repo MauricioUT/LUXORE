@@ -49,10 +49,6 @@ const home = [
     name: "Home 8",
     routerPath: "/home-8",
   },
-  {
-    name: "Home 9",
-    routerPath: "/home-9",
-  },
 ];
 
 const listing = [
