@@ -221,10 +221,6 @@ const pages = [
   },
   { name: "Compare", routerPath: "/compare" },
   {
-    name: "Service",
-    routerPath: "/service",
-  },
-  {
     name: "404 Page",
     routerPath: "/404",
   },
