@@ -220,15 +220,10 @@ const pages = [
     routerPath: "/about-us",
   },
   {
-    name: "Gallery",
-    routerPath: "/gallery",
-  },
-  {
     name: "Faq",
     routerPath: "/faq",
   },
   { name: "Compare", routerPath: "/compare" },
-  { name: "Membership", routerPath: "/membership" },
   {
     name: "Service",
     routerPath: "/service",
