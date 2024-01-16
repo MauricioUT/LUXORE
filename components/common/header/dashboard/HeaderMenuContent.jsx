@@ -128,10 +128,6 @@ const HeaderMenuContent = ({ float = "" }) => {
       title: "Agencies View",
       items: [
         {
-          name: "Agencies V2",
-          routerPath: "/agency-v2",
-        },
-        {
           name: "Agencies Details",
           routerPath: "/agency-details",
         },
