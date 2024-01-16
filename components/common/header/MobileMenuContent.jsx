@@ -80,32 +80,6 @@ const listing = [
         name: "Slider Style",
         routerPath: "/slider-style",
       },
-      {
-        name: "Map Header",
-        routerPath: "/map-header",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "Listing Half",
-    items: [
-      {
-        name: "Map V1",
-        routerPath: "/listing-map-v1",
-      },
-      {
-        name: "Map V2",
-        routerPath: "/listing-map-v2",
-      },
-      {
-        name: "Map V3",
-        routerPath: "/listing-map-v3",
-      },
-      {
-        name: "Map V4",
-        routerPath: "/listing-map-v4",
-      },
     ],
   },
 ];
