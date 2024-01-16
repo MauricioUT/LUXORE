@@ -136,7 +136,7 @@ const FeaturedItem = () => {
     .map((item) => (
       <div
         className={`${
-          isGridOrList ? "col-12 feature-list" : "col-md-6 col-lg-6"
+          isGridOrList ? "col-12 feature-list" : "col-md-4 col-lg-4"
         } `}
         key={item.id}
       >
