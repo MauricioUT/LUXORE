@@ -1,6 +1,5 @@
 import MobileMenu from "../common/header/MobileMenu";
 import Header from "./Header";
-import FeaturedProperties from "./FeaturedProperties";
 import Footer from "../common/footer/Footer";
 import CopyrightFooter from "../common/footer/CopyrightFooter";
 import Hero from "./Hero";
@@ -9,8 +8,8 @@ import GridListButton from "../common/listing/GridListButton";
 import ShowFilter from "../common/listing/ShowFilter";
 import FilterTopBar from "../common/listing/FilterTopBar";
 import Pagination from "../common/blog/Pagination";
-import SidebarListing3 from "../common/listing/SidebarListing3";
 import FeaturedItem from "./FeaturedItem";
+import SidebarListing from "../common/listing/SidebarListing";
 
 const Home3 = () => {
   return (
@@ -75,6 +74,64 @@ const Home3 = () => {
             {/* End  .col */}
 
             
+          </div>
+          {/* End .row */}
+
+          <div className="row">
+            <div className="col-lg-4 col-xl-4">
+              <div className="sidebar-listing-wrapper">
+                <SidebarListing />
+              </div>
+              {/* End SidebarListing */}
+
+              <div
+                className="offcanvas offcanvas-start offcanvas-listing-sidebar"
+                tabIndex="-1"
+                id="sidebarListing"
+              >
+                <div className="offcanvas-header">
+                  <h5 className="offcanvas-title">Advanced Search</h5>
+                  <button
+                    type="button"
+                    className="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                {/* End .offcanvas-heade */}
+
+                <div className="offcanvas-body">
+                  <SidebarListing />
+                </div>
+              </div>
+              {/* End mobile sidebar listing  */}
+            </div>
+            {/* End sidebar conent */}
+
+            <div className="col-md-12 col-lg-8">
+              <div className="grid_list_search_result ">
+                <div className="row align-items-center">
+                  <FilterTopBar />
+                </div>
+              </div>
+              {/* End .row */}
+
+              <div className="row">
+                <FeaturedItem />
+              </div>
+              {/* End .row */}
+
+              <div className="row">
+                <div className="col-lg-12 mt20">
+                  <div className="mbp_pagination">
+                    <Pagination />
+                  </div>
+                </div>
+                {/* End paginaion .col */}
+              </div>
+              {/* End .row */}
+            </div>
+            {/* End  page conent */}
           </div>
           {/* End .row */}
         </div>
