@@ -1,19 +1,137 @@
 'use client'
 
 import {
+  addAmenities,
+  addAreaMax,
+  addAreaMin,
+  addBathrooms,
+  addBedrooms,
+  addGarages,
   addKeyword,
   addLocation,
+  addPrice,
+  addPropertyType,
+  addStatus,
+  addYearBuilt,
+  resetAmenities,
 } from "../../features/properties/propertiesSlice";
 import PricingRangeSlider from "./PricingRangeSlider";
 import CheckBoxFilter from "./CheckBoxFilter";
 import GlobalSelectBox from "./GlobalSelectBox";
 import { useRouter } from "next/navigation";
+import { v4 as uuidv4 } from "uuid";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 
 const GlobalFilter = ({ className = "" }) => {
   const router = useRouter()
   // submit handler
   const submitHandler = () => {
-    router.push("/listing-grid-v1");
+    dispath(addKeyword(getKeyword));
+    dispath(addLocation(getLocation));
+    dispath(addStatus(getStatus));
+    dispath(addPropertyType(getPropertiesType));
+    dispath(addBathrooms(getBathroom));
+    dispath(addBedrooms(getBedroom));
+    dispath(addGarages(getGarages));
+    dispath(addYearBuilt(getBuiltYear));
+    dispath(dispath(addAreaMin(getAreaMin)));
+    dispath(dispath(addAreaMax(getAreaMax)));
+  };
+
+  const {
+    keyword,
+    location,
+    status,
+    propertyType,
+    bathrooms,
+    bedrooms,
+    garages,
+    yearBuilt,
+    area,
+    amenities,
+  } = useSelector((state) => state.properties);
+
+  // input state
+  const [getKeyword, setKeyword] = useState(keyword);
+  const [getLocation, setLocation] = useState(location);
+  const [getStatus, setStatus] = useState(status);
+  const [getPropertiesType, setPropertiesType] = useState(propertyType);
+  const [getBathroom, setBathroom] = useState(bathrooms);
+  const [getBedroom, setBedroom] = useState(bedrooms);
+  const [getGarages, setGarages] = useState(garages);
+  const [getBuiltYear, setBuiltYear] = useState(yearBuilt);
+  const [getAreaMin, setAreaMin] = useState(area.min);
+  const [getAreaMax, setAreaMax] = useState(area.max);
+
+  // advanced state
+  const [getAdvanced, setAdvanced] = useState([
+    { id: uuidv4(), name: "Air Conditioning" },
+    { id: uuidv4(), name: "Barbeque" },
+    { id: uuidv4(), name: "Gym" },
+    { id: uuidv4(), name: "Microwave" },
+    { id: uuidv4(), name: "TV Cable" },
+    { id: uuidv4(), name: "Lawn" },
+    { id: uuidv4(), name: "Refrigerator" },
+    { id: uuidv4(), name: "Swimming Pool" },
+    { id: uuidv4(), name: "WiFi" },
+    { id: uuidv4(), name: "Sauna" },
+    { id: uuidv4(), name: "Dryer" },
+    { id: uuidv4(), name: "Washer" },
+    { id: uuidv4(), name: "Laundry" },
+    { id: uuidv4(), name: "Outdoor Shower" },
+    { id: uuidv4(), name: "Window Coverings" },
+  ]);
+
+  const dispath = useDispatch();
+
+  // clear filter
+  const clearHandler = () => {
+    clearAllFilters();
+  };
+
+  const clearAllFilters = () => {
+    setKeyword("");
+    setLocation("");
+    setStatus("");
+    setPropertiesType("");
+    dispath(addPrice({ min: 10000, max: 20000 }));
+    setBathroom("");
+    setBedroom("");
+    setBedroom("");
+    setGarages("");
+    setBuiltYear("");
+    setAreaMin("");
+    setAreaMax("");
+    dispath(resetAmenities());
+    dispath(addStatusType(""));
+    dispath(addFeatured(""));
+    clearAdvanced();
+  };
+
+  // clear advanced
+  const clearAdvanced = () => {
+    const changed = getAdvanced.map((item) => {
+      item.isChecked = false;
+      return item;
+    });
+    setAdvanced(changed);
+  };
+
+  // add advanced
+  const advancedHandler = (id) => {
+    const data = getAdvanced.map((feature) => {
+      if (feature.id === id) {
+        if (feature.isChecked) {
+          feature.isChecked = false;
+        } else {
+          feature.isChecked = true;
+        }
+      }
+      return feature;
+    });
+
+    setAdvanced(data);
   };
 
   return (
@@ -25,7 +143,7 @@ const GlobalFilter = ({ className = "" }) => {
               type="text"
               className="form-control"
               placeholder="Enter keyword..."
-              onChange={(e) => dispatch(addKeyword(e.target.value))}
+              onChange={(e) => setKeyword(e.target.value)}
             />
           </div>
         </li>
@@ -34,7 +152,11 @@ const GlobalFilter = ({ className = "" }) => {
         <li className="list-inline-item">
           <div className="search_option_two">
             <div className="candidate_revew_select">
-              <select className="selectpicker w100 form-select show-tick">
+              <select
+                onChange={(e) => setStatus(e.target.value)}
+                className="selectpicker w100 show-tick form-select"
+                value={getStatus}
+              >          
                 <option value="">Property Type</option>
                 <option>Apartment</option>
                 <option>Bungalow</option>
@@ -54,8 +176,8 @@ const GlobalFilter = ({ className = "" }) => {
               type="text"
               className="form-control"
               placeholder="Location"
-              onChange={(e) => dispatch(addLocation(e.target.value))}
-            />
+              onChange={(e) => setLocation(e.target.value)}
+              />
             <label>
               <span className="flaticon-maps-and-flags"></span>
             </label>
