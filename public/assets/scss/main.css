@@ -9359,25 +9359,6 @@ ul.ab_counting li:last-child {
   font-size: 14px;
 }
 
-.our-agents {
-  border-bottom: 1px solid #e8eef2;
-  padding-bottom: 90px;
-}
-
-.our_agent {
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.our_agent .thumb {
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.our_agent .details p {
-  margin-bottom: 0;
-}
-
 .our_agent .thumb .overylay {
   background-color: rgba(8, 15, 29, 0.8);
   border-radius: 8px;

@@ -1,4 +1,3 @@
-import Ratings from "../../blog-details/Ratings";
 
 const WhatsNearby = () => {
   const nearbyContent = [
@@ -13,33 +12,18 @@ const WhatsNearby = () => {
           name: "Eladia &apos;s Kids",
           miles: "3.13",
           totalReview: "8895",
-          ratings: (
-            <>
-              <Ratings />
-            </>
-          ),
         },
         {
           id: 2,
           name: " Gear Up With ACLS",
           miles: "4.66",
           totalReview: "7475",
-          ratings: (
-            <>
-              <Ratings />
-            </>
-          ),
         },
         {
           id: 3,
           name: "Brooklyn Brainery",
           miles: "3.31",
           totalReview: "3579",
-          ratings: (
-            <>
-              <Ratings />
-            </>
-          ),
         },
       ],
     },
@@ -54,33 +38,18 @@ const WhatsNearby = () => {
           name: "Eladia &apos;s Kids",
           miles: "3.13",
           totalReview: "8895",
-          ratings: (
-            <>
-              <Ratings />
-            </>
-          ),
         },
         {
           id: 2,
           name: " Gear Up With ACLS",
           miles: "4.66",
           totalReview: "7475",
-          ratings: (
-            <>
-              <Ratings />
-            </>
-          ),
         },
         {
           id: 3,
           name: "Brooklyn Brainery",
           miles: "3.31",
           totalReview: "3579",
-          ratings: (
-            <>
-              <Ratings />
-            </>
-          ),
         },
       ],
     },
@@ -95,33 +64,18 @@ const WhatsNearby = () => {
           name: "Eladia &apos;s Kids",
           miles: "3.13",
           totalReview: "8895",
-          ratings: (
-            <>
-              <Ratings />
-            </>
-          ),
         },
         {
           id: 2,
           name: " Gear Up With ACLS",
           miles: "4.66",
           totalReview: "7475",
-          ratings: (
-            <>
-              <Ratings />
-            </>
-          ),
         },
         {
           id: 3,
           name: "Brooklyn Brainery",
           miles: "3.31",
           totalReview: "3579",
-          ratings: (
-            <>
-              <Ratings />
-            </>
-          ),
         },
       ],
     },
@@ -143,14 +97,6 @@ const WhatsNearby = () => {
               <p className="para">
                 {val.name} <span>({val.miles} miles)</span>
               </p>
-              <ul className="review">
-                <Ratings />
-                <li className="list-inline-item">
-                  <span className="total_rive_count">
-                    {val.totalReview} reviews
-                  </span>
-                </li>
-              </ul>
             </div>
           ))}
         </div>

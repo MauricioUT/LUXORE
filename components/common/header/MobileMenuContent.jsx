@@ -108,24 +108,6 @@ const listing = [
       },
     ],
   },
-  {
-    id: 5,
-    title: "Agent View",
-    items: [
-      {
-        name: "Agent V1",
-        routerPath: "/agent-v1",
-      },
-      {
-        name: "Agent V2",
-        routerPath: "/agent-v2",
-      },
-      {
-        name: "Agent Details",
-        routerPath: "/agent-details",
-      },
-    ],
-  },
 ];
 
 const property = [
