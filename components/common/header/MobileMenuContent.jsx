@@ -142,10 +142,6 @@ const property = [
         routerPath: "/listing-details-v2",
       },
       {
-        name: "Single V3",
-        routerPath: "/listing-details-v3",
-      },
-      {
         name: "Single V4",
         routerPath: "/listing-details-v4",
       },
