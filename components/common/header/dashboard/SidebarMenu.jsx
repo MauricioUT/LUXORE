@@ -18,7 +18,6 @@ const SidebarMenu = () => {
     { id: 3, name: "Editors", route: "/my-properties" },
   ];
   const reviews = [
-    { id: 1, name: "My Reviews", route: "/my-review" },
     { id: 2, name: "Visitor Reviews", route: "/my-review" },
   ];
   const manageAccount = [
@@ -27,12 +26,6 @@ const SidebarMenu = () => {
       name: "My Package",
       route: "/my-package",
       icon: "flaticon-box",
-    },
-    {
-      id: 2,
-      name: "My Profile",
-      route: "/my-profile",
-      icon: "flaticon-user",
     },
   ];
 
