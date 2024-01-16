@@ -4,6 +4,13 @@ import FeaturedProperties from "./FeaturedProperties";
 import Footer from "../common/footer/Footer";
 import CopyrightFooter from "../common/footer/CopyrightFooter";
 import Hero from "./Hero";
+import BreadCrumb from "./BreadCrumb2";
+import GridListButton from "../common/listing/GridListButton";
+import ShowFilter from "../common/listing/ShowFilter";
+import FilterTopBar from "../common/listing/FilterTopBar";
+import Pagination from "../common/blog/Pagination";
+import SidebarListing3 from "../common/listing/SidebarListing3";
+import FeaturedItem from "./FeaturedItem";
 
 const Home3 = () => {
   return (
@@ -17,27 +24,62 @@ const Home3 = () => {
       {/* <!-- Home Design --> */}
       <Hero />
 
-      {/* <!-- Feature Properties --> */}
-      <section id="feature-property" className="feature-property mt80 pb50">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="main-title mb40">
-              <h2>Featured Properties</h2>
-              <p>
-                Handpicked properties by our team.{" "}
-                <a className="float-end" href="#">
-                  View All <span className="flaticon-next"></span>
-                </a>
-              </p>
+    {/* <!-- Listing Grid View --> */}
+    <section className="our-listing bgc-f7 pb30-991 mt85 md-mt0 ">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <BreadCrumb />
             </div>
-          </div>
-          <div className="col-lg-12">
-            <div className="feature_property_home3_slider gutter-x15">
-              <FeaturedProperties />
+            {/* End .col */}
+
+            <div className="col-lg-6 position-relative">
+              <div className="listing_list_style mb20-xsd tal-991">
+                <GridListButton />
+              </div>
+              {/* End list grid */}
+
+              <div className="dn db-991 mt30 mb0">
+                <ShowFilter />
+              </div>
+              {/* ENd button for mobile sidebar show  */}
             </div>
+            {/* End .col filter grid list */}
           </div>
+          {/* End Page Breadcrumb and Grid,List and filter Button */}
+
+          <div className="row">
+            <div className="col-md-12 col-lg-8">
+              <div className="grid_list_search_result ">
+                <div className="row align-items-center">
+                  <FilterTopBar />
+                </div>
+              </div>
+              {/* End .row */}
+
+              <div className="row">
+                <FeaturedItem />
+              </div>
+              {/* End .row */}
+
+              <div className="row">
+                <div className="col-lg-12 mt20">
+                  <div className="mbp_pagination">
+                    <Pagination />
+                  </div>
+                </div>
+                {/* End paginaion .col */}
+              </div>
+              {/* End .row */}
+            </div>
+            {/* End  .col */}
+
+            
+          </div>
+          {/* End .row */}
         </div>
       </section>
+ 
 
       {/* <!-- Our Footer --> */}
       <section className="footer_one home3">
