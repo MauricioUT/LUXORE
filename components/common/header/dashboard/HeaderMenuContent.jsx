@@ -32,27 +32,7 @@ const HeaderMenuContent = ({ float = "" }) => {
         {
           name: "Grid v1",
           routerPath: "/listing-grid-v1",
-        },
-        {
-          name: "Grid v2",
-          routerPath: "/listing-grid-v2",
-        },
-        {
-          name: "Grid v3",
-          routerPath: "/listing-grid-v3",
-        },
-        {
-          name: "Grid v4",
-          routerPath: "/listing-grid-v4",
-        },
-        {
-          name: "Grid v5",
-          routerPath: "/listing-grid-v5",
-        },
-        {
-          name: "Grid v6",
-          routerPath: "/listing-grid-v6",
-        },
+        }
       ],
     },
     {
@@ -116,7 +96,6 @@ const HeaderMenuContent = ({ float = "" }) => {
   const pages = [
     { id: 1, name: "About Us", routerPath: "/about-us" },
     { id: 3, name: "Faq", routerPath: "/faq" },
-    { id: 4, name: "LogIn", routerPath: "/login" },
     { id: 5, name: "Compare", routerPath: "/compare" },
     { id: 9, name: "404 Page", routerPath: "/404" },
     { id: 10, name: "Terms & Conditions", routerPath: "/terms" },

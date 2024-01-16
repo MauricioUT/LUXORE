@@ -35,27 +35,7 @@ const listing = [
       {
         name: "Grid v1",
         routerPath: "/listing-grid-v1",
-      },
-      {
-        name: "Grid v2",
-        routerPath: "/listing-grid-v2",
-      },
-      {
-        name: "Grid v3",
-        routerPath: "/listing-grid-v3",
-      },
-      {
-        name: "Grid v4",
-        routerPath: "/listing-grid-v4",
-      },
-      {
-        name: "Grid v5",
-        routerPath: "/listing-grid-v5",
-      },
-      {
-        name: "Grid v6",
-        routerPath: "/listing-grid-v6",
-      },
+      }
     ],
   },
   {
