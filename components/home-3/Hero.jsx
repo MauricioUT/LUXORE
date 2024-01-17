@@ -7,10 +7,10 @@ const Hero = () => {
         <div className="row">
           <div className="col-lg-8">
             <div className="home3_home_content">
-              <h1>Your Property, Our Priority.</h1>
-              <h4>
+              <h1>Bienes raíces - Tu inversión, nuestra especialidad.</h1>
+              {/* <h4>
                 From as low as $10 per day with limited time offer discounts
-              </h4>
+              </h4> */}
             </div>
           </div>
         </div>

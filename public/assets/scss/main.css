@@ -1184,7 +1184,7 @@ header.header-nav a.navbar_brand {
 }
 
 .menu_style_home_one.stricky-fixed {
-  background-color: #ffffff;
+  background-color: #000000;
   -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.09);
   -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.09);
   -o-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.09);
@@ -1297,7 +1297,7 @@ header.header-nav.menu_style_home_one.stricky-fixed .ace-responsive-menu li a,
 header.header-nav.menu_style_home_one.stricky-fixed a.navbar_brand span,
 header.header-nav.menu_style_home_one.stricky-fixed .sign_up_btn .btn,
 header.header-nav.menu_style_home_one.stricky-fixed #search-button i {
-  color: #484848;
+  color:  #ffffff;
 }
 
 header.header-nav.menu_style_home_one.dashbord_pages.stricky-fixed a.navbar_brand span,
@@ -2691,7 +2691,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
 }
 
 .home_adv_srch_opt.home3 {
-  margin-top: -17px;
+  margin-top: -50px;
   box-shadow: 0px 0px 50px 0px rgba(32, 32, 32, 0.15);
 }
 @media (max-width: 576px) {
@@ -8182,7 +8182,7 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
 }
 
 .footer_social_widget li a {
-  color: #8a99b3;
+  color: #f7f7f7;
   font-size: 16px;
   font-family: "FontAwesome";
   line-height: 1.2;
@@ -8321,7 +8321,7 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
 }
 
 .footer_one {
-  background-color: #24324a;
+  background-color: #000000;
 }
 
 .footer_middle_area {
@@ -8404,7 +8404,7 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
 .footer_about_widget p {
   font-size: 14px;
   font-family: "Nunito";
-  color: #8a99b3;
+  color: #f7f7f7;
   line-height: 2.143;
   margin-bottom: 0;
 }
@@ -8486,7 +8486,7 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
 .footer_contact_widget li a {
   font-size: 14px;
   font-family: "Nunito";
-  color: #8a99b3;
+  color: #f7f7f7;
   line-height: 2.429;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
