@@ -1,74 +1,48 @@
 'use client'
 
 import {
-  addKeyword,
-  addLocation,
   addPrice,
   addStatus,
   resetAmenities,
+  addBathrooms,
+  addBedrooms,
 } from "../../features/properties/propertiesSlice";
 import PricingRangeSlider from "./PricingRangeSlider";
 import CheckBoxFilter from "./CheckBoxFilter";
-import GlobalSelectBox from "./GlobalSelectBox";
 import { useRouter } from "next/navigation";
-import { v4 as uuidv4 } from "uuid";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 
 const GlobalFilter = ({ className = "" }) => {
   const router = useRouter()
-  // submit handler
-  const submitHandler = () => {
-   
-  };
 
   const {
-    keyword,
-    location,
     status,
-    amenities
-  } = useSelector((state) => state.properties);
+    bathrooms,
+    bedrooms,
+    } = useSelector((state) => state.properties);
 
   // input state
-  const [getKeyword, setKeyword] = useState(keyword);
-  const [getLocation, setLocation] = useState(location);
   const [getStatus, setStatus] = useState(status);
-
-
-  const [getAdvanced, setAdvanced] = useState([
-    { id: uuidv4(), name: "Air Conditioning" },
-    { id: uuidv4(), name: "Barbeque" },
-    { id: uuidv4(), name: "Gym" },
-    { id: uuidv4(), name: "Microwave" },
-    { id: uuidv4(), name: "TV Cable" },
-    { id: uuidv4(), name: "Lawn" },
-    { id: uuidv4(), name: "Refrigerator" },
-    { id: uuidv4(), name: "Swimming Pool" },
-    { id: uuidv4(), name: "WiFi" },
-    { id: uuidv4(), name: "Sauna" },
-    { id: uuidv4(), name: "Dryer" },
-    { id: uuidv4(), name: "Washer" },
-    { id: uuidv4(), name: "Laundry" },
-    { id: uuidv4(), name: "Outdoor Shower" },
-    { id: uuidv4(), name: "Window Coverings" },
-  ]);
+  const [getBathroom, setBathroom] = useState(bathrooms);
+  const [getBedroom, setBedroom] = useState(bedrooms);
 
   const dispath = useDispatch();
-
-   // keyword
-   useEffect(() => {
-    dispath(addKeyword(getKeyword));
-  }, [dispath, getKeyword]);
 
   // status
   useEffect(() => {
     dispath(addStatus(getStatus));
   }, [dispath, getStatus]);
 
-  // location
+  // bathroom
   useEffect(() => {
-    dispath(addLocation(getLocation));
-  }, [dispath, getLocation]);
+    dispath(addBathrooms(getBathroom));
+  }, [dispath, getBathroom]);
+
+  // bedroom
+  useEffect(() => {
+    dispath(addBedrooms(getBedroom));
+  }, [dispath, getBedroom]);
 
   // clear filter
   const clearHandler = () => {
@@ -76,63 +50,16 @@ const GlobalFilter = ({ className = "" }) => {
   };
 
   const clearAllFilters = () => {
-    setKeyword("");
-    setLocation("");
     setStatus("");
-    setPropertiesType("");
-    dispath(addPrice({ min: 10000, max: 20000 }));
-    setBedroom("");
-    setBedroom("");
-    setGarages("");
     setBathroom("");
-    setBuiltYear("");
-    setAreaMin("");
-    setAreaMax("");
+    setBedroom("");
+    dispath(addPrice({ min: 10000, max: 20000 }));
     dispath(resetAmenities());
-    dispath(addStatusType(""));
-    dispath(addFeatured(""));
-    clearAdvanced();
-  };
-
-  // clear advanced
-  const clearAdvanced = () => {
-    const changed = getAdvanced.map((item) => {
-      item.isChecked = false;
-      return item;
-    });
-    setAdvanced(changed);
-  };
-
-  // add advanced
-  const advancedHandler = (id) => {
-    const data = getAdvanced.map((feature) => {
-      if (feature.id === id) {
-        if (feature.isChecked) {
-          feature.isChecked = false;
-        } else {
-          feature.isChecked = true;
-        }
-      }
-      return feature;
-    });
-
-    setAdvanced(data);
   };
 
   return (
     <div className={`home1-advnc-search ${className}`}>
       <ul className="h1ads_1st_list mb0">
-        <li className="list-inline-item">
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Enter keyword..."
-              onChange={(e) => setKeyword(e.target.value)}
-            />
-          </div>
-        </li>
-        {/* End li */}
 
         <li className="list-inline-item">
           <div className="search_option_two">
@@ -156,16 +83,37 @@ const GlobalFilter = ({ className = "" }) => {
         {/* End li */}
 
         <li className="list-inline-item">
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Location"
-              onChange={(e) => setLocation(e.target.value)}
-              />
-            <label>
-              <span className="flaticon-maps-and-flags"></span>
-            </label>
+          <div className="candidate_revew_select">
+            <select className="selectpicker w100 show-tick form-select"
+              onChange={(e) => setBedroom(e.target.value)}
+              value={getBedroom}>
+              <option>Bedrooms</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+            </select>
+          </div>
+        </li>
+        {/* End li */}
+
+        <li className="list-inline-item">
+          <div className="candidate_revew_select">
+            <select className="selectpicker w100 show-tick form-select" onChange={(e) => setBathroom(e.target.value)} value={getBathroom}>
+              <option value="">Bathrooms</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+            </select>
           </div>
         </li>
         {/* End li */}
@@ -214,15 +162,6 @@ const GlobalFilter = ({ className = "" }) => {
                   <CheckBoxFilter />
                 </div>
                 {/* End .row */}
-
-                <div className="row p15 pt0-xsd">
-                  <div className="col-lg-12 col-xl-12">
-                    <ul className="apeartment_area_list mb0">
-                      <GlobalSelectBox />
-                    </ul>
-                  </div>
-                </div>
-                {/* End .row */}
               </div>
               {/* End .dropdown-menu */}
             </div>
@@ -233,11 +172,11 @@ const GlobalFilter = ({ className = "" }) => {
         <li className="list-inline-item">
           <div className="search_option_button">
             <button
-              onClick={submitHandler}
-              type="submit"
+              onClick={clearHandler}
+              type="button"
               className="btn btn-thm"
             >
-              Search
+              Clear Filters
             </button>
           </div>
         </li>

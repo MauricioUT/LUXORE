@@ -1,25 +1,15 @@
-import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addAmenities
 } from "../../features/properties/propertiesSlice";
+
 import { v4 as uuidv4 } from "uuid";
 
 const CheckBoxFilter = () => {
     const {
-      keyword,
-      location,
-      status,
-      propertyType,
-      bathrooms,
-      bedrooms,
-      garages,
-      yearBuilt,
-      area,
       amenities,
     } = useSelector((state) => state.properties);
-  
 
   // advanced state
   const [getAdvanced, setAdvanced] = useState([
@@ -40,6 +30,8 @@ const CheckBoxFilter = () => {
     { id: uuidv4(), name: "Window Coverings" },
   ]);
 
+
+
   const dispath = useDispatch();
 
   const advancedHandler = (id) => {
@@ -56,6 +48,18 @@ const CheckBoxFilter = () => {
 
     setAdvanced(data);
   };
+
+    // clear advanced
+  const clearAdvanced = () => {
+    const changed = getAdvanced.map((item) => {
+      item.isChecked = false;
+      return item;
+    });
+  };
+
+  if(amenities.length === 0){
+    clearAdvanced();
+  }
 
   return (
     <>
