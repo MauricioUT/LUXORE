@@ -2,11 +2,12 @@
 'use client'
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState  } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addLength } from "../../features/properties/propertiesSlice";
 import properties from "../../data/properties";
 import Image from "next/image";
+import ReactPaginate from 'react-paginate';
 
 const FeaturedItem = () => {
   const {
@@ -25,6 +26,13 @@ const FeaturedItem = () => {
   const { statusType, featured, isGridOrList } = useSelector(
     (state) => state.filter
   );
+
+  //paginator constants
+  
+  const [take, setTake] = useState(5);
+  const [skip, setSkip] = useState(0);
+  const pageCount = Math.ceil(38 /5);
+
 
   const dispatch = useDispatch();
 
@@ -117,9 +125,11 @@ const FeaturedItem = () => {
     return true;
   };
 
+
+
   // status handler
   let content = properties
-    ?.slice(0, 10)
+    ?.slice(skip,take)
     ?.filter(keywordHandler)
     ?.filter(locationHandler)
     ?.filter(statusHandler)
@@ -217,15 +227,66 @@ const FeaturedItem = () => {
             {/* End .fp_footer */}
           </div>
         </div>
+
       </div>
     ));
-
+   
   // add length of filter items
   useEffect(() => {
     dispatch(addLength(content.length));
   }, [dispatch, content]);
 
-  return <>{content}</>;
+
+  //paginador 
+  
+  const handlePageClick = (event) => {
+    const itemsPerPage =  5;
+    const length = 38;
+    let _take= 5;
+    let _skipt = 0;
+    _take = (event.selected * itemsPerPage) % length;
+    _take =  _take + itemsPerPage;
+    _skipt =  _take - itemsPerPage;
+  console.log(
+    `Skipt ${_skipt}, take ${_take}  `
+  );
+  setTake(_take);
+  setSkip(_skipt);
+};
+
+
+
+  let paginador =  
+  <div className="row">
+    <div className="col-lg-6 mt20">
+      <div className="mbp_pagination">
+          <ReactPaginate
+                containerClassName="pagination"
+                activeClassName="active"
+                pageClassName="page-item"
+                pageLinkClassName="page-link"
+                previousClassName="page-item"
+                previousLinkClassName="page-link"
+                nextClassName="page-item"
+                nextLinkClassName="page-link"
+                breakClassName="page-item"
+                breakLinkClassName="page-link"
+            breakLabel="..."
+            nextLabel="Siguiente >"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={1}
+            pageCount={pageCount}
+            previousLabel="< Anterior"
+            renderOnZeroPageCount={null}
+            />
+      </div>
+  </div>
+</div>
+
+
+  return <>{content}  {paginador}
+           
+    </>;
 };
 
 export default FeaturedItem;
