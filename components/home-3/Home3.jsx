@@ -1,15 +1,10 @@
 import MobileMenu from "../common/header/MobileMenu";
 import Header from "./Header";
 import Footer from "../common/footer/Footer";
-import CopyrightFooter from "../common/footer/CopyrightFooter";
 import Hero from "./Hero";
-import BreadCrumb from "./BreadCrumb2";
-import GridListButton from "../common/listing/GridListButton";
-import ShowFilter from "../common/listing/ShowFilter";
 import FilterTopBar from "../common/listing/FilterTopBar";
 import Pagination from "../common/blog/Pagination";
 import FeaturedItem from "./FeaturedItem";
-import SidebarListing from "../common/listing/SidebarListing";
 
 const Home3 = () => {
   return (
