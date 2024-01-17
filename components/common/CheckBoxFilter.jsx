@@ -59,33 +59,37 @@ const CheckBoxFilter = () => {
 
   return (
     <>
-          <div className="col-xxs-12 col-sm col-lg col-xl">
-            <ul className="ui_kit_checkbox selectable-list fn-400">
-              {getAdvanced?.map((feature) => (
-                <li key={feature.id}>
-                  <div className="form-check custom-checkbox">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id={feature.id}
-                      value={feature.name}
-                      checked={feature.isChecked || false}
-                      onChange={(e) =>
-                        dispath(addAmenities(e.target.value))
-                      }
-                      onClick={() => advancedHandler(feature.id)}
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor={feature.id}
-                    >
-                      {feature.name}
-                    </label>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+           <div className="row">
+                <ul className="ui_kit_checkbox selectable-list row">
+                    {getAdvanced?.map((feature) => (
+                      <div className="col-xxs-6 col-sm-6 col-lg-4 col-xl-3 ">
+                            <li key={feature.id}>
+                                <div className="form-check custom-checkbox">
+                                  <input
+                                    type="checkbox"
+                                    className="form-check-input"
+                                    id={feature.id}
+                                    value={feature.name}
+                                    checked={feature.isChecked || false}
+                                    onChange={(e) =>
+                                      dispath(addAmenities(e.target.value))
+                                    }
+                                    onClick={() => advancedHandler(feature.id)}
+                                  />
+                                  <label
+                                    className="form-check-label"
+                                    htmlFor={feature.id}
+                                  >
+                                    {feature.name}
+                                  </label>
+                                </div>
+                            </li>
+                      </div>
+                    
+                    ))}
+                  </ul>
+           </div>
+           
       {/* End .col */}
     </>
   );
