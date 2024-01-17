@@ -27,37 +27,9 @@ const Home3 = () => {
      <section className="our-listing bgc-f7 pb30-991 mt85 md-mt0 ">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4 col-xl-4">
-              <div className="sidebar-listing-wrapper">
-                <SidebarListing />
-              </div>
-              {/* End SidebarListing */}
+           
 
-              <div
-                className="offcanvas offcanvas-start offcanvas-listing-sidebar"
-                tabIndex="-1"
-                id="sidebarListing"
-              >
-                <div className="offcanvas-header">
-                  <h5 className="offcanvas-title">Advanced rulas</h5>
-                  <button
-                    type="button"
-                    className="btn-close text-reset"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                {/* End .offcanvas-heade */}
-
-                <div className="offcanvas-body">
-                  <SidebarListing />
-                </div>
-              </div>
-              {/* End mobile sidebar listing  */}
-            </div>
-            {/* End sidebar conent */}
-
-            <div className="col-md-12 col-lg-8">
+            <div className="col-md-12 col-lg-12">
               <div className="grid_list_search_result ">
                 <div className="row align-items-center">
                   <FilterTopBar />
@@ -88,20 +60,14 @@ const Home3 = () => {
  
 
       {/* <!-- Our Footer --> */}
-      <section className="footer_one home3">
-        <div className="container-fluid">
+      <section className="footer_one">
+        <div className="container">
           <div className="row">
             <Footer />
           </div>
         </div>
       </section>
 
-      {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area home3 pt30 pb30">
-        <div className="container-fluid">
-          <CopyrightFooter />
-        </div>
-      </section>
     </>
   );
 };

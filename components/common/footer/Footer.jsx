@@ -7,10 +7,9 @@ const Footer = () => {
     <>
       <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3 pr0 pl0">
         <div className="footer_about_widget">
-          <h4>About Site</h4>
+          <h4>Nuestras Oficinas</h4>
           <p>
-            We’re reimagining how you buy, sell and rent. It’s now easier to get
-            into a place you love. So let’s do this, together.
+          Anillo Perif. 2165, Los Alpes, Álvaro Obregón, 01010 Ciudad de México, CDMX
           </p>
         </div>
       </div>
@@ -18,7 +17,7 @@ const Footer = () => {
 
       <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3">
         <div className="footer_qlink_widget">
-          <h4>Quick Links</h4>
+          <h4>Acerca de las Inversiones Inmobiliarias</h4>
           <ul className="list-unstyled">
             <li>
               <Link href="/">About Us</Link>
@@ -42,22 +41,13 @@ const Footer = () => {
 
       <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3">
         <div className="footer_contact_widget">
-          <h4>Contact Us</h4>
+          <h4>Contacto</h4>
           <ul className="list-unstyled">
             <li>
-              <a href="mailto:info@findhouse.com">info@findhouse.com</a>
+              <a href="mailto:contacto@luxore.mx">contacto@luxore.mx</a>
             </li>
             <li>
-              <a href="#">Collins Street West, Victoria</a>
-            </li>
-            <li>
-              <a href="#">8007, Australia.</a>
-            </li>
-            <li>
-              <a href="tel:+4733378901">+1 246-345-0699</a>
-            </li>
-            <li>
-              <a href="tel:+4733378901">+1 246-345-0695</a>
+              <a href="tel:55 8988 3659">55 8988 3659</a>
             </li>
           </ul>
         </div>
@@ -70,8 +60,6 @@ const Footer = () => {
           <ul className="mb30">
             <Social />
           </ul>
-          <h4>Subscribe</h4>
-          <SubscribeForm />
         </div>
       </div>
     </>
