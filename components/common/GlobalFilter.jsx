@@ -1,18 +1,10 @@
 'use client'
 
 import {
-  addAmenities,
-  addAreaMax,
-  addAreaMin,
-  addBathrooms,
-  addBedrooms,
-  addGarages,
   addKeyword,
   addLocation,
   addPrice,
-  addPropertyType,
   addStatus,
-  addYearBuilt,
   resetAmenities,
 } from "../../features/properties/propertiesSlice";
 import PricingRangeSlider from "./PricingRangeSlider";
@@ -21,50 +13,28 @@ import GlobalSelectBox from "./GlobalSelectBox";
 import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const GlobalFilter = ({ className = "" }) => {
   const router = useRouter()
   // submit handler
   const submitHandler = () => {
-    dispath(addKeyword(getKeyword));
-    dispath(addLocation(getLocation));
-    dispath(addStatus(getStatus));
-    dispath(addPropertyType(getPropertiesType));
-    dispath(addBathrooms(getBathroom));
-    dispath(addBedrooms(getBedroom));
-    dispath(addGarages(getGarages));
-    dispath(addYearBuilt(getBuiltYear));
-    dispath(dispath(addAreaMin(getAreaMin)));
-    dispath(dispath(addAreaMax(getAreaMax)));
+   
   };
 
   const {
     keyword,
     location,
     status,
-    propertyType,
-    bathrooms,
-    bedrooms,
-    garages,
-    yearBuilt,
-    area,
-    amenities,
+    amenities
   } = useSelector((state) => state.properties);
 
   // input state
   const [getKeyword, setKeyword] = useState(keyword);
   const [getLocation, setLocation] = useState(location);
   const [getStatus, setStatus] = useState(status);
-  const [getPropertiesType, setPropertiesType] = useState(propertyType);
-  const [getBathroom, setBathroom] = useState(bathrooms);
-  const [getBedroom, setBedroom] = useState(bedrooms);
-  const [getGarages, setGarages] = useState(garages);
-  const [getBuiltYear, setBuiltYear] = useState(yearBuilt);
-  const [getAreaMin, setAreaMin] = useState(area.min);
-  const [getAreaMax, setAreaMax] = useState(area.max);
 
-  // advanced state
+
   const [getAdvanced, setAdvanced] = useState([
     { id: uuidv4(), name: "Air Conditioning" },
     { id: uuidv4(), name: "Barbeque" },
@@ -85,6 +55,21 @@ const GlobalFilter = ({ className = "" }) => {
 
   const dispath = useDispatch();
 
+   // keyword
+   useEffect(() => {
+    dispath(addKeyword(getKeyword));
+  }, [dispath, getKeyword]);
+
+  // status
+  useEffect(() => {
+    dispath(addStatus(getStatus));
+  }, [dispath, getStatus]);
+
+  // location
+  useEffect(() => {
+    dispath(addLocation(getLocation));
+  }, [dispath, getLocation]);
+
   // clear filter
   const clearHandler = () => {
     clearAllFilters();
@@ -96,10 +81,10 @@ const GlobalFilter = ({ className = "" }) => {
     setStatus("");
     setPropertiesType("");
     dispath(addPrice({ min: 10000, max: 20000 }));
-    setBathroom("");
     setBedroom("");
     setBedroom("");
     setGarages("");
+    setBathroom("");
     setBuiltYear("");
     setAreaMin("");
     setAreaMax("");
