@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header
-      className={`header-nav menu_style_home_one style2 home3 navbar-scrolltofixed stricky main-menu  ${
+      className={`header-nav menu_style_home_one navbar-scrolltofixed stricky main-menu  ${
         navbar ? "stricky-fixed " : ""
       }`}
     >

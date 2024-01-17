@@ -4047,7 +4047,7 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
 }
 
 .home3_home_content {
-  padding: 160px 0;
+  padding: 90px 0;
   position: relative;
 }
 @media (max-width: 1199px) {
@@ -4219,7 +4219,7 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
-  height: 960px;
+  height: 560px;
 }
 
 .home1-overlay {
@@ -17357,7 +17357,7 @@ legend span {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 8px;
-  height: 600px;
+  height: 450px;
 }
 
 .bg-img4 {

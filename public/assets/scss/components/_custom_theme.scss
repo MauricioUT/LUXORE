@@ -78,8 +78,9 @@ a {
 
 .home1_bgi1 {
     @media (min-width: 1500px) {
-        height: 100vh;
+        height: 60vh;
     }
+
     .home_content {
         @media (min-width: 1500px) and (max-width: 1800px) {
             padding: 220px 0 400px;
