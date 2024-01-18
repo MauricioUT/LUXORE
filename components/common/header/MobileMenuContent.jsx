@@ -54,7 +54,6 @@ const pages = [
     name: "Faq",
     routerPath: "/faq",
   },
-  { name: "Compare", routerPath: "/compare" },
   {
     name: "404 Page",
     routerPath: "/404",
