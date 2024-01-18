@@ -41,7 +41,7 @@ const Header = () => {
             width={100}
             height={100}
             className="logo2 img-fluid"
-            src="/assets/images/logoDorado1.png"
+            src="/assets/images/logoBlanco1.png"
             alt="header-logo2.png"
           />
         </Link>

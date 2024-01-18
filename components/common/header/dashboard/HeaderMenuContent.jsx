@@ -111,7 +111,7 @@ const HeaderMenuContent = ({ float = "" }) => {
               : undefined
           }
         >
-          <span className="title">Home</span>
+          <span className="title">Inicio</span>
           <span className="arrow"></span>
         </a>
         {/* <!-- Level Two--> */}
@@ -132,6 +132,16 @@ const HeaderMenuContent = ({ float = "" }) => {
         </ul>
       </li>
       {/* End .dropitem */}
+
+      
+      <li className="last">
+        <Link
+          href="/contact"
+          className={pathname === "/contact" ? "ui-active" : undefined}
+        >
+          Inicio
+        </Link>
+      </li>
 
       <li className="dropitem">
         <a
