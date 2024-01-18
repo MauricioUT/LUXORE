@@ -56,6 +56,9 @@ const Home3 = () => {
         </div>
       </section>
 
+      {/* whatsApp section */}
+      <a href="https://api.whatsapp.com/send?phone=5580237622&text=Hola!%20Quiero%20contratar%20sus%20servicios!" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+
     </>
   );
 };
