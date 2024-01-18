@@ -63,7 +63,7 @@ export const propertiesSlice = createSlice({
             state.bathrooms = action.payload;
         },
         addBedrooms: (state, action) => {
-            state.bathrooms = action.payload;
+            state.bedrooms = action.payload;
         },
         addGarages: (state, action) => {
             state.garages = action.payload;

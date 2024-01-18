@@ -168,7 +168,7 @@ const GlobalFilter = ({ className = "" }) => {
             <select className="selectpicker w100 show-tick form-select"
               onChange={(e) => setBedroom(e.target.value)}
               value={getBedroom}>
-              <option>Bedrooms</option>
+              <option value="">Bedrooms</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>

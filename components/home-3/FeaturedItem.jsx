@@ -141,7 +141,6 @@ const FeaturedItem = () => {
 
        // City handler
        const cityHandler = (item) => {
-        debugger
         if (parseInt(city) !== 0) {
           return item.city == city;
         }
