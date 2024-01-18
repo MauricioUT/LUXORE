@@ -23,43 +23,6 @@ const home = [
   },
 ];
 
-const listing = [
-  {
-    id: 1,
-    title: "Listing Grid",
-    items: [
-      {
-        name: "Grid v1",
-        routerPath: "/listing-grid-v1",
-      }
-    ],
-  },
-  {
-    id: 2,
-    title: "Listing List",
-    items: [
-      {
-        name: "List V1",
-        routerPath: "/listing-list-v1",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Listing Style",
-    items: [
-      {
-        name: "Parallax Style",
-        routerPath: "/parallax-style",
-      },
-      {
-        name: "Slider Style",
-        routerPath: "/slider-style",
-      },
-    ],
-  },
-];
-
 const property = [
   {
     id: 2,
@@ -145,46 +108,6 @@ const MobileMenuContent = () => {
               Inicio
             </div>
           </MenuItem>
-          <SubMenu
-            label="Listing"
-            className={
-              listing.some((parent) => {
-                return parent.items.some(
-                  (page) => page.routerPath?.split('/')[1] === pathname.split('/')[1]
-                );
-              })
-                ? "parent-menu-active"
-                : 'inactive-mobile-menu'
-            }
-          >
-            {listing.map((item) => (
-              <SubMenu
-              label={item.title}
-                className={
-                  item.items.some((page) => page.routerPath?.split('/')[1] === pathname.split('/')[1])
-                    ? "ui-active plus alt"
-                    : "plus alt inactive-mobile-menu"
-                }
-                key={item.id}
-              >
-                {item.items.map((val, i) => (
-                  <MenuItem key={i}>
-                    <div
-                     onClick={()=>router.push(val.routerPath)}
-                      className={
-                        pathname?.split('/')[1] === val.routerPath?.split('/')[1]
-                          ? "ui-active"
-                          : 'inactive-mobile-menu'
-                      }
-                    >
-                      {val.name}
-                    </div>
-                  </MenuItem>
-                ))}
-              </SubMenu>
-            ))}
-          </SubMenu>
-          {/* End Pages Listing */}
 
           <SubMenu
             label="Property"
