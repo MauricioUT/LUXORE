@@ -18,10 +18,6 @@ import { usePathname, useRouter } from "next/navigation";
 
 const home = [
   {
-    name: "Home 1",
-    routerPath: "/",
-  },
-  {
     name: "Home 3",
     routerPath: "/home-3",
   },

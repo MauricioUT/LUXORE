@@ -13,11 +13,6 @@ const HeaderMenuContent = ({ float = "" }) => {
 
   const home = [
     {
-      id: 1,
-      name: "Home 1",
-      routerPath: "/",
-    },
-    {
       id: 3,
       name: "Home 3",
       routerPath: "/home-3",
