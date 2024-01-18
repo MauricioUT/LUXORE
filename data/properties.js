@@ -5,8 +5,7 @@ module.exports = [
     price: "13000",
     type: "Apartment",
     title: "Luxury Family Home",
-    location: `1421 San Pedro
-St, Los Angeles, CA 900015`,
+    location: `1421 San Pedro St, Los Angeles, CA 900015`,
     saleTag: ["Featured", "For Sale"],
     garages: "yes",
     itemDetails: [
@@ -44,6 +43,9 @@ St, Los Angeles, CA 900015`,
     amenities: "Air Conditioning",
     featured: "sale",
     created_at: 1667181268893,
+    state: 1,
+    city: 1,
+    neighborhood:1
   },
   {
     id: 2,

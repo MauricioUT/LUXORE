@@ -19,6 +19,9 @@ const initialState = {
         max: "",
     },
     length: 0,
+    state:0,
+    city:0,
+    neighborhood: 0
 };
 
 export const propertiesSlice = createSlice({
@@ -77,6 +80,17 @@ export const propertiesSlice = createSlice({
         addLength: (state, action) => {
             state.length = action.payload;
         },
+        addStates: (state, action) => {
+            state.state = action.payload;
+        },
+
+        addCity: (state, action) => {
+            state.city = action.payload;
+        },
+
+        addNeighborhood: (state, action) => {
+            state.neighborhood = action.payload;
+        },
     },
 });
 
@@ -95,5 +109,8 @@ export const {
     addAreaMax,
     addLength,
     resetAmenities,
+    addStates,
+    addCity,
+    addNeighborhood,
 } = propertiesSlice.actions;
 export default propertiesSlice.reducer;

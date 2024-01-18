@@ -22,6 +22,9 @@ const FeaturedItem = () => {
     yearBuilt,
     area,
     amenities,
+    state,
+    city,
+    neighborhood
   } = useSelector((state) => state.properties);
   const { statusType, featured, isGridOrList } = useSelector(
     (state) => state.filter
@@ -127,6 +130,35 @@ const FeaturedItem = () => {
 
 
 
+    // State handler
+    const stateHandler = (item) => {
+      if (parseInt(state) !== 0) {
+        return item.state == state;
+      }
+      return true;
+    };
+
+
+       // City handler
+       const cityHandler = (item) => {
+        debugger
+        if (parseInt(city) !== 0) {
+          return item.city == city;
+        }
+        return true;
+      };
+
+      // City handler
+      const neighborhoodHandler = (item) => {
+      if (parseInt(neighborhood) !== 0) {
+        return item.neighborhood == neighborhood;
+      }
+      return true;
+    };
+  
+  
+
+
   // status handler
   let content = properties
     ?.slice(skip,take)
@@ -143,6 +175,9 @@ const FeaturedItem = () => {
     ?.filter(advanceHandler)
     ?.sort(statusTypeHandler)
     ?.filter(featuredHandler)
+    ?.filter(stateHandler)
+    ?.filter(cityHandler)
+    ?.filter(neighborhoodHandler)
     .map((item) => (
       <div
         className={`${

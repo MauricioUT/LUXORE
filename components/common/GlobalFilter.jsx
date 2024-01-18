@@ -6,6 +6,9 @@ import {
   resetAmenities,
   addBathrooms,
   addBedrooms,
+  addStates,
+  addCity,
+  addNeighborhood
 } from "../../features/properties/propertiesSlice";
 import PricingRangeSlider from "./PricingRangeSlider";
 import CheckBoxFilter from "./CheckBoxFilter";
@@ -20,12 +23,18 @@ const GlobalFilter = ({ className = "" }) => {
     status,
     bathrooms,
     bedrooms,
+    state,
+    city,
+    neighborhood
     } = useSelector((state) => state.properties);
 
   // input state
   const [getStatus, setStatus] = useState(status);
   const [getBathroom, setBathroom] = useState(bathrooms);
   const [getBedroom, setBedroom] = useState(bedrooms);
+  const [getState, setState] = useState(state);
+  const [getCity, setCity] = useState(city);
+  const [getNeighborhood, setNeighborhood] = useState(neighborhood);
 
   const dispath = useDispatch();
 
@@ -44,6 +53,24 @@ const GlobalFilter = ({ className = "" }) => {
     dispath(addBedrooms(getBedroom));
   }, [dispath, getBedroom]);
 
+
+   // states
+   useEffect(() => {
+    dispath(addStates(getState));
+  }, [dispath, getState]);
+
+    // City
+    useEffect(() => {
+      dispath(addCity(getCity));
+    }, [dispath, getCity]);
+
+      // City
+      useEffect(() => {
+        dispath(addNeighborhood(getNeighborhood));
+      }, [dispath, getNeighborhood]);
+
+      
+
   // clear filter
   const clearHandler = () => {
     clearAllFilters();
@@ -55,12 +82,17 @@ const GlobalFilter = ({ className = "" }) => {
     setBedroom("");
     dispath(addPrice({ min: 10000, max: 20000 }));
     dispath(resetAmenities());
+
+    setState(0);
+    setCity(0);
+    setNeighborhood(0);
   };
 
   return (
     <div className={`home1-advnc-search ${className}`}>
       <ul className="h1ads_1st_list mb0">
 
+        {/* property type */}
         <li className="list-inline-item">
           <div className="search_option_two">
             <div className="candidate_revew_select">
@@ -82,6 +114,55 @@ const GlobalFilter = ({ className = "" }) => {
         </li>
         {/* End li */}
 
+
+          {/* Estado */}
+          <li className="list-inline-item">
+          <div className="candidate_revew_select">
+            <select className="selectpicker w100 show-tick form-select" onChange={(e) => setState(e.target.value)} value={getState}>
+              <option value={0}>Estado</option>
+              <option value={1}>CDMX</option>
+              <option value={2}>Chiapas</option>
+              <option value={3}>Estado de México</option>
+            </select>
+          </div>
+          </li>
+        {/* End li */}
+
+
+          {/* Ciudad */}
+          <li className="list-inline-item">
+          <div className="candidate_revew_select">
+            <select className="selectpicker w100 show-tick form-select" onChange={(e) => setCity(e.target.value)} value={getCity}>
+              <option value={0}>Ciudad</option>
+              <option value={1}>Iztapalapa</option>
+              <option value={2}>Coyoacan</option>
+              <option value={3}>Ecatepec</option>
+              <option value={4}>Comitan</option>
+              <option value={5}>Coacalco</option>
+            </select>
+          </div>
+          </li>
+          {/* End li */}
+
+           {/* Colonia */}
+           <li className="list-inline-item">
+          <div className="candidate_revew_select">
+            <select className="selectpicker w100 show-tick form-select" onChange={(e) => setNeighborhood(e.target.value)} value={getNeighborhood}>
+              <option value={0}>Colonia</option>
+              <option value={1}>Colonia de Iztapalapa1</option>
+              <option value={2}>Colonia de Ecatepec1</option>
+              <option value={3}>Colonia de Coyoacan1</option>
+              <option value={4}>Colonia de Ecatepec2</option>
+              <option value={5}>Colonia de Comitan1</option>
+              <option value={6}>Colonia de Iztapalapa2</option>
+              <option value={7}>Colonia de Iztapalapa3</option>
+              <option value={8}>Colonia de Coacalco1</option>
+            </select>
+          </div>
+          </li>
+          {/* End li */}
+
+         {/* bedrooms */}
         <li className="list-inline-item">
           <div className="candidate_revew_select">
             <select className="selectpicker w100 show-tick form-select"
@@ -100,7 +181,8 @@ const GlobalFilter = ({ className = "" }) => {
           </div>
         </li>
         {/* End li */}
-
+         
+          {/* bathrooms */}
         <li className="list-inline-item">
           <div className="candidate_revew_select">
             <select className="selectpicker w100 show-tick form-select" onChange={(e) => setBathroom(e.target.value)} value={getBathroom}>
@@ -118,6 +200,7 @@ const GlobalFilter = ({ className = "" }) => {
         </li>
         {/* End li */}
 
+          {/* price */}
         <li className="list-inline-item">
           <div className="small_dropdown2">
             <div
@@ -141,6 +224,7 @@ const GlobalFilter = ({ className = "" }) => {
         </li>
         {/* End li */}
 
+          {/* advanced */}
         <li className="custome_fields_520 list-inline-item">
           <div className="navbered">
             <div className="mega-dropdown ">
@@ -169,6 +253,7 @@ const GlobalFilter = ({ className = "" }) => {
         </li>
         {/* End li */}
 
+          {/* clear filter */}
         <li className="list-inline-item">
           <div className="search_option_button">
             <button
