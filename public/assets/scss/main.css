@@ -19723,3 +19723,8 @@ button.gm-ui-hover-effect:focus {
 .pro-sidebar .pro-menu a.ui-active {
   color: var(--color-primary) !important;
 }
+
+/* pagination */
+.pagination{
+  --bs-pagination-padding-x: 0.50rem;
+}
