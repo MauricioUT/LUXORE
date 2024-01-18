@@ -1,10 +1,22 @@
 import Link from "next/link";
 import Social from "./Social";
 import SubscribeForm from "./SubscribeForm";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <>
+     <div className="container-fluid p0 container-logo-footer">
+     <Image
+            width={100}
+            height={100}
+            className="logo-footer"
+            src="/assets/images/logoFooter1.png"
+            alt="header-logo2.png"
+          />
+     </div>
+    
+
       <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3 pr0 pl0">
         <div className="footer_about_widget">
           <h4>Nuestras Oficinas</h4>

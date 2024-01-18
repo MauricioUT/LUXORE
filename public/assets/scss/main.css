@@ -19727,6 +19727,7 @@ button.gm-ui-hover-effect:focus {
 /* pagination */
 .pagination{
   --bs-pagination-padding-x: 0.50rem;
+  margin-bottom: 50px;
 }
 
 
@@ -19747,4 +19748,14 @@ button.gm-ui-hover-effect:focus {
 
 .whatsapp-icon {
   margin-top:13px;
+}
+
+.logo-footer {
+margin-top: -20px;
+
+}
+
+.container-logo-footer {
+  text-align: center;
+  margin-top: -113px;
 }
