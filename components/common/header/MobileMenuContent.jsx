@@ -134,31 +134,17 @@ const MobileMenuContent = () => {
     {/* <Sidebar> */}
     <div style={{maxHeight:'calc(100vh - 100px)', overflowY:'auto'}}>
         <Menu>
-          <SubMenu
-            label="Home"
-           
-            className={
-              home.some((page) => page.routerPath?.split('/')[1] === pathname.split('/')[1])
-                ? "parent-menu-active"
-                : 'inactive-mobile-menu'
-            }
-          >
-            {home.map((val, i) => (
-              <MenuItem key={i} active={true}>
-                <div
-                 
-                  onClick={()=>router.push(val.routerPath)}
-                  className={
-                    val.routerPath?.split('/')[1] === pathname.split('/')[1] ? "ui-active" : 'inactive-mobile-menu'
-                  }
-                >
-                  {val.name}
-                </div>
-              </MenuItem>
-            ))}
-          </SubMenu>
-          {/* End Home Home */}
-
+        <MenuItem>
+            <div
+            onClick={()=>router.push("/")}
+             
+              className={
+                pathname === "/" ? "ui-active" : 'inactive-mobile-menu'
+              }
+            >
+              Inicio
+            </div>
+          </MenuItem>
           <SubMenu
             label="Listing"
             className={
@@ -283,6 +269,9 @@ const MobileMenuContent = () => {
             </div>
           </MenuItem>
         </Menu>
+
+
+        
         </div>
       {/* </Sidebar> */}
       </>  

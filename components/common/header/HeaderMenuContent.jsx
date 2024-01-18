@@ -249,6 +249,15 @@ const HeaderMenuContent = ({ float = "" }) => {
         </Link>
       </li>
       {/* End .dropitem */}
+
+      <li className="last">
+        <Link
+          href="tel:5589883659"
+          className={pathname === "/contact" ? "ui-active" : undefined}
+        >
+          55 8988 3659
+        </Link>
+      </li>
     </ul>
   );
 };

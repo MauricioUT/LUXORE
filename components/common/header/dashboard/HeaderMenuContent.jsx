@@ -330,24 +330,14 @@ const HeaderMenuContent = ({ float = "" }) => {
       </li>
       {/* End .dropitem */}
 
-      <li className="user_setting">
-        <div className="dropdown">
-          <a className="btn dropdown-toggle" href="#" data-bs-toggle="dropdown">
-            <Image
-              width={45}
-              height={45}
-              className="rounded-circle"
-              src="/assets/images/team/e1.png"
-              alt="e1.png"
-            />
-            <span className="dn-1199 ms-1">Ali Tufan</span>
-          </a>
-          <div className="dropdown-menu">
-            <MyAccount />
-          </div>
-        </div>
+      <li className="last">
+        <Link
+          href="tel:5589883659"
+          className={pathname === "/contact" ? "ui-active" : undefined}
+        >
+          55 8988 3659
+        </Link>
       </li>
-      {/* End ."user_setting */}
     </ul>
   );
 };
