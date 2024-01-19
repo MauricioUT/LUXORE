@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Social from "./Social";
-import SubscribeForm from "./SubscribeForm";
 import Image from "next/image";
 
 const Footer = () => {
