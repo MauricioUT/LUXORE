@@ -3,7 +3,6 @@ import PropertyDescriptions from "../common/listing-details/PropertyDescriptions
 import PropertyDetails from "../common/listing-details/PropertyDetails";
 import PropertyItem from "../common/listing-details/PropertyItem";
 import PropertyLocation from "../common/listing-details/PropertyLocation";
-import WalkScore from "../common/listing-details/WalkScore";
 import WhatsNearby from "../common/listing-details/WhatsNearby";
 
 const DetailsContent = () => {
@@ -52,11 +51,6 @@ const DetailsContent = () => {
         </div>
       </div>
       {/* End .location_area */}
-
-      <div className="walkscore_area mt30">
-        <WalkScore />
-      </div>
-      {/* End walkscore_area */}
 
       <div className="whats_nearby mt30">
         <h4 className="mb10">What&apos;s Nearby</h4>
