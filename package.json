@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cleanCSS":"purgecss --css public/assets/scss/ace-responsive-menu.css --content components/404/*.jsx components/home-3/*.jsx components/bout-us/*.jsx components/common/*.jsx components/common/footer/*.jsx components/common/header/*.jsx components/common/listing/*.jsx components/common/listing-details/*.jsx components/contact/*.jsx  components/faq/*.jsx  components/layout/*.jsx  components/contact/*.jsx  components/listing-details-v1/*.jsx components/listing-details-v2/*.jsx components/listing-details-v4/*.jsx components/terms-conditions/*.jsx --output purge"
   },
   "dependencies": {
     "@faker-js/faker": "^8.1.0",
@@ -15,6 +16,7 @@
     "chart.js": "^4.4.0",
     "next": "13.5.4",
     "photoswipe": "^5.4.2",
+    "purgecss": "^5.0.0",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
