@@ -3,7 +3,7 @@ import PropertyDescriptions from "../common/listing-details/PropertyDescriptions
 import PropertyDetails from "../common/listing-details/PropertyDetails";
 import PropertyItem from "../common/listing-details/PropertyItem";
 import PropertyLocation from "../common/listing-details/PropertyLocation";
-import WhatsNearby from "../common/listing-details/WhatsNearby";
+
 
 const DetailsContent = () => {
   return (
@@ -55,11 +55,7 @@ const DetailsContent = () => {
       </div>
       {/* End .location_area */}
 
-      <div className="whats_nearby mt30" id="tab-6">
-        <h4 className="mb10">What&apos;s Nearby</h4>
-        <WhatsNearby />
-      </div>
-      {/* End what's nearby area */}
+
     </>
   );
 };
