@@ -2,7 +2,7 @@ import GlobalHeroFilter from "../common/GlobalHeroFilter";
 
 const Hero = () => {
   return (
-    <section className="home-three bg-img3  md-mt0">
+    <section className="home-three bg-img3 md-mt0 bg-anime">
       <div className="container">
         <div className="row">
           <div className="col-lg-8">

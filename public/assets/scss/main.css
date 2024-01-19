@@ -2664,13 +2664,13 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
   padding: 30px 20px;
   position: relative;
   z-index: 9;
+  border-top: 5px solid var(--color-primary);
 }
 
-.home1_adsrchfrm:before {
+.home1_adsrchfrm:after {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   bottom: -10px;
-  content: "";
   left: -10px;
   position: absolute;
   right: -10px;
@@ -4037,7 +4037,6 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
 .home-three:before {
   background-color: rgba(29, 41, 62, 0.702);
   bottom: 0;
-  border-radius: 8px;
   content: "";
   left: 0;
   overflow: hidden;
@@ -17355,7 +17354,6 @@ legend span {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 8px;
   height: 450px;
 }
 
@@ -17365,7 +17363,6 @@ legend span {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 8px;
   height: 450px;
 }
 

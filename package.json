@@ -29,5 +29,9 @@
     "sharp": "^0.33.2",
     "slick-carousel": "^1.8.1",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.0"
   }
 }
