@@ -1,6 +1,5 @@
 import AdditionalDetails from "../common/listing-details/AdditionalDetails";
 import Attachments from "../common/listing-details/Attachments";
-import FloorPlans from "../common/listing-details/FloorPlans";
 import PropertyDescriptions from "../common/listing-details/PropertyDescriptions";
 import PropertyDetails from "../common/listing-details/PropertyDetails";
 import PropertyItem from "../common/listing-details/PropertyItem";
@@ -64,14 +63,6 @@ const DetailsContent = () => {
         </div>
       </div>
       {/* End .location_area */}
-
-      <div className="application_statics mt30">
-        <h4 className="mb30">Floor plans</h4>
-        <div className="faq_according style2">
-          <FloorPlans />
-        </div>
-      </div>
-      {/* End .floor_plane */}
 
       <div className="shop_single_tab_content style2 mt30">
         <PropertyVideo />
