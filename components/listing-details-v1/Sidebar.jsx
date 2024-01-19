@@ -1,4 +1,4 @@
-import Categorie from "../common/listing/Categorie";
+
 import ListingCreator from "../common/listing/ListingCreator";
 import FeaturedListings from "../common/listing/FeaturedListings";
 import FeatureProperties from "../common/listing/FeatureProperties";
@@ -24,16 +24,7 @@ const Sidebar = () => {
       </div>
       {/* End .Featured Properties */}
 
-      <div className="terms_condition_widget">
-        <h4 className="title">Categories Property</h4>
-        <div className="widget_list">
-          <ul className="list_details">
-            <Categorie />
-          </ul>
-        </div>
-      </div>
-      {/* End .Categories Property */}
-
+    
       <div className="sidebar_feature_listing">
         <h4 className="title">Recently Viewed</h4>
         <FeaturedListings />
