@@ -3,7 +3,6 @@ import Attachments from "../common/listing-details/Attachments";
 import FloorPlans from "../common/listing-details/FloorPlans";
 import PropertyDescriptions from "../common/listing-details/PropertyDescriptions";
 import PropertyDetails from "../common/listing-details/PropertyDetails";
-import PropertyFeatures from "../common/listing-details/PropertyFeatures";
 import PropertyItem from "../common/listing-details/PropertyItem";
 import PropertyLocation from "../common/listing-details/PropertyLocation";
 import PropertyVideo from "../common/listing-details/PropertyVideo";
@@ -52,17 +51,7 @@ const DetailsContent = () => {
       </div>
       {/* End .property_attachment_area */}
 
-      <div className="application_statics mt30">
-        <div className="row">
-          <div className="col-lg-12">
-            <h4 className="mb10">Features</h4>
-          </div>
-          {/* End .col */}
 
-          <PropertyFeatures />
-        </div>
-      </div>
-      {/* End .feature_area */}
 
       <div className="application_statics mt30" id="tab-3">
         <h4 className="mb30">
