@@ -177,9 +177,6 @@
 	.blog_post_home2.one .details {
 		margin-top: 100px;
 	}
-	.about_home3 .partners_thumb_list li {
-		margin-right: 30px;
-	}
 	.hvr_img_box {
 		padding: 40px 25px;
 	}
@@ -199,9 +196,6 @@
 	.logo-widget.home6 span {
 		font-size: 18px;
 		vertical-align: middle;
-	}
-	.about_home6 .partners_thumb_list li {
-		margin-right: 20px;
 	}
 	.blog_post_home6_date .post_grid {
 		padding: 30px 10px 30px 20px;
@@ -678,9 +672,6 @@
 	.home3_about_icon_box,
 	.home3_about_icon_box.home8 {
 		padding: 30px;
-	}
-	.about_home3 .partners_thumb_list li {
-		margin-right: 15px;
 	}
 	.cart_btnes.home4 a.btn.cart_btn {
 		margin-top: 15px;
@@ -1591,11 +1582,6 @@
 	.main-title.home6 {
 		margin-bottom: 30px;
 		text-align: center;
-	}
-	.about_home6 .partners_thumb_list {
-		margin-top: 0;
-		text-align: center;
-		margin-bottom: 40px;
 	}
 	.footer_social_widget.home6 {
 		margin-top: 0;
@@ -2887,10 +2873,6 @@
 	}
 	.search_box_home4 .header_search_widget .mailchimp_form button {
 		right: 10px;
-	}
-	.about_home3 .partners_thumb_list li {
-		width: 40%;
-		margin-bottom: 30px;
 	}
 	.logo-widget.home6 {
 		margin-left: 20%;

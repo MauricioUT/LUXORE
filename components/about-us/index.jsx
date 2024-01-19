@@ -1,7 +1,6 @@
 import Footer from "../common/footer/Footer";
 import Header from "../common/header/DefaultHeader";
 import MobileMenu from "../common/header/MobileMenu";
-import Partners from "../common/Partners";
 import WhyChoose from "../common/WhyChoose";
 import Testimonial from "../home-7/Testimonial";
 import BreadCrumbBanner from "./BreadCrumbBanner";
@@ -95,24 +94,6 @@ const index = () => {
           </div>
         </div>
       </section>
-
-      {/* <!-- Our Partners --> */}
-      <section id="our-partners" className="our-partners">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center">
-                <h2>Our Partners</h2>
-                <p>We only work with the best companies around the globe</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <Partners />
-          </div>
-        </div>
-      </section>
-
       {/* <!-- Our Footer --> */}
       <section className="footer_one">
         <div className="container">
