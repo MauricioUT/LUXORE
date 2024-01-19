@@ -3,7 +3,6 @@ import PropertyDescriptions from "../common/listing-details/PropertyDescriptions
 import PropertyDetails from "../common/listing-details/PropertyDetails";
 import PropertyItem from "../common/listing-details/PropertyItem";
 import PropertyLocation from "../common/listing-details/PropertyLocation";
-import PropertyVideo from "../common/listing-details/PropertyVideo";
 import WalkScore from "../common/listing-details/WalkScore";
 import WhatsNearby from "../common/listing-details/WhatsNearby";
 
@@ -53,11 +52,6 @@ const DetailsContent = () => {
         </div>
       </div>
       {/* End .location_area */}
-
-      <div className="shop_single_tab_content style2 mt30">
-        <PropertyVideo />
-      </div>
-      {/* End property-video  */}
 
       <div className="walkscore_area mt30">
         <WalkScore />
