@@ -25,10 +25,6 @@ const HeaderMenuContent = ({ float = "" }) => {
           routerPath: "/listing-details-v1",
         },
         {
-          name: "Single V2",
-          routerPath: "/listing-details-v2",
-        },
-        {
           name: "Single V4",
           routerPath: "/listing-details-v4",
         },
