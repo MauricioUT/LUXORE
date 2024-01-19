@@ -4054,8 +4054,15 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
     padding: 120px 0 120px;
   }
 }
-.home3_home_content h1 {
+.home3_home_content h1  {
   font-size: 55px;
+  font-family: "Nunito";
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.home3_home_content h2  {
   font-family: "Nunito";
   color: #ffffff;
   font-weight: bold;

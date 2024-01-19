@@ -9,15 +9,18 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1000px) {
 	.h1ads_1st_list.half_style li.custome_fields_half:nth-child(2) {
 		width: 65%;
 	}
 	.bg-img3 {
 		border-radius: 0px;
+		background-image: none !important;
+		background: #000000 !important;
 	}
 	.home-three:before {
 		border-radius: 0px;
+		background-color: #000000 !important;
 	}
 }
 
