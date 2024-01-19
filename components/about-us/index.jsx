@@ -1,4 +1,3 @@
-import CallToAction from "../common/CallToAction";
 import Footer from "../common/footer/Footer";
 import Header from "../common/header/DefaultHeader";
 import MobileMenu from "../common/header/MobileMenu";
@@ -111,13 +110,6 @@ const index = () => {
           <div className="row">
             <Partners />
           </div>
-        </div>
-      </section>
-
-      {/* <!-- Start Call to Action --> */}
-      <section className="start-partners bgc-thm pt50 pb50">
-        <div className="container">
-          <CallToAction />
         </div>
       </section>
 
