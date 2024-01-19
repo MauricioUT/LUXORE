@@ -1,6 +1,5 @@
 
 import "photoswipe/dist/photoswipe.css";
-import CopyrightFooter from "@/components/common/footer/CopyrightFooter";
 import Footer from "@/components/common/footer/Footer";
 import Header from "@/components/common/header/DefaultHeader";
 import MobileMenu from "@/components/common/header/MobileMenu";
@@ -71,12 +70,6 @@ const ListingDynamicDetailsV2 = ({params}) => {
         </div>
       </section>
 
-      {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area pt40 pb40">
-        <div className="container">
-          <CopyrightFooter />
-        </div>
-      </section>
     </>
   );
 };
