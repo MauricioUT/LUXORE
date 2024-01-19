@@ -3,7 +3,6 @@ import Header from "./Header";
 import Footer from "../common/footer/Footer";
 import Hero from "./Hero";
 import FilterTopBar from "../common/listing/FilterTopBar";
-import Pagination from "../common/blog/Pagination";
 import FeaturedItem from "./FeaturedItem";
 
 const Home3 = () => {
