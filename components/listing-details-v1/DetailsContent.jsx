@@ -1,5 +1,4 @@
 import AdditionalDetails from "../common/listing-details/AdditionalDetails";
-import Attachments from "../common/listing-details/Attachments";
 import PropertyDescriptions from "../common/listing-details/PropertyDescriptions";
 import PropertyDetails from "../common/listing-details/PropertyDetails";
 import PropertyItem from "../common/listing-details/PropertyItem";
@@ -40,17 +39,7 @@ const DetailsContent = () => {
           <AdditionalDetails />
         </div>
       </div>
-      {/* End .additional_details */}
-
-      <div className="property_attachment_area">
-        <h4 className="mb30">Property Attachments</h4>
-        <div className="iba_container style2">
-          <Attachments />
-        </div>
-      </div>
-      {/* End .property_attachment_area */}
-
-  
+      {/* End .additional_details */} 
 
       <div className="application_statics mt30">
         <h4 className="mb30">
