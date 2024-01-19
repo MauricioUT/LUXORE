@@ -38,13 +38,6 @@ const TermsCondions = () => {
     },
   ];
 
-  const navigationList = [
-    { id: 1, routeLink: "#", name: "Welcome Text" },
-    { id: 2, routeLink: "#", name: "Our Terms" },
-    { id: 3, routeLink: "#", name: "Conditions" },
-    { id: 4, routeLink: "#", name: "Your Privacy" },
-    { id: 5, routeLink: "#", name: "Informations We Collect" },
-  ];
 
   return (
     <div className="row">
@@ -60,24 +53,6 @@ const TermsCondions = () => {
         </div>
       </div>
       {/* End .col */}
-
-      <div className="col-lg-4 col-xl-4">
-        <div className="terms_condition_widget">
-          <h4 className="title">Navigation</h4>
-          <div className="widget_list">
-            <ul className="list_details">
-              {navigationList.map((list) => (
-                <li key={list.id}>
-                  <Link href={list.routeLink}>
-                    <i className="fa fa-caret-right mr10"></i>
-                    {list.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

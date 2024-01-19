@@ -19,9 +19,12 @@ const Testimonial = () => {
       <Slider {...settings} arrows={false}>
         {testimonials.slice(0, 5).map((item) => (
           <div className="item" key={item.id}>
-            <div className="testimonial_grid">
+            <div className="testimonial_grid style2">
               <div className="thumb">
-                <Image width={95} height={95} src={item.img} alt="1.jpg" />
+                <Image width={104} height={104} src={item.img} alt="1.jpg" />
+                <div className="tg_quote">
+                  <span className="fa fa-quote-left"></span>
+                </div>
               </div>
               <div className="details">
                 <h4>{item.name}</h4>

@@ -2,7 +2,7 @@ import Footer from "../common/footer/Footer";
 import Header from "../common/header/DefaultHeader";
 import MobileMenu from "../common/header/MobileMenu";
 import WhyChoose from "../common/WhyChoose";
-import Testimonial from "../home-7/Testimonial";
+import Testimonial from "../common/Testimonial";
 import BreadCrumbBanner from "./BreadCrumbBanner";
 import Team from "./Team";
 import OurMission from "./OurMission";
