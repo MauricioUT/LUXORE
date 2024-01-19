@@ -1,5 +1,4 @@
 import ListingCreator from "../common/listing/ListingCreator";
-import FeaturedListings from "../common/listing/FeaturedListings";
 
 const Sidebar = () => {
   return (
@@ -17,11 +16,6 @@ const Sidebar = () => {
 
 
 
-      <div className="sidebar_feature_listing">
-        <h4 className="title">Recently Viewed</h4>
-        <FeaturedListings />
-      </div>
-      {/* End .Recently Viewed */}
     </>
   );
 };
