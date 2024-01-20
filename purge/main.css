@@ -2854,6 +2854,15 @@ a.btn.btn_error {
   height: 450px;
 }
 
+.how-work-header-img{
+  background-attachment: scroll;
+  background-image: url("../images/luxore/how-work-imag-header.webp");
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px; 
+}
+
 section {
   padding: 60px 0;
   position: relative;

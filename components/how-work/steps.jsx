@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const OurHistory = () => {
+const Steps = () => {
 
 
   return (

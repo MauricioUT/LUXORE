@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import HowWork from "@/components/how-work";
 
 export const metadata = {
-  title: 'Quienes somos',
+  title: 'como funcionan',
 }
 
 const index = () => {

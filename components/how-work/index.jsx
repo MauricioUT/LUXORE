@@ -1,32 +1,32 @@
 import Footer from "../common/footer/Footer";
-import Header from "../common/header/DefaultHeader";
+import Header from "../common/header/Header";
 import MobileMenu from "../common/header/MobileMenu";
 import WhyChoose from "../common/WhyChoose";
-import Testimonial from "../common/Testimonial";
-import BreadCrumbBanner from "./BreadCrumbBanner";
-import Team from "./Team";
+import BreadCrumbBanner from "../common/header/BreadCrumbBanner";
 import OurMissionVission from "./ourMissionVision";
-import OurHistory from "./ourHistory"
+import Steps from "./steps"
 
 const index = () => {
   return (
     <>
-      {/* <!-- Main Header Nav --> */}
-      <Header />
-
+     {/* <!-- Main Header Nav --> */}
+     <Header />
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
       {/* <!-- Inner Page Breadcrumb --> */}
-      <BreadCrumbBanner />
-
-      {/* <!-- About Text Content --> */}
+      <BreadCrumbBanner clase="how-work-header-img" 
+      headerMsg="¿Cómo funciona la compra y venta de bienes raíces?"
+      />
+      {/* <!-- Our Contact --> */}
  
- {/* <!-- History --> */}
+ {/* <!-- how do they work --> */}
  <section className="about-section">
         <div className="container">
           <div className="row">
-            <OurHistory />
+            <h2 className="text-center">Bienes Raíces- ¿Cómo Funcionan?</h2>
+          </div>
+          <div className="row">
+            <Steps />
           </div>
           {/* End .row */}
 
@@ -49,49 +49,7 @@ const index = () => {
           {/* End .row */}
         </div>
       </section>
-      
 
-      {/* <!-- Our Team --> */}
-      <section className="our-team bgc-f7">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center">
-                <h2>Our Team</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="team_slider gutter-x15">
-                <Team />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* <!-- Our Testimonials --> */}
-      <section className="our-testimonials">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center mb20">
-                <h2>Testimonials</h2>
-                <p>Here could be a nice sub title</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="testimonial_grid_slider style2 gutter-x15">
-                <Testimonial />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* <!-- Our Footer --> */}
       <section className="footer_one">
         <div className="container">

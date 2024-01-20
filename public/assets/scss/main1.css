@@ -17311,6 +17311,15 @@ legend span {
   height: 450px;
 }
 
+.how-work-header-img{
+  background-attachment: scroll;
+  background-image: url("../images/luxore/how-work-imag-header.webp");
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px; 
+}
+
 .bg-img4 {
   background-attachment: scroll;
   background-image: url("../images/background/4.jpg");
