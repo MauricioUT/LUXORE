@@ -8850,6 +8850,35 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
   margin-bottom: 40px;
 }
 
+/*==Page How they work ==*/
+.how-work-section h2{
+  margin-bottom: 50px;
+}
+
+.how-work-section .main-title{
+  margin-top: 50px;
+  font-size: 16px;
+}
+
+.how-work-content p.large {
+  color: #484848;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 45px;
+}
+
+.how-work-content p {
+  font-size: 14px;
+  color: #484848;
+  line-height: 1.714;
+  margin-bottom: 40px;
+}
+
+.how-work-content h4 {
+  margin-bottom: 20px;
+}
+
 ul.ab_counting li {
   margin-right: 30px !important;
 }

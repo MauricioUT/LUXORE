@@ -3073,6 +3073,49 @@ margin-top: -20px;
   height: 50px;
 }
 
+/*how they work page*/
+.icon-service-5 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/icon-service-5.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+
+.icon-service-6 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/icon-service-6.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+.icon-service-7 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/icon-service-7.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+.icon-service-8 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/icon-service-8.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+.icon-service-9 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/icon-service-9.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+
 
 .backGroudAboutUs{
   background-image: url(../images/luxore/aboutUsHeader.jpg) !important;
@@ -3285,6 +3328,34 @@ text-align: center;
 }
 
 
+
+/*==Page How they work ==*/
+.how-work-section h2{
+  margin-bottom: 50px;
+}
+
+.how-work-section .main-title{
+  margin-top: 50px;
+  font-size: 16px;
+}
+
+.how-work-content p.large {
+  color: #484848;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.how-work-content p {
+  font-size: 14px;
+  color: #484848;
+  line-height: 1.714;
+  text-align: justify;
+}
+
+.how-work-content h4 {
+  margin-bottom: 20px;
+}
 
 .team_member {
   background-color: #ffffff;

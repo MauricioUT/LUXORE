@@ -1,26 +1,25 @@
 import Footer from "../common/footer/Footer";
 import Header from "../common/header/Header";
 import MobileMenu from "../common/header/MobileMenu";
-import WhyChoose from "../common/WhyChoose";
 import BreadCrumbBanner from "../common/header/BreadCrumbBanner";
-import OurMissionVission from "./ourMissionVision";
+import Stages from "./stages";
 import Steps from "./steps"
 
 const index = () => {
   return (
     <>
-     {/* <!-- Main Header Nav --> */}
-     <Header />
+      {/* <!-- Main Header Nav --> */}
+      <Header />
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
       {/* <!-- Inner Page Breadcrumb --> */}
-      <BreadCrumbBanner clase="how-work-header-img" 
-      headerMsg="¿Cómo funciona la compra y venta de bienes raíces?"
+      <BreadCrumbBanner clase="how-work-header-img"
+        headerMsg="¿Cómo funciona la compra y venta de bienes raíces?"
       />
       {/* <!-- Our Contact --> */}
- 
- {/* <!-- how do they work --> */}
- <section className="about-section">
+
+      {/* <!-- how do they work --> */}
+      <section className="how-work-section">
         <div className="container">
           <div className="row">
             <h2 className="text-center">Bienes Raíces- ¿Cómo Funcionan?</h2>
@@ -30,23 +29,18 @@ const index = () => {
           </div>
           {/* End .row */}
 
-          <div className="row ">
-            <div className="col-lg-6 offset-lg-3">
+          <div className="row">
+            <div className="col-lg-7 offset-lg-3">
               <div className="main-title text-center">
-                <h2>¿Por qué nosotros?</h2>
-                <p>Brindamos un servicio completo en cada paso.</p>
+                <h4>La compraventa de una propiedad se realiza en 5 etapas, aquí te orientamos para que estés en todo momento seguro del proceso:</h4>
               </div>
             </div>
           </div>
           {/* End .row */}
 
-         <div  className="row">
-          <OurMissionVission/>
-         </div>
           <div className="row">
-            <WhyChoose />
+            <Stages />
           </div>
-          {/* End .row */}
         </div>
       </section>
 
