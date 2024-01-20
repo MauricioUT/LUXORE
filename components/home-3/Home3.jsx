@@ -1,5 +1,5 @@
 import MobileMenu from "../common/header/MobileMenu";
-import Header from "./Header";
+import Header from "../common/header/Header";
 import Footer from "../common/footer/Footer";
 import Hero from "./Hero";
 import FilterTopBar from "../common/listing/FilterTopBar";

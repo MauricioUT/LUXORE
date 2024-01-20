@@ -10,7 +10,21 @@ const Form = () => {
               className="form-control"
               required="required"
               type="text"
-              placeholder="Name"
+              placeholder="Nombre(s)"
+            />
+          </div>
+        </div>
+        {/* End .col */}
+
+        <div className="col-md-6">
+          <div className="form-group">
+            <input
+              id="form_name"
+              name="form_name"
+              className="form-control"
+              required="required"
+              type="text"
+              placeholder="Apellido(s)"
             />
           </div>
         </div>
@@ -38,7 +52,7 @@ const Form = () => {
               className="form-control required phone"
               required="required"
               type="phone"
-              placeholder="Phone"
+              placeholder="Teléfono"
             />
           </div>
         </div>
@@ -52,7 +66,7 @@ const Form = () => {
               className="form-control required"
               required="required"
               type="text"
-              placeholder="Subject"
+              placeholder="Monto a invertir"
             />
           </div>
         </div>
@@ -66,14 +80,14 @@ const Form = () => {
               className="form-control required"
               rows="8"
               required="required"
-              placeholder="Your Message"
+              placeholder="Mensaje adicional"
             ></textarea>
           </div>
           {/* End .col */}
 
           <div className="form-group mb0">
             <button type="submit" className="btn btn-lg btn-thm">
-              Send Message
+              Agendar Cita
             </button>
           </div>
           {/* End button submit */}
