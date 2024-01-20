@@ -1,20 +1,21 @@
 import Footer from "../common/footer/Footer";
-import Header from "../common/header/DefaultHeader";
+import Header from "../common/header/Header";
 import MobileMenu from "../common/header/MobileMenu";
-import BreadCrumbBanner from "./BreadCrumbBanner";
+import BreadCrumbBanner from "../common/header/BreadCrumbBanner";
 import FaqContent from "./FaqContent";
 
 const index = () => {
   return (
     <>
-      {/* <!-- Main Header Nav --> */}
-      <Header />
-
+   {/* <!-- Main Header Nav --> */}
+   <Header />
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
       {/* <!-- Inner Page Breadcrumb --> */}
-      <BreadCrumbBanner />
+      <BreadCrumbBanner clase="backGroudFaq" 
+      headerMsg="Preguntas Frecuentes"
+      subHeaderMsg=""/>
+      {/* <!-- About Text Content --> */}
 
       {/* <!-- Our FAQ --> */}
       <section className="our-faq bgc-f7">
@@ -22,7 +23,7 @@ const index = () => {
           <div className="row">
             <div className="col-lg-6 offset-lg-3">
               <div className="main-title text-center">
-                <h1 className="mt0">Preguntas Frecunetes</h1>
+                <h2 className="mt0">Listado de preguntas</h2>
               </div>
             </div>
           </div>

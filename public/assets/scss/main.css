@@ -3067,6 +3067,7 @@ margin-top: -20px;
 .backGroudAboutUs{
   background-image: url(../images/luxore/aboutUsHeader.jpg) !important;
   /* margin-top: 75px; */
+  height: 550px;
 }
 
 .backRealState{
@@ -3078,6 +3079,16 @@ margin-top: -20px;
   background-size: cover;
 
 }
+
+.backGroudFaq{
+  background-image: url(../images/luxore/backFaq.jpg) !important;
+  /* margin-top: 75px; */
+  background-position: right 45% top 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+}
+
 
 .breadcrumb_title_center{
 text-align: center;
