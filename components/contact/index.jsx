@@ -1,22 +1,20 @@
-import Image from "next/image";
+
 import Footer from "../common/footer/Footer";
 import Header from "../common/header/Header";
 import MobileMenu from "../common/header/MobileMenu";
-import BreadCrumbBanner from "./BreadCrumbBanner";
+import BreadCrumbBanner from "../common/header/BreadCrumbBanner";
 import Form from "./Form";
-
 const index = () => {
   return (
     <>
       {/* <!-- Main Header Nav --> */}
       <Header />
-
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
       {/* <!-- Inner Page Breadcrumb --> */}
-      <BreadCrumbBanner />
-
+      <BreadCrumbBanner clase="contact-header-img" 
+      headerMsg="Contacto"
+      subHeaderMsg="Déjanos tus datos y te asesoramos"/>
       {/* <!-- Our Contact --> */}
       <section className="our-contact pb0 bgc-f7">
         <div className="container">
@@ -33,13 +31,11 @@ const index = () => {
               </div>
             </div>
             {/* End .col */}
-
           </div>
           {/* End .row */}
         </div>
         {/* End .container */}
       </section>
-
 
       {/* <!-- Our Footer --> */}
       <section className="footer_one">
@@ -52,5 +48,4 @@ const index = () => {
     </>
   );
 };
-
 export default index;
