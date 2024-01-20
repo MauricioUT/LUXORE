@@ -22,7 +22,7 @@ const index = () => {
           <div className="row">
             <div className="col-lg-6 offset-lg-3">
               <div className="main-title text-center">
-                <h2 className="mt0">Frequently Asked Questions</h2>
+                <h1 className="mt0">Preguntas Frecunetes</h1>
               </div>
             </div>
           </div>

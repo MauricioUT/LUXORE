@@ -5,14 +5,14 @@ const FaqContent = () => {
         <div className="card">
           <div id="headingOne">
             <button
-              className="btn btn-link accordion-button collapsed"
+              className="btn btn-link accordion-button collapsed "
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
               aria-expanded="false"
               aria-controls="collapseOne"
             >
-              Contrary to popular belief, Lorem Ipsum is not simply
+            ¿Cuáles son los métodos de pago aceptados para comprar una propiedad en Luxore?
             </button>
           </div>
           <div
@@ -23,13 +23,7 @@ const FaqContent = () => {
           >
             <div className="card-body">
               <p>
-                Maecenas quis viverra metus, et efficitur ligula. Nam congue
-                augue et ex congue, sed luctus lectus congue. Integer convallis
-                condimentum sem. Duis elementum tortor eget condimentum tempor.
-                Praesent sollicitudin lectus ut pharetra pulvinar. Donec et
-                libero ligula. Vivamus semper at orci at placerat.Placeat Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Quod libero
-                amet, laborum qui nulla quae alias tempora.
+              Cheques certificados, transferencias bancarias y financiamiento a través de un préstamo hipotecario (FOVISSSTE/INFONAVIT).
               </p>
             </div>
           </div>
@@ -43,27 +37,21 @@ const FaqContent = () => {
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              There are many variations of passages of Lorem
+            ¿Qué es un título de propiedad?
             </button>
           </div>
           <div
             id="collapseTwo"
-            className="accordion-collapse collapse show"
+            className="accordion-collapse collapse "
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
             <div className="card-body">
               <p>
-                Maecenas quis viverra metus, et efficitur ligula. Nam congue
-                augue et ex congue, sed luctus lectus congue. Integer convallis
-                condimentum sem. Duis elementum tortor eget condimentum tempor.
-                Praesent sollicitudin lectus ut pharetra pulvinar. Donec et
-                libero ligula. Vivamus semper at orci at placerat.Placeat Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Quod libero
-                amet, laborum qui nulla quae alias tempora.
+              Es el documento legal que demuestra la propiedad de una persona sobre una propiedad. Es importante porque garantiza que el vendedor tiene derecho a vender la propiedad y que está libre de gravámenes o reclamaciones legales. Antes de comprar una propiedad, se realiza una búsqueda de título para verificar su validez.
               </p>
             </div>
           </div>
@@ -80,7 +68,7 @@ const FaqContent = () => {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Model sentence structures, to generate
+              ¿Que es un crédito hipotecario pre-aprobado?
             </button>
           </div>
           <div
@@ -91,13 +79,7 @@ const FaqContent = () => {
           >
             <div className="card-body">
               <p>
-                Maecenas quis viverra metus, et efficitur ligula. Nam congue
-                augue et ex congue, sed luctus lectus congue. Integer convallis
-                condimentum sem. Duis elementum tortor eget condimentum tempor.
-                Praesent sollicitudin lectus ut pharetra pulvinar. Donec et
-                libero ligula. Vivamus semper at orci at placerat.Placeat Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Quod libero
-                amet, laborum qui nulla quae alias tempora.
+              Es una carta de un prestamista que indica que has sido pre-aprobado para un préstamo hipotecario en función de tu situación financiera y crédito. Puede ayudarte a determinar cuánto puedes gastar en una propiedad y demostrar a los vendedores que eres un comprador serio.
               </p>
             </div>
           </div>
@@ -114,7 +96,7 @@ const FaqContent = () => {
               aria-expanded="false"
               aria-controls="collapseFour"
             >
-              The first line of Lorem Ipsum
+              ¿Que es el avalúo de un inmueble?
             </button>
           </div>
           <div
@@ -125,13 +107,7 @@ const FaqContent = () => {
           >
             <div className="card-body">
               <p>
-                Maecenas quis viverra metus, et efficitur ligula. Nam congue
-                augue et ex congue, sed luctus lectus congue. Integer convallis
-                condimentum sem. Duis elementum tortor eget condimentum tempor.
-                Praesent sollicitudin lectus ut pharetra pulvinar. Donec et
-                libero ligula. Vivamus semper at orci at placerat.Placeat Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Quod libero
-                amet, laborum qui nulla quae alias tempora.
+              Es una evaluación realizada por un profesional independiente para determinar el valor de mercado de una propiedad. Los prestamistas hipotecarios requieren un avalúo para asegurarse de que el valor de la propiedad sea suficiente para respaldar el préstamo hipotecario.
               </p>
             </div>
           </div>
@@ -148,7 +124,7 @@ const FaqContent = () => {
               aria-expanded="false"
               aria-controls="collapseFive"
             >
-              Finibus Bonorum et Malorum by Cicero are also
+             ¿Por qué contratar los servicios de Luxore?
             </button>
           </div>
           <div
@@ -159,13 +135,7 @@ const FaqContent = () => {
           >
             <div className="card-body">
               <p>
-                Maecenas quis viverra metus, et efficitur ligula. Nam congue
-                augue et ex congue, sed luctus lectus congue. Integer convallis
-                condimentum sem. Duis elementum tortor eget condimentum tempor.
-                Praesent sollicitudin lectus ut pharetra pulvinar. Donec et
-                libero ligula. Vivamus semper at orci at placerat.Placeat Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Quod libero
-                amet, laborum qui nulla quae alias tempora.
+              Contamos con agentes inmobiliarios con más de 12 años de experiencia en el mercado. Además nuestro interés principal es la rapidez y claridad en el proceso de compra y venta de propiedad de tu elección.
               </p>
             </div>
           </div>
@@ -182,7 +152,7 @@ const FaqContent = () => {
               aria-expanded="false"
               aria-controls="collapseSix"
             >
-              Letraset sheets containing Lorem Ipsum passages
+             ¿Puedo vender mi propiedad con Luxore?
             </button>
           </div>
           <div
@@ -193,13 +163,7 @@ const FaqContent = () => {
           >
             <div className="card-body">
               <p>
-                Maecenas quis viverra metus, et efficitur ligula. Nam congue
-                augue et ex congue, sed luctus lectus congue. Integer convallis
-                condimentum sem. Duis elementum tortor eget condimentum tempor.
-                Praesent sollicitudin lectus ut pharetra pulvinar. Donec et
-                libero ligula. Vivamus semper at orci at placerat.Placeat Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Quod libero
-                amet, laborum qui nulla quae alias tempora.
+              Claro, podemos agregar tu inmueble a nuestro catálogo, comunícate con nosotros para platicarte más del proceso.
               </p>
             </div>
           </div>
@@ -216,7 +180,7 @@ const FaqContent = () => {
               aria-expanded="false"
               aria-controls="collapseSeven"
             >
-              Model sentence structures, to generate
+             ¿Que es una escritura pública?
             </button>
           </div>
           <div
@@ -227,13 +191,7 @@ const FaqContent = () => {
           >
             <div className="card-body">
               <p>
-                Maecenas quis viverra metus, et efficitur ligula. Nam congue
-                augue et ex congue, sed luctus lectus congue. Integer convallis
-                condimentum sem. Duis elementum tortor eget condimentum tempor.
-                Praesent sollicitudin lectus ut pharetra pulvinar. Donec et
-                libero ligula. Vivamus semper at orci at placerat.Placeat Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Quod libero
-                amet, laborum qui nulla quae alias tempora.
+              Es un documento legal que transfiere la propiedad de un vendedor a un comprador. Debe ser firmada y notariada para que sea legalmente válida.
               </p>
             </div>
           </div>
@@ -250,7 +208,7 @@ const FaqContent = () => {
               aria-expanded="false"
               aria-controls="collapseEight"
             >
-              The first line of Lorem Ipsum
+            ¿Que es la plusvalía de un inmueble?
             </button>
           </div>
           <div
@@ -261,13 +219,7 @@ const FaqContent = () => {
           >
             <div className="card-body">
               <p>
-                Maecenas quis viverra metus, et efficitur ligula. Nam congue
-                augue et ex congue, sed luctus lectus congue. Integer convallis
-                condimentum sem. Duis elementum tortor eget condimentum tempor.
-                Praesent sollicitudin lectus ut pharetra pulvinar. Donec et
-                libero ligula. Vivamus semper at orci at placerat.Placeat Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Quod libero
-                amet, laborum qui nulla quae alias tempora.
+              Se refiere al aumento en el valor de una propiedad con el tiempo. Es un indicador de la inversión exitosa en bienes raíces y puede generar ganancias cuando vendes la propiedad.
               </p>
             </div>
           </div>
@@ -284,7 +236,7 @@ const FaqContent = () => {
               aria-expanded="false"
               aria-controls="collapseNine"
             >
-              Finibus Bonorum et Malorum by Cicero are also
+            ¿Qué es protección contra la inflación?
             </button>
           </div>
           <div
@@ -295,13 +247,7 @@ const FaqContent = () => {
           >
             <div className="card-body">
               <p>
-                Maecenas quis viverra metus, et efficitur ligula. Nam congue
-                augue et ex congue, sed luctus lectus congue. Integer convallis
-                condimentum sem. Duis elementum tortor eget condimentum tempor.
-                Praesent sollicitudin lectus ut pharetra pulvinar. Donec et
-                libero ligula. Vivamus semper at orci at placerat.Placeat Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Quod libero
-                amet, laborum qui nulla quae alias tempora.
+              Los bienes raíces mantener su valor con el tiempo y, a menudo, superan la inflación. Esto puede ayudar a proteger tu inversión de la pérdida de poder adquisitivo.
               </p>
             </div>
           </div>
@@ -318,7 +264,7 @@ const FaqContent = () => {
               aria-expanded="false"
               aria-controls="collapseTen"
             >
-              Letraset sheets containing Lorem Ipsum passages
+             ¿Qué tengo que hacer para comenzar a invertir?
             </button>
           </div>
           <div
@@ -329,13 +275,37 @@ const FaqContent = () => {
           >
             <div className="card-body">
               <p>
-                Maecenas quis viverra metus, et efficitur ligula. Nam congue
-                augue et ex congue, sed luctus lectus congue. Integer convallis
-                condimentum sem. Duis elementum tortor eget condimentum tempor.
-                Praesent sollicitudin lectus ut pharetra pulvinar. Donec et
-                libero ligula. Vivamus semper at orci at placerat.Placeat Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Quod libero
-                amet, laborum qui nulla quae alias tempora.
+              Lo primero que debes hacer hacer es llenar el formulario de contacto para agendar una cita.
+
+Nuestros ejecutivos te explicaran el proceso y aclararan todas las dudas que tengas.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* End .card */}
+
+        <div className="card">
+          <div id="headingTen">
+            <button
+              className="btn btn-link accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseeleven"
+              aria-expanded="false"
+              aria-controls="collapseeleven"
+            >
+           ¿Tengo el control sobre mi inversión?
+            </button>
+          </div>
+          <div
+            id="collapseeleven"
+            className="accordion-collapse collapse"
+            aria-labelledby="headingTen"
+            data-bs-parent="#accordionExample"
+          >
+            <div className="card-body">
+              <p>
+              Sí, al invertir en bienes raíces directamente, tienes control total. Puedes tomar decisiones sobre la propiedad y su gestión.
               </p>
             </div>
           </div>
