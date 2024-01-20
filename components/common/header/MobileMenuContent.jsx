@@ -56,8 +56,8 @@ const pages = [
 
 
 const services = [
-  { id: 1, name: "Agencia inmobiliaria", routerPath: "/about-us" },
-  { id: 2, name: "Invierte en remates hipotecarios", routerPath: "/faq" },
+  { id: 1, name: "Agencia inmobiliaria", routerPath: "/real-state" },
+  { id: 2, name: "Invierte en remates hipotecarios", routerPath: "/goal-attempt" },
 ]
 
 const realState = [

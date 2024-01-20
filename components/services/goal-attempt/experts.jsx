@@ -4,7 +4,7 @@ const Experts = ({ style = "" }) => {
 
           <div className="row" key={1}>
             <div className="col-md-12 col-lg-12 col-xl-12 text-center">
-              <h2>Somos expertos en Compra y Venta de Inmuebles</h2>
+              <h2>Invierte en el Sector Inmobiliario</h2>
               <h4>Hacemos que tu inversión rinda mucho más.</h4>
             </div>
                 {/* Contenedor 1 */}
@@ -16,7 +16,7 @@ const Experts = ({ style = "" }) => {
                       </div>
                       <div className="details text-center mt30">
                         <h4>Respaldo bancario</h4>
-                        <p>Te asesoramos para la elección de la institución bancaria que podría facilitarte la adquisición del inmueble</p>
+                        <p>Todos los pagos realizados son directamente a la institución bancaria correspondiente o al poseedor de los derechos de la propiedad.</p>
                       </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ const Experts = ({ style = "" }) => {
                         </div>
                         <div className="details  text-center mt30 p15">
                           <h4>Invierte de forma segura</h4>
-                          <p>Transparencia en el proceso, recibirás asesoría personalizada de nuestros especialistas, quienes te darán certeza jurídica para realizar la operación.</p>
+                          <p>Transparencia en el proceso, recibirás seguimiento personalizado de nuestros especialistas, se aseguran de que la inversión se viable antes de proceder al pago.</p>
                         </div>
                       </div>
 
@@ -43,14 +43,10 @@ const Experts = ({ style = "" }) => {
                         </div>
                         <div className="details text-center mt30">
                           <h4>Disfruta de tu inmueble</h4>
-                          <p>Con Luxore tu patrimonio es una realidad, la garantía de nuestros servicios es la entera satisfacción de nuestros clientes. </p>
+                          <p>Con Luxore tu patrimonio es una realidad, la garantía de nuestros servicios son cientos de casos de éxito. </p>
                         </div>
                       </div>
                 </div>
-
-                <div className="text-center">
-              <p>* Porcentaje promedio, cada operación es independiente y puede variar.</p>
-            </div>
           </div>
       </>
     );

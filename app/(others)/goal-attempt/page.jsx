@@ -1,14 +1,14 @@
 import dynamic from "next/dynamic";
-import RealState from "@/components/services/real-state";
+import GoalAttemp from "@/components/services/goal-attempt";
 
 export const metadata = {
-  title: 'Nuestros servicios',
+  title: 'Remates hipotecarios',
 }
 
 const index = () => {
   return (
     <>
-      <RealState />
+      <GoalAttemp />
     </>
   );
 };
