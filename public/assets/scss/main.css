@@ -2857,7 +2857,7 @@ a.btn.btn_error {
 .contact-header-img {
   background-attachment: scroll;
   background-image: url("../images/luxore/contactHeader.webp");
-  background-position: center;
+  background-position: inherit;
   background-repeat: no-repeat;
   background-size: cover;
   height: 450px;
