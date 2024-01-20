@@ -1,21 +1,20 @@
 import Footer from "../../common/footer/Footer";
-import Header from "../../common/header/DefaultHeader";
+import Header from "../../common/header/Header";
 import MobileMenu from "../../common/header/MobileMenu";
-import BreadCrumbBanner from "./BreadCrumbBanner";
+import BreadCrumbBanner from "../../common/header/BreadCrumbBanner";
 import  OurServices from "./our-services"
 import Experts  from "./experts"
 const index = () => {
   return (
     <>
-      {/* <!-- Main Header Nav --> */}
-      <Header />
-
+   {/* <!-- Main Header Nav --> */}
+   <Header />
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-
       {/* <!-- Inner Page Breadcrumb --> */}
-      <BreadCrumbBanner />
-
+      <BreadCrumbBanner clase="backRealState" 
+      headerMsg="LUXORE TE BRINDA LA SOLUCIÓN A TUS NECESIDADES Y MAXIMIZA TU INVERSIÓN"
+      subHeaderMsg=""/>
       {/* <!-- About Text Content --> */}
  
  {/* <!-- History --> */}

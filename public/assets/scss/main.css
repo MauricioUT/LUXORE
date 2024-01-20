@@ -3066,12 +3066,12 @@ margin-top: -20px;
 
 .backGroudAboutUs{
   background-image: url(../images/luxore/aboutUsHeader.jpg) !important;
-  margin-top: 75px;
+  /* margin-top: 75px; */
 }
 
 .backRealState{
   background-image: url(../images/luxore/backRealState.jpg) !important;
-  margin-top: 75px;
+  /* margin-top: 75px; */
   height: 550px;
   background-position: right 45% top 30%;
   background-repeat: no-repeat;
@@ -3169,7 +3169,7 @@ text-align: center;
 /* goal attempt */
 .backGoalAttempt{
   background-image: url(../images/luxore/backGoalAttempt.jpg) !important;
-  margin-top: 75px;
+  /* margin-top: 75px; */
   height: 550px;
   background-position: right 45% top 30%;
   background-repeat: no-repeat;
