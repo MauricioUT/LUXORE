@@ -19,6 +19,11 @@
 		border-radius: 0px;
 		background-color: #000000 !important;
 	}
+	.contact-header-img {
+		border-radius: 0px;
+		background-image: none !important;
+		background: #000000 !important;
+	}
 }
 /*  (min-width:1280px)+++ */
 @media only screen and (max-width: 1280px) {
