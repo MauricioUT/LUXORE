@@ -1,15 +1,9 @@
 'use client'
 
-// import "react-pro-sidebar/dist/css/styles.css";
 import {
-  ProSidebar,
-  SidebarHeader,
-  SidebarFooter,
   Menu,
   MenuItem,
   SubMenu,
-  SidebarContent,
-  Sidebar
 } from "react-pro-sidebar";
 import Link from "next/link";
 
@@ -60,6 +54,24 @@ const pages = [
   },
 ];
 
+
+const services = [
+  { id: 1, name: "Agencia inmobiliaria", routerPath: "/about-us" },
+  { id: 2, name: "Invierte en remates hipotecarios", routerPath: "/faq" },
+]
+
+const realState = [
+  { id: 1, name: "¿Qué son", routerPath: "/about-us" },
+  { id: 3, name: "¿Cómo funcionan?", routerPath: "/faq" },
+  { id: 5, name: "¿Qué tan seguros son?", routerPath: "/compare" },
+  { id: 9, name: "Casos de éxito en la compra de bienes raíces", routerPath: "/404" },
+  { id: 10, name: "Preguntas frecuentes", routerPath: "/faq" },
+]
+
+
+
+
+
 const MobileMenuContent = () => {
   const pathname = usePathname()
   const router = useRouter()
@@ -102,7 +114,68 @@ const MobileMenuContent = () => {
             >
               Inicio
             </div>
-          </MenuItem>
+      
+        </MenuItem>
+        {/* fin inicio */}
+
+        <MenuItem>
+            <div
+            onClick={()=>router.push("/about-us")}
+             
+              className={
+                pathname === "/about-us" ? "ui-active" : 'inactive-mobile-menu'
+              }
+            >
+              Quienes somos
+            </div>
+        </MenuItem>
+           {/* fin quienes somos */}
+         
+         <SubMenu
+            label="Servicios"
+            className={
+              services.some((page) => page.routerPath?.split('/')[1] === pathname.split('/')[1])
+                ? "parent-menu-active"
+                : 'inactive-mobile-menu'
+            }
+          >
+            {services.map((val, i) => (
+              <MenuItem key={i}>
+                <div
+                  onClick={()=>router.push(val.routerPath)}
+                  className={
+                    pathname?.split('/')[1] === val.routerPath?.split('/')[1] ? "ui-active" : 'inactive-mobile-menu'
+                  }
+                >
+                  {val.name}
+                </div>
+              </MenuItem>
+            ))}
+          </SubMenu>
+          {/* End servicios */}
+
+          <SubMenu
+            label="Bienes raíces"
+            className={
+              realState.some((page) => page.routerPath?.split('/')[1] === pathname.split('/')[1])
+                ? "parent-menu-active"
+                : 'inactive-mobile-menu'
+            }
+          >
+            {realState.map((val, i) => (
+              <MenuItem key={i}>
+                <div
+                  onClick={()=>router.push(val.routerPath)}
+                  className={
+                    pathname?.split('/')[1] === val.routerPath?.split('/')[1] ? "ui-active" : 'inactive-mobile-menu'
+                  }
+                >
+                  {val.name}
+                </div>
+              </MenuItem>
+            ))}
+          </SubMenu>
+          {/* End bienes raíces */}
 
           <SubMenu
             label="Property"
@@ -150,7 +223,7 @@ const MobileMenuContent = () => {
               </SubMenu>
             ))}
           </SubMenu>
-          {/* End Pages Property */}
+          {/* End properties */}
 
           <SubMenu
             label="Pages"
@@ -183,7 +256,7 @@ const MobileMenuContent = () => {
                 pathname === "/contact" ? "ui-active" : 'inactive-mobile-menu'
               }
             >
-              Contact
+              Contacto
             </div>
           </MenuItem>
         </Menu>

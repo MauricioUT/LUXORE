@@ -25,17 +25,31 @@ const HeaderMenuContent = ({ float = "" }) => {
           routerPath: "/listing-details-v1",
         },
         {
-          name: "Single V4",
-          routerPath: "/listing-details-v4",
+          name: "Single V1",
+          routerPath: "/listing-details-v1",
         },
       ],
     },
+  
   ];
 
 
+  const services = [
+    { id: 1, name: "Agencia inmobiliaria", routerPath: "/temp1" },
+    { id: 2, name: "Invierte en remates hipotecarios", routerPath: "/faq" },
+  ]
+
+  const realState = [
+    { id: 1, name: "¿Qué son", routerPath: "/temp2" },
+    { id: 3, name: "¿Cómo funcionan?", routerPath: "/faq" },
+    { id: 5, name: "¿Qué tan seguros son?", routerPath: "/compare" },
+    { id: 9, name: "Casos de éxito en la compra de bienes raíces", routerPath: "/404" },
+    { id: 10, name: "Preguntas frecuentes", routerPath: "/faq" },
+  ]
+
 
   const pages = [
-    { id: 1, name: "About Us", routerPath: "/about-us" },
+    { id: 1, name: "About Us", routerPath: "/temp3" },
     { id: 3, name: "Faq", routerPath: "/faq" },
     { id: 5, name: "Compare", routerPath: "/compare" },
     { id: 9, name: "404 Page", routerPath: "/404" },
@@ -56,7 +70,76 @@ const HeaderMenuContent = ({ float = "" }) => {
           Inicio
         </Link>
       </li>
+    {/* End .Inicio */}
 
+      <li className="last">
+        <Link
+          href="/about-us"
+          className={pathname === "/about-us" ? "ui-active" : undefined}
+        >
+          Quienes somos
+        </Link>
+      </li>
+      {/* End Quienes somos */}
+
+      <li className="dropitem">
+        <a
+          href="#"
+          className={
+            services.some((page) => page.routerPath?.split('/')[1] === pathname?.split('/')[1])
+              ? "ui-active"
+              : undefined
+          }
+        >
+          <span className="title">Servicios</span>
+          <span className="arrow"></span>
+        </a>
+        <ul className="sub-menu ">
+          {services.map((item) => (
+            <li key={item.id}>
+              <Link
+                href={item.routerPath}
+                className={
+                  pathname?.split('/')[1] === item.routerPath?.split('/')[1] ? "ui-active" : undefined
+                }
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li>
+      {/* End servicios */}
+
+      
+      <li className="dropitem">
+        <a
+          href="#"
+          className={
+            realState.some((page) => page.routerPath?.split('/')[1] === pathname?.split('/')[1])
+              ? "ui-active"
+              : undefined
+          }
+        >
+          <span className="title">Bienes raíces</span>
+          <span className="arrow"></span>
+        </a>
+        <ul className="sub-menu ">
+          {realState.map((item) => (
+            <li key={item.id}>
+              <Link
+                href={item.routerPath}
+                className={
+                  pathname?.split('/')[1] === item.routerPath?.split('/')[1] ? "ui-active" : undefined
+                }
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li>
+      {/* End .dropitem */}
 
       <li className="dropitem">
         <a
@@ -73,7 +156,7 @@ const HeaderMenuContent = ({ float = "" }) => {
               : undefined
           }
         >
-          <span className="title">Property</span>{" "}
+          <span className="title">property</span>{" "}
           <span className="arrow"></span>
         </a>
         <ul className="sub-menu ">
@@ -153,7 +236,7 @@ const HeaderMenuContent = ({ float = "" }) => {
           href="/contact"
           className={pathname === "/contact" ? "ui-active" : undefined}
         >
-          Contact
+          Contacto
         </Link>
       </li>
       {/* End .dropitem */}
