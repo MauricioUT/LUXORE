@@ -6,8 +6,6 @@ import {
   SubMenu,
 } from "react-pro-sidebar";
 import Link from "next/link";
-
-import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
 const home = [
@@ -62,7 +60,7 @@ const services = [
 
 const realState = [
   { id: 1, name: "¿Qué son", routerPath: "/about-us" },
-  { id: 3, name: "¿Cómo funcionan?", routerPath: "/faq" },
+  { id: 3, name: "¿Cómo funcionan?", routerPath: "/how-work" },
   { id: 5, name: "¿Qué tan seguros son?", routerPath: "/compare" },
   { id: 9, name: "Casos de éxito en la compra de bienes raíces", routerPath: "/404" },
   { id: 10, name: "Preguntas frecuentes", routerPath: "/faq" },
