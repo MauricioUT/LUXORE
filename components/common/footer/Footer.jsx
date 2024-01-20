@@ -10,7 +10,7 @@ const Footer = () => {
             width={100}
             height={100}
             className="logo-footer"
-            src="/assets/images/logoFooter1.png"
+            src="/assets/images/luxore/logoFooter3.webp"
             alt="header-logo2.png"
           />
      </div>

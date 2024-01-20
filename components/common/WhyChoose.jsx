@@ -1,25 +1,22 @@
 const WhyChoose = ({ style = "" }) => {
   const whyCooseContent = [
     {
-      id: 1,
-      icon: "flaticon-high-five",
-      title: "Trusted By Thousands",
-      descriptions: `Aliquam dictum elit vitae mauris facilisis at dictum urna
-      dignissim donec vel lectus vel felis.`,
-    },
-    {
-      id: 2,
-      icon: "flaticon-home-1",
-      title: "Wide Renge Of Properties",
-      descriptions: `Aliquam dictum elit vitae mauris facilisis at dictum urna
-      dignissim donec vel lectus vel felis.`,
-    },
-    {
       id: 3,
+      icon: "flaticon-high-five",
+      title: "ASESORAMIENTO",
+      descriptions: `Informamos con claridad a nuestros inversionistas todos los detalles del proceso de adquisición de Bienes Inmuebles en México.`,
+    },
+    {
+      id: 4,
+      icon: "flaticon-home-1",
+      title: "INTEGRIDAD",
+      descriptions: `Pensamos, decidimos y actuamos para cuidar los intereses de nuestros clientes.`,
+    },
+    {
+      id: 5,
       icon: "flaticon-profit",
-      title: "Financing Made Easy",
-      descriptions: `Aliquam dictum elit vitae mauris facilisis at dictum urna
-      dignissim donec vel lectus vel felis.`,
+      title: "COMPROMISO",
+      descriptions: `Acompañamos a nuestros clientes en cada etapa del proceso, su éxito, es nuestro éxito.`,
     },
   ];
 

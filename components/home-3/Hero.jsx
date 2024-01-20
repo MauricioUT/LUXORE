@@ -10,9 +10,6 @@ const Hero = () => {
             <div className="home3_home_content">
               <h1>Bienes raíces </h1>
               <h2>Tu inversión, nuestra especialidad.</h2>
-              {/* <h4>
-                From as low as $10 per day with limited time offer discounts
-              </h4> */}
             </div>
           </div>
         </div>

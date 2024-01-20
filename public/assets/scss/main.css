@@ -506,7 +506,7 @@ header.header-nav.menu_style_home_one.style2.home10 .ace-responsive-menu > li > 
 header.header-nav.menu_style_home_one.style2 .ace-responsive-menu li a {
   font-size: 16px;
   font-family: "Nunito";
-  color: #484848;
+  color: #ffffff;
   line-height: 1.2;
 }
 
@@ -3024,6 +3024,43 @@ margin-top: -20px;
   margin-top: 10px;
 }
 
+/* header statico */
+.staticHeader {
+  background: #000000 !important;
+}
+
+
+
+/* mision vision */
+.misionImg {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/mision.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+
+.visionImg {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/mision.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+
+
+.backGroudAboutUs{
+  background-image: url(../images/luxore/aboutUsHeader.jpg) !important;
+  margin-top: 75px;
+}
+
+
+
+
+
+
 
 /* recuperado */
 .about_counting {
@@ -3106,6 +3143,7 @@ margin-top: -20px;
   color: #484848;
   line-height: 1.714;
   margin-bottom: 40px;
+  text-align: justify;
 }
 
 

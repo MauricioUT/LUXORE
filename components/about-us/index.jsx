@@ -5,7 +5,8 @@ import WhyChoose from "../common/WhyChoose";
 import Testimonial from "../common/Testimonial";
 import BreadCrumbBanner from "./BreadCrumbBanner";
 import Team from "./Team";
-import OurMission from "./OurMission";
+import OurMissionVission from "./ourMissionVision";
+import OurHistory from "./ourHistory"
 
 const index = () => {
   return (
@@ -20,38 +21,35 @@ const index = () => {
       <BreadCrumbBanner />
 
       {/* <!-- About Text Content --> */}
-      <section className="about-section">
+ 
+ {/* <!-- History --> */}
+ <section className="about-section">
         <div className="container">
           <div className="row">
+            <OurHistory />
+          </div>
+          {/* End .row */}
+
+          <div className="row ">
             <div className="col-lg-6 offset-lg-3">
               <div className="main-title text-center">
-                <h2 className="mt0">Our Mission Is To FindHouse</h2>
+                <h2>¿Por qué nosotros?</h2>
+                <p>Brindamos un servicio completo en cada paso.</p>
               </div>
             </div>
           </div>
           {/* End .row */}
 
-          <div className="row">
-            <OurMission />
-          </div>
-          {/* End .row */}
-
-          <div className="row mt80">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center">
-                <h2>Why Choose Us</h2>
-                <p>We provide full service at every step.</p>
-              </div>
-            </div>
-          </div>
-          {/* End .row */}
-
+         <div  className="row">
+          <OurMissionVission/>
+         </div>
           <div className="row">
             <WhyChoose />
           </div>
           {/* End .row */}
         </div>
       </section>
+      
 
       {/* <!-- Our Team --> */}
       <section className="our-team bgc-f7">

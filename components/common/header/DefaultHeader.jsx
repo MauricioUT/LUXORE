@@ -21,29 +21,29 @@ const Header = () => {
   }, []);
 
   return (
+    //header-nav menu_style_home_one navbar-scrolltofixed stricky main-menu
     <header
-      className={`header-nav menu_style_home_one style2 navbar-scrolltofixed stricky main-menu  ${
+      className={`header-nav menu_style_home_one style2 navbar-scrolltofixed stricky main-menu  staticHeader ${
         navbar ? "stricky-fixed " : ""
       }`}
     >
       <div className="container-fluid p0">
         {/* <!-- Menu Toggle btn--> */}
         <Link href="/" className="navbar_brand float-start dn-smd">
-          <Image
-            width={40}
-            height={45}
+        <Image
+            width={100}
+            height={100}
             className="logo1 img-fluid"
-            src="/assets/images/header-logo2.png"
+            src="/assets/images/luxore/logoBlanco1.png"
             alt="header-logo2.png"
           />
           <Image
-            width={40}
-            height={45}
+            width={100}
+            height={100}
             className="logo2 img-fluid"
-            src="/assets/images/header-logo2.png"
+            src="/assets/images/luxore/logoBlanco1.png"
             alt="header-logo2.png"
           />
-          <span>FindHouse</span>
         </Link>
         {/* site logo brand */}
 
