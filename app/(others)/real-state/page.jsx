@@ -1,14 +1,16 @@
 import dynamic from "next/dynamic";
-import AboutUs from "@/components/about-us";
+import RealState from "@/components/services/real-state";
 
 export const metadata = {
-  title: 'Quienes somos',
+  title: 'Nuestros servicios',
+  description:
+    'FindHouse - Real Estate React Template',
 }
 
 const index = () => {
   return (
     <>
-      <AboutUs />
+      <RealState />
     </>
   );
 };

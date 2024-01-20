@@ -2800,7 +2800,7 @@ a.btn.btn_error {
 }
 
 .mt50 {
-  margin-top: 50px;
+  margin-top: 50px !important;
 }
 
 .mt80 {
@@ -2810,6 +2810,10 @@ a.btn.btn_error {
 .mt85 {
   margin-top: 85px;
 }
+.mt210 {
+  margin-top: 210px !important;
+}
+
 
 .mb0 {
   margin-bottom: 0px !important;
@@ -3055,6 +3059,102 @@ margin-top: -20px;
   background-image: url(../images/luxore/aboutUsHeader.jpg) !important;
   margin-top: 75px;
 }
+
+.backRealState{
+  background-image: url(../images/luxore/backRealState.jpg) !important;
+  margin-top: 75px;
+  height: 550px;
+  background-position: right 45% top 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.breadcrumb_title_center{
+text-align: center;
+}
+
+
+
+/* service */
+.realStateImg1 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/icon-service-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+.realStateImg2 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/icon-service-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+
+.realStateImg3 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/icon-service-3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+.realStateImg4 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/icon-service-4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+
+.gif1 {
+
+  background-image: url("../images/luxore/animated-arrow-form.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  margin-top: 40px;
+  width: 300px;
+}
+
+
+/* Experts */
+.expertsImg1 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/experts1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  border-radius: 10px;
+}
+
+.expertsImg2 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/experts2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.expertsImg3 {
+  background-attachment: scroll;
+  background-image: url("../images/luxore/experts3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  border-radius: 10px;
+}
+
 
 
 

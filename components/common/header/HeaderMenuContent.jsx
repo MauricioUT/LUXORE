@@ -35,7 +35,7 @@ const HeaderMenuContent = ({ float = "" }) => {
 
 
   const services = [
-    { id: 1, name: "Agencia inmobiliaria", routerPath: "/temp1" },
+    { id: 1, name: "Agencia inmobiliaria", routerPath: "/real-state" },
     { id: 2, name: "Invierte en remates hipotecarios", routerPath: "/faq" },
   ]
 
