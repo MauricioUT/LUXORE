@@ -2881,6 +2881,15 @@ a.btn.btn_error {
   height: 575px; 
 }
 
+.what-are-header-img{
+  background-attachment: scroll;
+  background-image: url("../images/luxore/what-are-header-img.webp");
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 575px; 
+}
+
 
 section {
   padding: 60px 0;
@@ -3402,6 +3411,17 @@ text-align: center;
 }
 
 .how-safe-content-two h3 {
+  margin-top: 30px;
+} 
+
+/* page what are*/
+.what-are-content {
+  margin-bottom: 40px;
+} 
+.what-are-content h3 {
+  margin-top: 30px;
+} 
+.what-are-content h4 {
   margin-top: 30px;
 } 
 
