@@ -13,7 +13,7 @@ const Luxore = () => {
               height={600}
               priority
               className="img-fluid w100 cover"
-              src="/assets/images/luxore/bussinesman-smile-img.webp"
+              src="/assets/images/luxore/coffe-couple.webp"
               alt="1.jpg"
             />
           </div>
@@ -56,7 +56,7 @@ const Luxore = () => {
               2. <strong>Flujo de efectivo:</strong> Si decides alquilar la propiedad, puedes obtener ingresos regulares en forma de alquiler.
             </p>
             <p>
-              3. <strong>Inflación y protección del valo:</strong> Los bienes raíces a menudo actúan como una protección contra la inflación, ya que los precios de las propiedades tienden a aumentar con la inflación.
+              3. <strong>Inflación y protección del valor:</strong> Los bienes raíces a menudo actúan como una protección contra la inflación, ya que los precios de las propiedades tienden a aumentar con la inflación.
             </p>
             <p>
               4. <strong>Herencia y legado:</strong> Los bienes raíces se pueden mantener y transmitir a futuras generaciones, formando parte de tu patrimonio familiar.
@@ -70,7 +70,7 @@ const Luxore = () => {
               height={600}
               priority
               className="img-fluid w100 cover"
-              src="/assets/images/luxore/ourhistory.jpg"
+              src="/assets/images/luxore/meeting-work.webp"
               alt="1.jpg"
             />
           </div>
@@ -86,7 +86,7 @@ const Luxore = () => {
               height={600}
               priority
               className="img-fluid w100 cover"
-              src="/assets/images/luxore/bussinesman-smile-img.webp"
+              src="/assets/images/luxore/giveme-keys.webp"
               alt="1.jpg"
             />
           </div>
