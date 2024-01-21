@@ -59,9 +59,9 @@ const services = [
 ]
 
 const realState = [
-  { id: 1, name: "¿Qué son", routerPath: "/about-us" },
-  { id: 3, name: "¿Cómo funcionan?", routerPath: "/como-funcionan" },
-  { id: 4, name: "¿Qué tan seguros son?", routerPath: "/que-tan-seguros-son" },
+  { id: 1, name: "¿Qué son?", routerPath: "/que-son-los-bienes-raices" },
+  { id: 2, name: "¿Cómo funcionan?", routerPath: "/como-funcionan" },
+  { id: 3, name: "¿Qué tan seguros son?", routerPath: "/que-tan-seguros-son" },
   { id: 9, name: "Casos de éxito en la compra de bienes raíces", routerPath: "/404" },
   { id: 10, name: "Preguntas frecuentes", routerPath: "/faq" },
 ]

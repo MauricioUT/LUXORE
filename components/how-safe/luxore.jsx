@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Steps = () => {
+const Luxore = () => {
 
 
   return (
@@ -72,4 +72,4 @@ const Steps = () => {
   );
 };
 
-export default Steps;
+export default Luxore;
