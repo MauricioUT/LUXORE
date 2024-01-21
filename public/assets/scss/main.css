@@ -2872,6 +2872,15 @@ a.btn.btn_error {
   height: 575px; 
 }
 
+.how-safe-header-img{
+  background-attachment: scroll;
+  background-image: url("../images/luxore/how-safe-header-img.webp");
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 575px; 
+}
+
 
 section {
   padding: 60px 0;
@@ -3356,6 +3365,45 @@ text-align: center;
 .how-work-content h4 {
   margin-bottom: 20px;
 }
+
+/*page how safe*/
+.how-safe-content p.large {
+  color: #484848;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 45px;
+}
+
+.how-safe-content p {
+  font-size: 14px;
+  color: #484848;
+  line-height: 1.714;
+  margin-bottom: 40px;
+}
+
+.how-safe-content h3 {
+  margin-top: 30px;
+}
+
+.how-safe-content-two p.large {
+  color: #484848;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 45px;
+}
+
+.how-safe-content-two p {
+  font-size: 14px;
+  color: #484848;
+  line-height: 1.714;
+  margin-bottom: 10px;
+}
+
+.how-safe-content-two h3 {
+  margin-top: 30px;
+} 
 
 .team_member {
   background-color: #ffffff;

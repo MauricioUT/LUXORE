@@ -1,14 +1,14 @@
 import dynamic from "next/dynamic";
-import HowWork from "@/components/how-work";
+import HowSafe from "@/components/how-safe";
 
 export const metadata = {
-  title: 'como funcionan',
+  title: '¿Qué tan seguros son?',
 }
 
 const index = () => {
   return (
     <>
-      <HowWork />
+      <HowSafe />
     </>
   );
 };

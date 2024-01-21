@@ -8879,6 +8879,27 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
   margin-bottom: 20px;
 }
 
+/*page how safe*/
+
+.how-safe-content p.large {
+  color: #484848;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 45px;
+}
+
+.how-safe-content p {
+  font-size: 14px;
+  color: #484848;
+  line-height: 1.714;
+  margin-bottom: 40px;
+}
+
+.how-safe-content h3 {
+  margin-bottom: 100px;
+}
+
 ul.ab_counting li {
   margin-right: 30px !important;
 }
@@ -17343,6 +17364,15 @@ legend span {
 .how-work-header-img{
   background-attachment: scroll;
   background-image: url("../images/luxore/how-work-imag-header.webp");
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 575px; 
+}
+
+.how-safe-header-img{
+  background-attachment: scroll;
+  background-image: url("../images/luxore/how-safe-header-img.webp");
   background-position: inherit;
   background-repeat: no-repeat;
   background-size: cover;

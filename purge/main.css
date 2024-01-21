@@ -2863,6 +2863,15 @@ a.btn.btn_error {
   height: 575px; 
 }
 
+.how-safe-header-img{
+  background-attachment: scroll;
+  background-image: url("../images/luxore/how-safe-header-img.webp");
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 575px; 
+}
+
 section {
   padding: 60px 0;
   position: relative;
