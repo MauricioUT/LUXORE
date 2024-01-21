@@ -15,6 +15,7 @@ import CheckBoxFilter from "./CheckBoxFilter";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
+import InputRange from "react-input-range";
 
 const GlobalFilter = ({ className = "", testVar = "" }) => {
   const router = useRouter()
@@ -31,6 +32,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
 
 
   // input state
+  const [price, setPrice] = useState({ value: { min: 10000, max: 20000 } });
   const [getStatus, setStatus] = useState(status);
   const [getBathroom, setBathroom] = useState(bathrooms);
   const [getBedroom, setBedroom] = useState(bedrooms);
@@ -82,7 +84,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     setStatus("");
     setBathroom("");
     setBedroom("");
-    dispath(addPrice({ min: 10000, max: 20000 }));
+    setPrice({ value: { min: 10000, max: 20000 }});
     dispath(resetAmenities());
 
     setState(0);
@@ -91,11 +93,29 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
   };
 
 
+// 
+const handleOnChange = (value) => {
+  console.log(value)
+  setPrice({ value });
+};
+
+// price add to state
+useEffect(() => {
+  dispath(
+    addPrice({
+      min: price.value.min,
+      max: price.value.max,
+    })
+  );
+}, [dispath, price]);
+
+
+//search button
   const onSearch =() =>  {
     const consulta = {
       city: getCity
     }
-     console.log("soy la busqueda" + getCity +' price: ' + getPrice.max)
+     console.log("soy la busqueda" + getCity +' price: ' + price.value.max)
   }
 
 
@@ -227,7 +247,32 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
             </div>
             <div className="dd_content2 dropdown-menu">
               <div className="pricing_acontent">
-                <PricingRangeSlider />
+              <div className="nft__filter-price tp-range-slider tp-range-slider-dark mb-20">
+                <div className="nft__filter-price-inner d-flex align-items-center justify-content-between">
+                  <div className="nft__filter-price-box">
+                    <div className="d-flex align-items-center">
+                      <span>$ </span>
+                      <span>{price.value.min}</span>
+                    </div>
+                  </div>
+                  <div className="nft__filter-price-box">
+                    <div className="d-flex align-items-center">
+                      <span>$ </span>
+                      <span>{price.value.max}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <InputRange
+                  formatLabel={(value) => ``}
+                  maxValue={20000}
+                  minValue={10000}
+                  value={price.value}
+                  onChange={(value) => handleOnChange(value)}
+                />
+
+                <div className="slider-styled inside-slider" id="nft-slider"></div>
+              </div>
               </div>
             </div>
           </div>
