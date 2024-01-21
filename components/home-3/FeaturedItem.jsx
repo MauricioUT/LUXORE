@@ -24,7 +24,8 @@ const FeaturedItem = () => {
     amenities,
     state,
     city,
-    neighborhood
+    neighborhood,
+    featuredId
   } = useSelector((state) => state.properties);
   const { statusType, featured, isGridOrList } = useSelector(
     (state) => state.filter
@@ -154,7 +155,16 @@ const FeaturedItem = () => {
       }
       return true;
     };
-  
+
+
+    //featuredId
+
+    const featuredIdHandler = (item) => {
+        if (parseInt(featuredId) !== 0) {
+          return item.featuredId == featuredId;
+        }
+        return true;
+      };
   
 
 
@@ -176,6 +186,7 @@ const FeaturedItem = () => {
     ?.filter(featuredHandler)
     ?.filter(stateHandler)
     ?.filter(cityHandler)
+    ?.filter(featuredIdHandler)
     ?.filter(neighborhoodHandler)
     .map((item) => (
       <div

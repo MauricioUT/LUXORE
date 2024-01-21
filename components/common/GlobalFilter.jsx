@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 
-const GlobalFilter = ({ className = "" }) => {
+const GlobalFilter = ({ className = "", testVar = "" }) => {
   const router = useRouter()
 
   const {
@@ -75,6 +75,8 @@ const GlobalFilter = ({ className = "" }) => {
   const clearHandler = () => {
     clearAllFilters();
   };
+
+
 
   const clearAllFilters = () => {
     setStatus("");

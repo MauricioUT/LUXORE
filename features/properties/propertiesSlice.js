@@ -21,7 +21,8 @@ const initialState = {
     length: 0,
     state:0,
     city:0,
-    neighborhood: 0
+    neighborhood: 0,
+    featuredId:0
 };
 
 export const propertiesSlice = createSlice({
@@ -91,6 +92,9 @@ export const propertiesSlice = createSlice({
         addNeighborhood: (state, action) => {
             state.neighborhood = action.payload;
         },
+        addFeaturedId: (state,action) => {
+            state.featuredId =  action.payload;
+        }
     },
 });
 
@@ -112,5 +116,6 @@ export const {
     addStates,
     addCity,
     addNeighborhood,
+    addFeaturedId
 } = propertiesSlice.actions;
 export default propertiesSlice.reducer;
