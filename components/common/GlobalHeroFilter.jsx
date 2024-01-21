@@ -78,7 +78,7 @@ const GlobalHeroFilter = ({ className = "" }) => {
           role="tabpanel"
           aria-labelledby="venta-directa"
         >
-          <GlobalFilter   testVar="Test" />
+          <GlobalFilter   testVar="1" />
         </div>
         <div
           className="tab-pane fade"
@@ -86,7 +86,7 @@ const GlobalHeroFilter = ({ className = "" }) => {
           role="tabpanel"
           aria-labelledby="rh"
         >
-          <GlobalFilter />
+          <GlobalFilter   testVar="2" />
         </div>
         <div
           className="tab-pane fade"
@@ -94,7 +94,7 @@ const GlobalHeroFilter = ({ className = "" }) => {
           role="tabpanel"
           aria-labelledby="renta"
         >
-          <GlobalFilter />
+          <GlobalFilter    testVar="3"/>
         </div>
 
       

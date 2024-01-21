@@ -25,14 +25,17 @@ const FeaturedItem = () => {
     state,
     city,
     neighborhood,
-    featuredId
+    featuredId,
+    lstProperties
   } = useSelector((state) => state.properties);
 
   
   const { statusType, featured, isGridOrList } = useSelector(
     (state) => state.filter
   );
-
+ 
+  const [getLstProperties, setLstProperties] = useState(lstProperties);
+  
   //paginator constants
   
   const [take, setTake] = useState(5);
@@ -171,7 +174,7 @@ const FeaturedItem = () => {
 
 
   // status handler
-  let content = properties
+  let content = lstProperties
     ?.slice(skip,take)
     ?.filter(keywordHandler)
     ?.filter(locationHandler)
