@@ -27,6 +27,8 @@ const FeaturedItem = () => {
     neighborhood,
     featuredId
   } = useSelector((state) => state.properties);
+
+  
   const { statusType, featured, isGridOrList } = useSelector(
     (state) => state.filter
   );
@@ -160,7 +162,7 @@ const FeaturedItem = () => {
     //featuredId
 
     const featuredIdHandler = (item) => {
-        if (parseInt(featuredId) !== 0) {
+        if (featuredId !== "" && parseInt(featuredId) !== 0) {
           return item.featuredId == featuredId;
         }
         return true;
@@ -201,6 +203,7 @@ const FeaturedItem = () => {
           }`}
         >
           <div className="thumb">
+ 
             <Image
               width={342}
               height={220}

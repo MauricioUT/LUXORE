@@ -8,7 +8,7 @@ import {
   addBedrooms,
   addStates,
   addCity,
-  addNeighborhood
+  addNeighborhood,
 } from "../../features/properties/propertiesSlice";
 import PricingRangeSlider from "./PricingRangeSlider";
 import CheckBoxFilter from "./CheckBoxFilter";
@@ -25,8 +25,10 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     bedrooms,
     state,
     city,
-    neighborhood
+    neighborhood,
+
     } = useSelector((state) => state.properties);
+
 
   // input state
   const [getStatus, setStatus] = useState(status);
@@ -35,9 +37,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
   const [getState, setState] = useState(state);
   const [getCity, setCity] = useState(city);
   const [getNeighborhood, setNeighborhood] = useState(neighborhood);
-
   const dispath = useDispatch();
-
   // status
   useEffect(() => {
     dispath(addStatus(getStatus));
@@ -90,6 +90,15 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     setNeighborhood(0);
   };
 
+
+  const onSearch =() =>  {
+    const consulta = {
+      city: getCity
+    }
+     console.log("soy la busqueda" + getCity +' price: ' + getPrice.max)
+  }
+
+
   return (
     <div className={`home1-advnc-search ${className}`}>
       <ul className="h1ads_1st_list mb0">
@@ -129,7 +138,6 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
           </div>
           </li>
         {/* End li */}
-
 
           {/* Ciudad */}
           <li className="list-inline-item">
@@ -264,6 +272,21 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
               className="btn btn-thm"
             >
               Clear Filters
+            </button>
+          </div>
+        </li>
+        {/* End li */}
+
+
+                  {/* clear filter */}
+                  <li className="list-inline-item">
+          <div className="search_option_button">
+            <button
+              onClick={onSearch}
+              type="button"
+              className="btn btn-thm"
+            >
+              buscar
             </button>
           </div>
         </li>

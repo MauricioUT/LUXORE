@@ -12,7 +12,7 @@ const GlobalHeroFilter = ({ className = "" }) => {
 
     const dispath = useDispatch();
 
-    const [geteaturedId, setFeaturedId] = useState(status);
+    const [geteaturedId, setFeaturedId] = useState(1);
 
 
       // City

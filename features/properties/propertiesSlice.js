@@ -94,7 +94,7 @@ export const propertiesSlice = createSlice({
         },
         addFeaturedId: (state,action) => {
             state.featuredId =  action.payload;
-        },
+        },        
     },
 });
 
