@@ -2,7 +2,9 @@ import dynamic from "next/dynamic";
 import WhatAre from "@/components/what-are";
 
 export const metadata = {
-  title: '¿Qué son los bienes raíces?',
+  title: 'Qué son los bienes raíces',
+  description:
+  'informacion de que son las bienes raices',
 }
 
 const index = () => {

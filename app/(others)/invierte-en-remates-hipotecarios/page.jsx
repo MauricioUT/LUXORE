@@ -2,7 +2,9 @@ import dynamic from "next/dynamic";
 import GoalAttemp from "@/components/services/goal-attempt";
 
 export const metadata = {
-  title: 'Remates hipotecarios',
+  title: 'invierte en remates hipotecarios',
+  description:
+  'LUXORE te brinda la solución a tus problemas de inversión',
 }
 
 const index = () => {

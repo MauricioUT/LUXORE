@@ -3,6 +3,8 @@ import HowWork from "@/components/how-work";
 
 export const metadata = {
   title: '¿Cómo funcionan?',
+  description:
+    'Cómo funciona la compra y venta de bienes raíces',
 }
 
 const index = () => {
