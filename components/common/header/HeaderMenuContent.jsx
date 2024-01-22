@@ -105,7 +105,7 @@ const HeaderMenuContent = ({ float = "" }) => {
 
       <li className="last">
         <Link
-          href="/contact"
+          href="/contacto"
           className={pathname === "/contacto" ? "ui-active" : undefined}
         >
           Contacto
