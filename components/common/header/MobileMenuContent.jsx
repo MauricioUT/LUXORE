@@ -8,13 +8,6 @@ import {
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-const home = [
-  {
-    name: "Home 3",
-    routerPath: "/home-3",
-  },
-];
-
 const property = [
   {
     id: 2,
@@ -34,10 +27,6 @@ const property = [
 
 
 const pages = [
-  {
-    name: "About Us",
-    routerPath: "/about-us",
-  },
   {
     name: "Faq",
     routerPath: "/faq",
@@ -118,10 +107,10 @@ const MobileMenuContent = () => {
 
         <MenuItem>
             <div
-            onClick={()=>router.push("/about-us")}
+            onClick={()=>router.push("/quienes-somos")}
              
               className={
-                pathname === "/about-us" ? "ui-active" : 'inactive-mobile-menu'
+                pathname === "/quienes-somos" ? "ui-active" : 'inactive-mobile-menu'
               }
             >
               Quienes somos

@@ -6,15 +6,6 @@ import { usePathname } from "next/navigation";
 const HeaderMenuContent = ({ float = "" }) => {
   const pathname = usePathname();
 
-  const home = [
-    {
-      id: 3,
-      name: "Home 3",
-      routerPath: "/home-3",
-    },
-  ];
-
-
   const property = [
     {
       id: 2,
@@ -49,7 +40,6 @@ const HeaderMenuContent = ({ float = "" }) => {
 
 
   const pages = [
-    { id: 1, name: "About Us", routerPath: "/temp3" },
     { id: 3, name: "Faq", routerPath: "/faq" },
     { id: 5, name: "Compare", routerPath: "/compare" },
     { id: 9, name: "404 Page", routerPath: "/404" },
@@ -74,8 +64,8 @@ const HeaderMenuContent = ({ float = "" }) => {
 
       <li className="last">
         <Link
-          href="/about-us"
-          className={pathname === "/about-us" ? "ui-active" : undefined}
+          href="/quienes-somos"
+          className={pathname === "/quienes-somos" ? "ui-active" : undefined}
         >
           Quienes somos
         </Link>
