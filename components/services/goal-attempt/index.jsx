@@ -13,7 +13,7 @@ const index = () => {
       <MobileMenu />
       {/* <!-- Inner Page Breadcrumb --> */}
       <BreadCrumbBanner clase="backGoalAttempt" 
-      headerMsg="LUXORE TE BRINDA LA SOLUCIÓN A TUS PROBLEMAS DE INVERSIÓN"
+      headerMsg="LUXORE te brinda la solución a tus problemas de inversión"
       subHeaderMsg=""/>
  
  {/* <!-- History --> */}
