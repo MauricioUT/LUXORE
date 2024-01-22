@@ -33,9 +33,9 @@ const OurServices = ({ style = "" }) => {
                 {/* Contenedor 2 */}
                 <div  className="col-md-6 col-lg-4 col-xl-4"> 
                     {/* div gift */}
-                    <div className={` col-md-12 col-lg-12 col-xl-12`}>
-                      <div className="icon">
-                        <section className="gif1"></section>
+                    <div className={` col-md-12 col-lg-12 col-xl-12`} style={{height:'100%'}}>
+                      <div className="icon" style={{height:'100%'}}>
+                        <section className="gif1" ></section>
                       </div>
                     </div>
 
