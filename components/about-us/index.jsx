@@ -3,8 +3,6 @@ import Header from "../common/header/Header";
 import MobileMenu from "../common/header/MobileMenu";
 import BreadCrumbBanner from "../common/header/BreadCrumbBanner";
 import WhyChoose from "../common/WhyChoose";
-import Testimonial from "../common/Testimonial";
-import Team from "./Team";
 import OurMissionVission from "./ourMissionVision";
 import OurHistory from "./ourHistory"
 
@@ -50,48 +48,6 @@ const index = () => {
         </div>
       </section>
       
-
-      {/* <!-- Our Team --> */}
-      <section className="our-team bgc-f7">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center">
-                <h2>Our Team</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="team_slider gutter-x15">
-                <Team />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* <!-- Our Testimonials --> */}
-      <section className="our-testimonials">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="main-title text-center mb20">
-                <h2>Testimonials</h2>
-                <p>Here could be a nice sub title</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-6 offset-lg-3">
-              <div className="testimonial_grid_slider style2 gutter-x15">
-                <Testimonial />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* <!-- Our Footer --> */}
       <section className="footer_one">
         <div className="container">
