@@ -116,7 +116,6 @@ const HeaderMenuContent = ({ float = "" }) => {
       <li className="last">
         <Link
           href="tel:5589883659"
-          className={pathname === "/contacto" ? "ui-active" : undefined}
         >
           <i className="fa fa-solid fa-phone"> 55 8988 3659</i>
          
