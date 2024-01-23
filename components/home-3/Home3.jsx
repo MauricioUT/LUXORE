@@ -4,6 +4,7 @@ import Footer from "../common/footer/Footer";
 import Hero from "./Hero";
 import FilterTopBar from "../common/listing/FilterTopBar";
 import FeaturedItem from "./FeaturedItem";
+import Map from "../common/map/Map"
 
 const Home3 = () => {
   return (
@@ -36,6 +37,9 @@ const Home3 = () => {
               </div>
               {/* End .row */}
 
+              <div className="row">
+                <Map />
+              </div>
             
               {/* End .row */}
             </div>

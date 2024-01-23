@@ -7,20 +7,23 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cleanCSS":"purgecss --css public/assets/scss/ace-responsive-menu.css --content components/404/*.jsx components/home-3/*.jsx components/bout-us/*.jsx components/common/*.jsx components/common/footer/*.jsx components/common/header/*.jsx components/common/listing/*.jsx components/common/listing-details/*.jsx components/contact/*.jsx  components/faq/*.jsx  components/layout/*.jsx  components/contact/*.jsx  components/listing-details-v1/*.jsx components/listing-details-v2/*.jsx components/listing-details-v4/*.jsx components/terms-conditions/*.jsx --output purge"
+    "cleanCSS": "purgecss --css public/assets/scss/ace-responsive-menu.css --content components/404/*.jsx components/home-3/*.jsx components/bout-us/*.jsx components/common/*.jsx components/common/footer/*.jsx components/common/header/*.jsx components/common/listing/*.jsx components/common/listing-details/*.jsx components/contact/*.jsx  components/faq/*.jsx  components/layout/*.jsx  components/contact/*.jsx  components/listing-details-v1/*.jsx components/listing-details-v2/*.jsx components/listing-details-v4/*.jsx components/terms-conditions/*.jsx --output purge"
   },
   "dependencies": {
     "@faker-js/faker": "^8.1.0",
     "@reduxjs/toolkit": "^1.9.6",
     "bootstrap": "^5.2.1",
     "chart.js": "^4.4.0",
+    "leaflet": "^1.9.4",
     "next": "13.5.4",
     "photoswipe": "^5.4.2",
     "purgecss": "^5.0.0",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
     "react-input-range": "^1.3.0",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-cluster": "2.0.0",
     "react-modal-video": "^2.0.1",
     "react-paginate": "^8.2.0",
     "react-photoswipe-gallery": "^2.2.7",
@@ -33,6 +36,7 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.8",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0"
   }
