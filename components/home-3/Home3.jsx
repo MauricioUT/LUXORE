@@ -37,11 +37,6 @@ const Home3 = () => {
               </div>
               {/* End .row */}
 
-              <div className="row">
-                <Map />
-              </div>
-            
-              {/* End .row */}
             </div>
             {/* End  page conent */}
           </div>

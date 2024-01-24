@@ -3,6 +3,8 @@ import PropertyDescriptions from "../common/listing-details/PropertyDescriptions
 import PropertyDetails from "../common/listing-details/PropertyDetails";
 import PropertyItem from "../common/listing-details/PropertyItem";
 import PropertyLocation from "../common/listing-details/PropertyLocation";
+import Map from "../common/map/Map"
+
 
 const DetailsContent = () => {
   return (
@@ -45,9 +47,9 @@ const DetailsContent = () => {
             1421 San Pedro St, Los Angeles, CA 90015
           </small>
         </h4>
-        <div className="property_video p0">
-          <PropertyLocation />
-        </div>
+        <div id="map" className="row">
+                <Map lat="19.4322582" long="-99.1382348" />
+         </div>
       </div>
       {/* End .location_area */}
 
