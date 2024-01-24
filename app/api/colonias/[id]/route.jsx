@@ -8,5 +8,5 @@ export async function GET(request, { params }){
       results = await conn.query('SELECT * FROM C_COLONIES where id_city = ?', [params.id]);
    
  
-   return NextResponse.json(JSON.stringify(results));
+   return NextResponse.json(results);
 }

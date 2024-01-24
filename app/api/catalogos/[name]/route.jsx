@@ -7,5 +7,5 @@ export async function GET(request, { params }){
    if(cat.includes(params.name))
       results = await conn.query(`SELECT * FROM ${params.name}`);
 
-   return NextResponse.json(JSON.stringify(results));
+   return NextResponse.json(results);
 }
