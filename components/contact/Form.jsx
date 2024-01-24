@@ -2,25 +2,39 @@
 
 import { useState } from 'react';
 
+
 const Form = () => {
 
-  const [subject, setSubject] = useState('');
+  //const history = useHistory();
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [money, setMoney] = useState('');
   const [message, setMessage] = useState('');
 
   const sendMail = async (e) => {
     e.preventDefault();
 
+  
     const response = await fetch('/api/sendEmail', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
       },
       body: JSON.stringify({
-        subject,
+        name,
+        lastName,
+        email,
+        phone,
+        money, 
         message
       })
     })
-    console.log(await response.json())
+     const messageR = await response.json();
+
+    window.location.href="/"
+    //  console.log(messageR)
   }
 
   return (
@@ -34,6 +48,10 @@ const Form = () => {
               className="form-control"
               type="text"
               placeholder="Nombre(s)"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value)
+              }}
             />
           </div>
         </div>
@@ -47,6 +65,10 @@ const Form = () => {
               className="form-control"
               type="text"
               placeholder="Apellido(s)"
+              value={lastName}
+              onChange={(e) => {
+                setLastName(e.target.value)
+              }}
             />
           </div>
         </div>
@@ -61,9 +83,9 @@ const Form = () => {
               required="required"
               type="email"
               placeholder="Email"
-              value={subject}
+              value={email}
               onChange={(e) => {
-                setSubject(e.target.value)
+                setEmail(e.target.value)
               }}
             />
           </div>
@@ -78,6 +100,10 @@ const Form = () => {
               className="form-control required phone"
               type="phone"
               placeholder="Teléfono"
+              value={phone}
+              onChange={(e) => {
+                setPhone(e.target.value)
+              }}
             />
           </div>
         </div>
@@ -91,6 +117,10 @@ const Form = () => {
               className="form-control required"
               type="text"
               placeholder="Monto a invertir"
+              value={money}
+              onChange={(e) => {
+                setMoney(e.target.value)
+              }}
             />
           </div>
         </div>
