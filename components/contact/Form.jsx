@@ -1,6 +1,30 @@
+"use client"
+
+import { useState } from 'react';
+
 const Form = () => {
+
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const sendMail = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        subject,
+        message
+      })
+    })
+    console.log(await response.json())
+  }
+
   return (
-    <form className="contact_form" action="#">
+    <form className="contact_form" action={sendMail}>
       <div className="row">
         <div className="col-md-6">
           <div className="form-group">
@@ -8,7 +32,6 @@ const Form = () => {
               id="form_name"
               name="form_name"
               className="form-control"
-              required="required"
               type="text"
               placeholder="Nombre(s)"
             />
@@ -22,7 +45,6 @@ const Form = () => {
               id="form_name"
               name="form_name"
               className="form-control"
-              required="required"
               type="text"
               placeholder="Apellido(s)"
             />
@@ -39,6 +61,10 @@ const Form = () => {
               required="required"
               type="email"
               placeholder="Email"
+              value={subject}
+              onChange={(e) => {
+                setSubject(e.target.value)
+              }}
             />
           </div>
         </div>
@@ -50,7 +76,6 @@ const Form = () => {
               id="form_phone"
               name="form_phone"
               className="form-control required phone"
-              required="required"
               type="phone"
               placeholder="Teléfono"
             />
@@ -64,7 +89,6 @@ const Form = () => {
               id="form_subject"
               name="form_subject"
               className="form-control required"
-              required="required"
               type="text"
               placeholder="Monto a invertir"
             />
@@ -81,12 +105,16 @@ const Form = () => {
               rows="8"
               required="required"
               placeholder="Mensaje adicional"
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value)
+              }}
             ></textarea>
           </div>
           {/* End .col */}
 
           <div className="form-group mb0">
-            <button type="submit" className="btn btn-lg btn-thm">
+            <button onClick={sendMail} className="btn btn-lg btn-thm">
               Agendar Cita
             </button>
           </div>
