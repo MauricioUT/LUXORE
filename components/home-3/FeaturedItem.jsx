@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useEffect, useState  } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addLength } from "../../features/properties/propertiesSlice";
-import properties from "../../data/properties";
 import Image from "next/image";
 import ReactPaginate from 'react-paginate';
 
