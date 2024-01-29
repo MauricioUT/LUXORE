@@ -8,68 +8,58 @@ import { useState, useEffect } from "react";
 
 
 
+
 const GlobalHeroFilter = ({ className = "" }) => {
 
     const dispath = useDispatch();
 
     const [geteaturedId, setFeaturedId] = useState(1);
-
+    const [getCategories, setCategories]=  useState([]);
 
       // City
       useEffect(() => {
         dispath(addFeaturedId(geteaturedId));
       }, [dispath, geteaturedId]);
 
+
+      useEffect(() => {
+        // Cargar datos al renderizar
+        (async () => {
+          const response = await fetch('/api/catalogos/C_CATEGORIES', {
+            method: 'GET',
+            headers: {
+              'content-type': 'application/json'
+            }
+          })
+          console.log("entre a C_CATEGORIES")
+          const data = await response.json()
+          setCategories(data);
+        })();
+      }, []);
+
   return (
     <div className={`home_adv_srch_opt ${className}`}>
       <ul className="nav nav-pills" id="pills-tab" role="tablist">
-        <li className="nav-item">
-          <a
-            className="nav-link active"
-            id="venta-directa-tab"
-            data-bs-toggle="pill"
-            href="#venta-directa"
-            role="tab"
-            aria-controls="venta-directa"
-            aria-selected="true"
-            onClick={(e) => setFeaturedId(1)}
-          >
-            Venta 
-          </a>
-        </li>
-
-        <li className="nav-item">
-          <a
-            className="nav-link"
-            id="rh-tab"
-            data-bs-toggle="pill"
-            href="#rh"
-            role="tab"
-            aria-controls="rh"
-            aria-selected="false"
-            onClick={(e) => setFeaturedId(2)}
-          >
-            Remate Hipotecario
-          </a>
-        </li>
-
-
-        <li className="nav-item">
-          <a
-            className="nav-link"
-            id="renta-tab"
-            data-bs-toggle="pill"
-            href="#renta"
-            role="tab"
-            aria-controls="renta"
-            aria-selected="false"
-            onClick={(e) => setFeaturedId(3)}
-          >
-            renta
-          </a>
-        </li>
+          {getCategories.map((item) => (
+                  <li className="nav-item">
+                  <a
+                    className={`${["nav-link"]} ${[item.tag == 'venta-directa' ? "active":'']}`}
+                    id={item.tag+"-tab"}
+                    data-bs-toggle="pill"
+                    href={"#"+item.tag}
+                    role="tab"
+                    aria-controls={item.tag}
+                    aria-selected="true"
+                    onClick={(e) => setFeaturedId(item.id)}
+                  >
+                    {item.category} 
+                  </a>
+                </li>
+            ))
+            }
       </ul>
       {/* End nav-pills */}
+
 
       <div className="tab-content home1_adsrchfrm" id="pills-tabContent">
         <div
