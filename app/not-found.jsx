@@ -1,6 +1,3 @@
-
-
-
 import dynamic from "next/dynamic";
 import NotFound from "@/components/404";
 
