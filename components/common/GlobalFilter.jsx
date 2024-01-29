@@ -44,23 +44,13 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
   const [getNeighborhood, setNeighborhood] = useState(neighborhood);
   const [getLstProperties, setLstProperties] = useState([]);
 
-  const [getAdvanced, setAdvanced] = useState([
-    { id: uuidv4(), name: "Air Conditioning" },
-    { id: uuidv4(), name: "Barbeque" },
-    { id: uuidv4(), name: "Gym" },
-    { id: uuidv4(), name: "Microwave" },
-    { id: uuidv4(), name: "TV Cable" },
-    { id: uuidv4(), name: "Lawn" },
-    { id: uuidv4(), name: "Refrigerator" },
-    { id: uuidv4(), name: "Swimming Pool" },
-    { id: uuidv4(), name: "WiFi" },
-    { id: uuidv4(), name: "Sauna" },
-    { id: uuidv4(), name: "Dryer" },
-    { id: uuidv4(), name: "Washer" },
-    { id: uuidv4(), name: "Laundry" },
-    { id: uuidv4(), name: "Outdoor Shower" },
-    { id: uuidv4(), name: "Window Coverings" },
-  ]);
+  //catalogos
+  const [getPropertyTypes, setPropertyTypes]=  useState([]);
+  const [getStates, setStates]=  useState([]);
+  const [getCities, setCities]=  useState([]);
+  const [getColonies, setColonies]=  useState([]);
+
+  const [getAdvanced, setAdvanced] = useState([]);
 
 
 
@@ -116,7 +106,12 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     setCity(0);
     setNeighborhood(0);
 
+    setCities([]);
+    setColonies([]);
+
     clearAdvanced();
+
+
   };
 
 
@@ -194,6 +189,156 @@ useEffect(() => {
   }
   },[featuredId]);
 
+
+  const changeState =  function(state){
+    console.log(state);
+    setState(state);
+    setColonies([]);
+    setCities([]);
+    setCity(0);
+    setNeighborhood(0);
+    getCitiesFunction(state);
+  }
+  const changeCity =  function(city){
+    console.log(city);
+    setCity(city)
+    getColoniesFunction(city);
+  }
+
+ 
+
+  useEffect(() => {
+    // Cargar datos al renderizar
+    getPropertyTypesFunction();
+    getStatesFunction();
+    getAmenities();
+  }, []);
+
+
+  //call apis
+  const getPropertyTypesFunction=  function(){
+      (async () => {
+        const response = await fetch('/api/catalogos/C_PROPERTY_TYPES', {
+          method: 'GET',
+          headers: {
+            'content-type': 'application/json'
+          }
+        })
+        console.log("entre a C_PROPERTY_TYPES")
+        const data = await response.json()
+        setPropertyTypes(data);
+      })();
+  }
+
+  const getStatesFunction=  function(){
+      (async () => {
+        const response = await fetch('/api/catalogos/C_STATES', {
+          method: 'GET',
+          headers: {
+            'content-type': 'application/json'
+          }
+        })
+        console.log("entre a C_STATES")
+        const data = await response.json()
+        setStates(data);
+      })();
+  }
+
+  const getCitiesFunction=  function(state){
+    (async () => {
+      const response = await fetch('/api/ciudades/' + state, {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json'
+        }
+      })
+      console.log("entre a cities")
+      const data = await response.json()
+      setCities(data);
+    })();
+  }
+
+  const getColoniesFunction=function(city){
+    (async () => {
+      const response = await fetch('/api/colonias/' + city, {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json'
+        }
+      })
+      console.log("entre a colonies")
+      const data = await response.json()
+      setColonies(data);
+      console.log(data);
+    })();
+  }
+
+  const getAmenities =  function(){
+    (async () => {
+      const response = await fetch('/api/catalogos/C_AMENITIES', {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json'
+        }
+      })
+      console.log("entre a amenities")
+      const data = await response.json()
+      setAdvanced(data);
+      console.log(getAdvanced);
+    })();
+  }
+
+//crate options
+ const createPropertyTypesSelectItems=  function() {
+    let items = [];         
+    if(getPropertyTypes.length > 0){
+      for (let i = 0; i <= getPropertyTypes.length; i++) {    
+        if(getPropertyTypes[i]?.propertyType !==  undefined){           
+           items.push(<option key={getPropertyTypes[i]?.id} value={getPropertyTypes[i]?.id}>{getPropertyTypes[i]?.propertyType}</option>);   
+        }
+      }
+    }
+    return items;
+}
+
+const createStatesSelectItems=  function() {
+  let items = [];         
+  if(getStates.length > 0){
+    for (let i = 0; i <= getStates.length; i++) {      
+      if(getStates[i]?.state !==  undefined){       
+         items.push(<option key={getStates[i]?.id} value={getStates[i]?.id}>{getStates[i]?.state}</option>);   
+      }
+    }
+  }
+  return items;
+}
+
+const createCitiesSelectItems=  function() {
+  let items = [];         
+  if(getCities.length > 0){
+    for (let i = 0; i <= getCities.length; i++) {      
+      if(getCities[i]?.city !==  undefined){       
+         items.push(<option key={getCities[i]?.id} value={getCities[i]?.id}>{getCities[i]?.city}</option>);   
+      }
+    }
+  }
+  return items;
+}
+
+
+const createColoniesSelectItems=  function() {
+  let items = [];         
+  if(getColonies.length > 0){
+    debugger
+    for (let i = 0; i <= getColonies.length; i++) {      
+      if(getColonies[i]?.colony !==  undefined){       
+         items.push(<option key={getColonies[i]?.id} value={getColonies[i]?.id}>{getColonies[i]?.colony}</option>);   
+      }
+    }
+  }
+  return items;
+}
+
   return (
     <div className={`home1-advnc-search ${className}`}>
       <ul className="h1ads_1st_list mb0">
@@ -207,13 +352,8 @@ useEffect(() => {
                 className="selectpicker w100 show-tick form-select"
                 value={getStatus}
               >          
-                <option value="">Property Type</option>
-                <option>Apartment</option>
-                <option>Bungalow</option>
-                <option>Condo</option>
-                <option>House</option>
-                <option>Land</option>
-                <option>Single Family</option>
+                <option value="">Tipo de propiedad</option>
+                {createPropertyTypesSelectItems()}
               </select>
             </div>
           </div>
@@ -224,11 +364,9 @@ useEffect(() => {
           {/* Estado */}
           <li className="list-inline-item">
           <div className="candidate_revew_select">
-            <select className="selectpicker w100 show-tick form-select" onChange={(e) => setState(e.target.value)} value={getState}>
+            <select className="selectpicker w100 show-tick form-select" onChange={(e) => changeState(e.target.value)} value={getState}>
               <option value={0}>Estado</option>
-              <option value={1}>CDMX</option>
-              <option value={2}>Chiapas</option>
-              <option value={3}>Estado de México</option>
+              {createStatesSelectItems()}
             </select>
           </div>
           </li>
@@ -237,13 +375,9 @@ useEffect(() => {
           {/* Ciudad */}
           <li className="list-inline-item">
           <div className="candidate_revew_select">
-            <select className="selectpicker w100 show-tick form-select" onChange={(e) => setCity(e.target.value)} value={getCity}>
+            <select className="selectpicker w100 show-tick form-select" onChange={(e) => changeCity(e.target.value)} value={getCity}>
               <option value={0}>Ciudad</option>
-              <option value={1}>Iztapalapa</option>
-              <option value={2}>Coyoacan</option>
-              <option value={3}>Ecatepec</option>
-              <option value={4}>Comitan</option>
-              <option value={5}>Coacalco</option>
+              {createCitiesSelectItems()}
             </select>
           </div>
           </li>
@@ -254,14 +388,7 @@ useEffect(() => {
           <div className="candidate_revew_select">
             <select className="selectpicker w100 show-tick form-select" onChange={(e) => setNeighborhood(e.target.value)} value={getNeighborhood}>
               <option value={0}>Colonia</option>
-              <option value={1}>Colonia de Iztapalapa1</option>
-              <option value={2}>Colonia de Ecatepec1</option>
-              <option value={3}>Colonia de Coyoacan1</option>
-              <option value={4}>Colonia de Ecatepec2</option>
-              <option value={5}>Colonia de Comitan1</option>
-              <option value={6}>Colonia de Iztapalapa2</option>
-              <option value={7}>Colonia de Iztapalapa3</option>
-              <option value={8}>Colonia de Coacalco1</option>
+             {createColoniesSelectItems()}
             </select>
           </div>
           </li>
@@ -273,7 +400,7 @@ useEffect(() => {
             <select className="selectpicker w100 show-tick form-select"
               onChange={(e) => setBedroom(e.target.value)}
               value={getBedroom}>
-              <option value="">Bedrooms</option>
+              <option value="">Baños</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -291,7 +418,7 @@ useEffect(() => {
         <li className="list-inline-item">
           <div className="candidate_revew_select">
             <select className="selectpicker w100 show-tick form-select" onChange={(e) => setBathroom(e.target.value)} value={getBathroom}>
-              <option value="">Bathrooms</option>
+              <option value="">Habitaciones</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -315,7 +442,7 @@ useEffect(() => {
               data-bs-auto-close="outside"
               aria-expanded="false"
             >
-              <span>Price</span>
+              <span>Rango de precio</span>
               <label htmlFor="InputEmail2">
                 <span className="fa fa-angle-down"></span>
               </label>
@@ -364,13 +491,13 @@ useEffect(() => {
                 data-bs-auto-close="outside"
                 aria-expanded="false"
               >
-                Advanced <i className="flaticon-more pl10 flr-520"></i>
+                Amenidades <i className="flaticon-more pl10 flr-520"></i>
               </span>
 
               <div className="dropdown-content dropdown-menu ">
                 <div className="row p15">
                   <div className="col-lg-12">
-                    <h4 className="text-thm3 mb-4">Amenities</h4>
+                    <h4 className="text-thm3 mb-4">Amenidades</h4>
                   </div>
 
                   <div className="row">
@@ -383,7 +510,7 @@ useEffect(() => {
                                     type="checkbox"
                                     className="form-check-input"
                                     id={feature.id}
-                                    value={feature.name}
+                                    value={feature.amenity}
                                     checked={feature.isChecked || false}
                                     onChange={(e) =>
                                       dispath(addAmenities(e.target.value))
@@ -394,7 +521,7 @@ useEffect(() => {
                                     className="form-check-label"
                                     htmlFor={feature.id}
                                   >
-                                    {feature.name}
+                                    {feature.amenity}
                                   </label>
                                 </div>
                             </li>
@@ -420,7 +547,7 @@ useEffect(() => {
               type="button"
               className="btn btn-thm"
             >
-              Clear Filters
+              Borrar filtros
             </button>
           </div>
         </li>
@@ -435,7 +562,7 @@ useEffect(() => {
               type="button"
               className="btn btn-thm"
             >
-              buscar
+              Buscar
             </button>
           </div>
         </li>
