@@ -35,7 +35,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
 
 
   // input state
-  const [price, setPrice] = useState({ value: { min: 10000, max: 20000 } });
+  const [price, setPrice] = useState({ value: { min: 10, max: 100 } });
   const [getStatus, setStatus] = useState(status);
   const [getBathroom, setBathroom] = useState(bathrooms);
   const [getBedroom, setBedroom] = useState(bedrooms);
@@ -99,7 +99,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     setStatus("");
     setBathroom("");
     setBedroom("");
-    setPrice({ value: { min: 10000, max: 20000 }});
+    setPrice({ value: { min: 10, max: 100 }});
     dispath(resetAmenities());
 
     setState(0);
@@ -111,13 +111,12 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
 
     clearAdvanced();
 
-
+    onSearch();
   };
 
 
 // 
 const handleOnChange = (value) => {
-  console.log(value)
   setPrice({ value });
 };
 
@@ -142,14 +141,30 @@ useEffect(() => {
 
 //search button
   const onSearch =() =>  {
-    const consulta = {
-      city: getCity
-    }
-     console.log("soy la busqueda" + getCity +' price: ' + price.value.max + ' checks:' + getAdvanced.filter(bathroomHandler).length)
-
-     //notificar a featureditem
-     setLstProperties(properties);
-     console.log(getLstProperties)
+     (async () => {
+      const response = await fetch('/api/properties', {
+        method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+        body: JSON.stringify({
+          "idCategory":featuredId,
+          "idPropertyType":getPropertyTypes,
+          "idState":getState,
+          "idCity":getCity,
+          "idColony":getNeighborhood, 
+          "bedrooms":getBedroom, 
+          "bathrooms":getBathroom, 
+          "price":price, 
+          "amenities":getAdvanced.filter(bathroomHandler).map((obj) => obj.id), 
+          "limit":1, 
+          "offset":1
+        })
+      })
+     
+      const data = await response.json();
+      setLstProperties(data);      
+    })();
   }
 
   // bathroom handler
@@ -181,6 +196,7 @@ useEffect(() => {
       item.isChecked = false;
       return item;
     });
+
   };
 
  useEffect(() => {
@@ -191,7 +207,6 @@ useEffect(() => {
 
 
   const changeState =  function(state){
-    console.log(state);
     setState(state);
     setColonies([]);
     setCities([]);
@@ -200,7 +215,6 @@ useEffect(() => {
     getCitiesFunction(state);
   }
   const changeCity =  function(city){
-    console.log(city);
     setCity(city)
     getColoniesFunction(city);
   }
@@ -224,7 +238,6 @@ useEffect(() => {
             'content-type': 'application/json'
           }
         })
-        console.log("entre a C_PROPERTY_TYPES")
         const data = await response.json()
         setPropertyTypes(data);
       })();
@@ -238,7 +251,6 @@ useEffect(() => {
             'content-type': 'application/json'
           }
         })
-        console.log("entre a C_STATES")
         const data = await response.json()
         setStates(data);
       })();
@@ -252,7 +264,6 @@ useEffect(() => {
           'content-type': 'application/json'
         }
       })
-      console.log("entre a cities")
       const data = await response.json()
       setCities(data);
     })();
@@ -266,10 +277,8 @@ useEffect(() => {
           'content-type': 'application/json'
         }
       })
-      console.log("entre a colonies")
       const data = await response.json()
       setColonies(data);
-      console.log(data);
     })();
   }
 
@@ -281,10 +290,8 @@ useEffect(() => {
           'content-type': 'application/json'
         }
       })
-      console.log("entre a amenities")
       const data = await response.json()
       setAdvanced(data);
-      console.log(getAdvanced);
     })();
   }
 
@@ -394,12 +401,12 @@ const createColoniesSelectItems=  function() {
           </li>
           {/* End li */}
 
-         {/* bedrooms */}
+         {/* bathrooms */}
         <li className="list-inline-item">
           <div className="candidate_revew_select">
             <select className="selectpicker w100 show-tick form-select"
-              onChange={(e) => setBedroom(e.target.value)}
-              value={getBedroom}>
+              onChange={(e) => setBathroom(e.target.value)}
+              value={getBathroom}>
               <option value="">Baños</option>
               <option>1</option>
               <option>2</option>
@@ -414,11 +421,11 @@ const createColoniesSelectItems=  function() {
         </li>
         {/* End li */}
          
-          {/* bathrooms */}
+          {/* rooms*/}
         <li className="list-inline-item">
           <div className="candidate_revew_select">
-            <select className="selectpicker w100 show-tick form-select" onChange={(e) => setBathroom(e.target.value)} value={getBathroom}>
-              <option value="">Habitaciones</option>
+            <select className="selectpicker w100 show-tick form-select" onChange={(e) => setBedroom(e.target.value)} value={getBedroom}>
+              <option value="">Cuartos</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -467,8 +474,8 @@ const createColoniesSelectItems=  function() {
 
                 <InputRange
                   formatLabel={(value) => ``}
-                  maxValue={20000}
-                  minValue={10000}
+                  maxValue={100}
+                  minValue={10}
                   value={price.value}
                   onChange={(value) => handleOnChange(value)}
                 />

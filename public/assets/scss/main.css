@@ -1148,7 +1148,9 @@ header.header-nav.menu_style_home_one.style2 .ace-responsive-menu li a {
   height: 25px;
   line-height: 25px;
   text-align: center;
-  width: 75px;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .feat_property .thumb .thmb_cntnt ul.tag li:first-child {

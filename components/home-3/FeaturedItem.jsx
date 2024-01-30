@@ -33,7 +33,7 @@ const FeaturedItem = () => {
     (state) => state.filter
   );
  
-  const [getLstProperties, setLstProperties] = useState(lstProperties);
+
   
   //paginator constants
   
@@ -175,23 +175,6 @@ const FeaturedItem = () => {
   // status handler
   let content = lstProperties
     ?.slice(skip,take)
-    ?.filter(keywordHandler)
-    ?.filter(locationHandler)
-    ?.filter(statusHandler)
-    ?.filter(propertiesHandler)
-    ?.filter(priceHandler)
-    ?.filter(bathroomHandler)
-    ?.filter(bedroomHandler)
-    ?.filter(garagesHandler)
-    ?.filter(builtYearsHandler)
-    ?.filter(areaHandler)
-    ?.filter(advanceHandler)
-    ?.sort(statusTypeHandler)
-    ?.filter(featuredHandler)
-    ?.filter(stateHandler)
-    ?.filter(cityHandler)
-    ?.filter(featuredIdHandler)
-    ?.filter(neighborhoodHandler)
     .map((item) => (
       <div
         className={`${
@@ -210,7 +193,7 @@ const FeaturedItem = () => {
               width={342}
               height={220}
               className="img-whp w-100 h-100 cover"
-              src={item.img}
+              src={item.mainImage}
               alt="fp1.jpg"
             />
             <div className="thmb_cntnt">
@@ -220,7 +203,7 @@ const FeaturedItem = () => {
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="text-capitalize">
-                    {item.featured}
+                    {item.category}
                   </a>
                 </li>
               </ul>
@@ -229,13 +212,13 @@ const FeaturedItem = () => {
                 className="fp_price"
               >
                 ${item.price}
-                <small>/mo</small>
+                <small>/MX</small>
               </Link>
             </div>
           </div>
           <div className="details">
             <div className="tc_content">
-              <p className="text-thm">{item.type}</p>
+              <p className="text-thm">{item.propertyType}</p>
               <h4>
                 <Link href={`/listing-details-v1/${item.id}`}>
                   {item.title}
@@ -243,18 +226,23 @@ const FeaturedItem = () => {
               </h4>
               <p>
                 <span className="flaticon-placeholder"></span>
-                {item.location}
+                {item.addres}
               </p>
 
-              <ul className="prop_details mb0">
-                {item.itemDetails.map((val, i) => (
-                  <li className="list-inline-item" key={i}>
-                    <a href="#">
-                      {val.name}: {val.number}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <div className="row">
+                <div className="col-4">
+                <p>Habitaciones:{item.rooms} </p>
+                </div>
+                <div className="col-3">
+                <p>Cuartos:{item.bedrooms} </p>
+                </div>
+                <div className="col-3">
+                <p>Baños:{item.bathrooms} </p>
+                </div>
+                <div className="col-3">
+                <p>Metros:{item.metersSurface}m2 </p>
+                </div>
+              </div>
             </div>
             {/* End .tc_content */}
 
