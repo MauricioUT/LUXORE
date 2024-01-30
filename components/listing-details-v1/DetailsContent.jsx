@@ -2,8 +2,10 @@ import AdditionalDetails from "../common/listing-details/AdditionalDetails";
 import PropertyDescriptions from "../common/listing-details/PropertyDescriptions";
 import PropertyDetails from "../common/listing-details/PropertyDetails";
 import PropertyItem from "../common/listing-details/PropertyItem";
-import PropertyLocation from "../common/listing-details/PropertyLocation";
-import Map from "../common/map/Map"
+// import Map from "../common/map/Map"
+import dynamic from "next/dynamic";
+const Map = dynamic(() => import("../common/map/Map"), { ssr: false });
+
 
 
 const DetailsContent = () => {
