@@ -10,7 +10,7 @@ export const metadata = {
 const index = () => {
   return (
     <>
-      <ListingDetailsV1 />
+      {/* <ListingDetailsV1 /> */}
     </>
   );
 };
