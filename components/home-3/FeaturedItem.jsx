@@ -265,7 +265,7 @@ const FeaturedItem = () => {
   //paginador 
   
   const handlePageClick = (event) => {
-    const itemsPerPage =  5;
+    const itemsPerPage =  9;
     const length = 38;
     let _take= 5;
     let _skipt = 0;

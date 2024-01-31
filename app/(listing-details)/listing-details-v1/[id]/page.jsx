@@ -1,4 +1,4 @@
-
+'use client'
 
 import "photoswipe/dist/photoswipe.css";
 import Footer from "@/components/common/footer/Footer";
@@ -8,14 +8,32 @@ import properties from "@/data/properties";
 import DetailsContent from "@/components/listing-details-v1/DetailsContent";
 import Sidebar from "@/components/listing-details-v1/Sidebar";
 import ListingOne from "@/components/listing-single/ListingOne";
+import { useState, useEffect } from "react";
+
 
 const ListingDynamicDetailsV1 = ({params}) => {
  
   const id = params.id;
-  const property = properties?.find((item) => item.id == id) || properties[0]
+  const [getProperty, setProperty]=  useState([]);
+
+  useEffect(() => {
+    // Cargar datos al renderizar
+    (async () => {
+      const response = await fetch('/api/properties/'+id, {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json'
+        }
+      })
+      console.log("detalle property")
+      const data = await response.json()
+      setProperty(data);
+    })();
+  }, []);
 
   return (
-    <>
+    // condición para pintar el detalle solo cuando se tenga valores.
+    getProperty.id &&  <>
       {/* <!-- Main Header Nav --> */}
       <Header />
 
@@ -23,7 +41,7 @@ const ListingDynamicDetailsV1 = ({params}) => {
       <MobileMenu />
 
       {/* <!-- Listing Single Property --> */}
-      <ListingOne property={property} />
+      <ListingOne property={getProperty} />
     
 
       {/* <!-- Agent Single Grid View --> */}
@@ -31,7 +49,7 @@ const ListingDynamicDetailsV1 = ({params}) => {
         <div className="container">
           <div className="row">
             <div className="col-md-12 col-lg-8">
-              <DetailsContent />
+              <DetailsContent property={getProperty} />
             </div>
             {/* End details content .col-lg-8 */}
 

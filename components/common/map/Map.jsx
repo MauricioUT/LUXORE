@@ -42,17 +42,22 @@ const markers = [
 
 
 
-export default function App({ lat = "", long= "" }) {
-  console.log(lat +"----n-n----"+ long)
-  return (
+export default function App({ property,lat = "", long= "" }) {
+  console.log("entre al mapa")
+  console.log(lat +" ----n-n---- "+ long)
+  console.log("lat:" +property.latitude )
+  console.log("long:"+property.longitude)
 
-    <MapContainer center={[Number(lat),Number(long)]} zoom={15} scrollWheelZoom={false}>
+
+  return (    
+        
+    <MapContainer center={[Number(property.latitude == undefined ? 0 : property.latitude),Number(property.longitude == undefined ? 0 : property.longitude)]} zoom={15} scrollWheelZoom={false}>
       {/* OPEN STREEN MAPS TILES */}
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-    <Marker position={[Number(lat),Number(long)]}  icon={customIcon}>
+    <Marker position={[Number(property.latitude == undefined ? 0 : property.latitude),Number(property.longitude == undefined ? 0 : property.longitude)]}  icon={customIcon}>
       <Popup>
       </Popup>
     </Marker>   

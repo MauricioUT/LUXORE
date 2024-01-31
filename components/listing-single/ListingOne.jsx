@@ -13,7 +13,7 @@ export default function ListingOne({property}) {
           <div className="col-lg-7 col-xl-8">
             <div className="single_property_title mt30-767">
               <h2>{property?.title}</h2>
-              <p>{property?.location}</p>
+              <p>{property?.addres}</p>
             </div>
           </div>
           <div className="col-lg-5 col-xl-4">
@@ -21,22 +21,12 @@ export default function ListingOne({property}) {
               <div className="price float-start fn-400">
                 <h2>
                   ${property?.price}
-                  <small>/mo</small>
+                  <small>/mx</small>
                 </h2>
               </div>
 
               <div className="spss style2 mt20 text-end tal-400">
                 <ul className="mb0">
-                  <li className="list-inline-item">
-                    <a href="#">
-                      <span className="flaticon-transfer-1"></span>
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="#">
-                      <span className="flaticon-heart"></span>
-                    </a>
-                  </li>
                   <li className="list-inline-item">
                     <a href="#">
                       <span className="flaticon-share"></span>
@@ -61,8 +51,8 @@ export default function ListingOne({property}) {
               <div className="col-lg-12">
                 <div className="spls_style_two mb30-520">
                   <Item
-                    original={property?.img}
-                    thumbnail={property?.img}
+                    original={property?.mainImage}
+                    thumbnail={property?.mainImage}
                     width={752}
                     height={450}
                   >
@@ -72,7 +62,7 @@ export default function ListingOne({property}) {
                           width={752}
                           height={450}
                           className="img-fluid w100 cover lds-1"
-                          src={property.img}
+                          src={property.mainImage}
                           alt="1.jpg"
                         />
                       </div>
@@ -90,8 +80,8 @@ export default function ListingOne({property}) {
                 <div className="col-6" key={i}>
                   <div className="spls_style_two img-gallery-box mb24">
                     <Item
-                      original={val}
-                      thumbnail={val}
+                      original={val.imagePath}
+                      thumbnail={val.imagePath}
                       width={752}
                       height={450}
                     >
@@ -101,7 +91,7 @@ export default function ListingOne({property}) {
                             width={170}
                             height={133}
                             className="img-fluid w100 cover"
-                            src={val}
+                            src={val.imagePath}
                             alt="2.jpg"
                           />
                         </div>
