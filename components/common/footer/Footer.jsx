@@ -31,19 +31,16 @@ const Footer = () => {
           <h4>Acerca de las Inversiones Inmobiliarias</h4>
           <ul className="list-unstyled">
             <li>
-              <Link href="/">About Us</Link>
+              <Link href="/">Quienes somos</Link>
             </li>
             <li>
-              <Link href="/">Terms & Conditions</Link>
+              <Link href="/">Servicios</Link>
             </li>
             <li>
-              <Link href="/">User’s Guide</Link>
+              <Link href="/">Bienes Raices</Link>
             </li>
             <li>
-              <Link href="/">Support Center</Link>
-            </li>
-            <li>
-              <Link href="/">Press Info</Link>
+              <Link href="/">Contacto</Link>
             </li>
           </ul>
         </div>
