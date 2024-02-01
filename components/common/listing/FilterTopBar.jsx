@@ -10,7 +10,7 @@ import {
 } from "../../../features/filter/filterSlice";
 
 const FilterTopBar = () => {
-  const { length } = useSelector((state) => state.properties);
+  const { count } = useSelector((state) => state.properties);
   const { statusType, featured } = useSelector((state) => state.filter);
   const [getStatus, setStatus] = useState(statusType);
 
@@ -40,10 +40,10 @@ const FilterTopBar = () => {
       <div className="col-sm-12 col-md-2 col-lg-4 col-xl-4">
         <div className="left_area tac-xsd">
           <p>
-            <span className={length === 0 ? "text-danger" : undefined}>
-              {length}{" "}
+            <span className={count === 0 ? "text-danger" : undefined}>
+              {count}{" "}
             </span>
-            {length !== 0 ? (
+            {count !== 0 ? (
               "Resultado(s)"
             ) : (
               <span className="text-danger">No se encontraron resultados</span>

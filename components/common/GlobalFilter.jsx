@@ -11,6 +11,10 @@ import {
   addNeighborhood,
   addAmenities,
   addLstProperties,
+  addCount,
+  getCurrentPage,
+  addCurrentPage,
+  addSkip
 } from "../../features/properties/propertiesSlice";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,6 +35,8 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     city,
     neighborhood,
     featuredId,
+    skip,
+    currentPage
     } = useSelector((state) => state.properties);
 
 
@@ -43,6 +49,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
   const [getCity, setCity] = useState(city);
   const [getNeighborhood, setNeighborhood] = useState(neighborhood);
   const [getLstProperties, setLstProperties] = useState([]);
+  const [getCount, setCount] = useState([]);
 
   //catalogos
   const [getPropertyTypes, setPropertyTypes]=  useState([]);
@@ -51,6 +58,8 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
   const [getColonies, setColonies]=  useState([]);
 
   const [getAdvanced, setAdvanced] = useState([]);
+
+  const [getCurrentPage, setCurrentPage] = useState(0);
 
 
 
@@ -86,7 +95,27 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
         dispath(addNeighborhood(getNeighborhood));
       }, [dispath, getNeighborhood]);
 
-      
+    // currentPage
+    useEffect(() => {
+
+    dispath(addCurrentPage(getCurrentPage));
+  }, [dispath, getCurrentPage]);
+
+  useEffect(() => {
+    if(testVar == featuredId ){
+      console.log('by feature')
+     onSearch();
+    }
+    },[featuredId]);
+  
+  
+    useEffect( () =>{
+      if(testVar == featuredId ){
+        console.log('by skip')
+         onSearch();
+      }
+    },[skip])
+     
 
   // clear filter
   const clearHandler = () => {
@@ -111,7 +140,11 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
 
     clearAdvanced();
 
-    onSearch();
+    dispath(addCurrentPage(0));
+    dispath(addSkip(0));
+    onSearchInitial();
+
+   
   };
 
 
@@ -134,9 +167,17 @@ useEffect(() => {
 useEffect(() => {
   dispath(
 
-    addLstProperties(getLstProperties)
+    addLstProperties(getLstProperties),
+
+    
   );
 }, [dispath, getLstProperties]);
+
+useEffect(() => {
+  dispath(
+    addCount(getCount)
+  );
+}, [dispath, getCount]);
 
 
 //search button
@@ -157,14 +198,50 @@ useEffect(() => {
           "bathrooms":getBathroom, 
           "price":price, 
           "amenities":getAdvanced.filter(bathroomHandler).map((obj) => obj.id), 
-          "limit":1, 
-          "offset":1
+          "limit":9, 
+          "offset": skip 
         })
       })
      
       const data = await response.json();
-      setLstProperties(data);      
+      setCount(data.count)
+      setLstProperties(data.lstHoms);      
     })();
+  }
+
+
+  const onSearchInitial =() =>  {
+    (async () => {
+     const response = await fetch('/api/properties', {
+       method: 'POST',
+     headers: {
+       'content-type': 'application/json'
+     },
+       body: JSON.stringify({
+         "idCategory":featuredId,
+         "idPropertyType":0,
+         "idState":0,
+         "idCity":0,
+         "idColony":0, 
+         "bedrooms":0, 
+         "bathrooms":0, 
+         "price":{ value: { min: 10, max: 100 }}, 
+         "amenities":[], 
+         "limit":9, 
+         "offset": 0 
+       })
+     })
+    
+     const data = await response.json();
+     setCount(data.count)
+     setLstProperties(data.lstHoms);      
+   })();
+ }
+
+ const onClickSearch =() =>  {
+    dispath(addCurrentPage(0));
+    dispath(addSkip(0));
+      onSearch();
   }
 
   // bathroom handler
@@ -199,11 +276,6 @@ useEffect(() => {
 
   };
 
- useEffect(() => {
-  if(testVar == featuredId ){
-   onSearch();
-  }
-  },[featuredId]);
 
 
   const changeState =  function(state){
@@ -336,7 +408,7 @@ const createCitiesSelectItems=  function() {
 const createColoniesSelectItems=  function() {
   let items = [];         
   if(getColonies.length > 0){
-    debugger
+
     for (let i = 0; i <= getColonies.length; i++) {      
       if(getColonies[i]?.colony !==  undefined){       
          items.push(<option key={getColonies[i]?.id} value={getColonies[i]?.id}>{getColonies[i]?.colony}</option>);   
@@ -358,7 +430,7 @@ const createColoniesSelectItems=  function() {
                 onChange={(e) => setStatus(e.target.value)}
                 className="selectpicker w100 show-tick form-select"
                 value={getStatus}
-              >          
+              >        
                 <option value="">Tipo de propiedad</option>
                 {createPropertyTypesSelectItems()}
               </select>
@@ -565,7 +637,7 @@ const createColoniesSelectItems=  function() {
                   <li className="list-inline-item">
           <div className="search_option_button">
             <button
-              onClick={onSearch}
+              onClick={onClickSearch}
               type="button"
               className="btn btn-thm"
             >

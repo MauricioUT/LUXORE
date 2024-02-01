@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { useEffect, useState  } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addLength } from "../../features/properties/propertiesSlice";
+import { addLength,addSkip,addCurrentPage } from "../../features/properties/propertiesSlice";
 import Image from "next/image";
 import ReactPaginate from 'react-paginate';
 
@@ -25,7 +25,10 @@ const FeaturedItem = () => {
     city,
     neighborhood,
     featuredId,
-    lstProperties
+    lstProperties,
+    count,
+    currentPage,
+    skip
   } = useSelector((state) => state.properties);
 
   
@@ -37,9 +40,10 @@ const FeaturedItem = () => {
   
   //paginator constants
   
-  const [take, setTake] = useState(5);
-  const [skip, setSkip] = useState(0);
-  const pageCount = Math.ceil(38 /5);
+  const [take, setTake] = useState(9);
+  const [getSkip, setSkip] = useState(skip);
+  const [getCurrenPage, setCurrenPage] =  useState(0);
+  const pageCount = Math.ceil(count /9);
 
 
   const dispatch = useDispatch();
@@ -174,8 +178,8 @@ const FeaturedItem = () => {
 
   // status handler
   let content = lstProperties
-    ?.slice(skip,take)
     .map((item) => (
+
       <div
         className={`${
           isGridOrList ? "col-12 feature-list" : "col-md-4 col-lg-4"
@@ -186,9 +190,9 @@ const FeaturedItem = () => {
           className={`feat_property home7 style4 ${
             isGridOrList ? "d-flex align-items-center" : undefined
           }`}
-        >
+        >  
           <div className="thumb">
- 
+        
             <Image
               width={342}
               height={220}
@@ -264,18 +268,31 @@ const FeaturedItem = () => {
 
   //paginador 
   
+  useEffect(() => {
+    dispatch(addSkip(getSkip))
+  },[getSkip]);
+
+  useEffect(() => {
+    setSkip(skip)
+  },[skip]);
+
   const handlePageClick = (event) => {
     const itemsPerPage =  9;
-    const length = 38;
-    let _take= 5;
-    let _skipt = 0;
+     const length = count;
+     let _take= 9;
+     let _skipt = 0;
+     let _CurrenPage= 0;
     _take = (event.selected * itemsPerPage) % length;
     _take =  _take + itemsPerPage;
     _skipt =  _take - itemsPerPage;
+    _CurrenPage =  _skipt/itemsPerPage;
   console.log(
-    `Skipt ${_skipt}, take ${_take}  `
+    `Skipt ${_skipt}, take ${_take}  currentPage ${_CurrenPage}  `
   );
-  setTake(_take);
+
+  dispatch(addCurrentPage(_CurrenPage));
+  console.log(skip);
+  console.log(getSkip);
   setSkip(_skipt);
 };
 
@@ -303,6 +320,7 @@ const FeaturedItem = () => {
             pageCount={pageCount}
             previousLabel="< Anterior"
             renderOnZeroPageCount={null}
+            forcePage={currentPage}
             />
       </div>
   </div>

@@ -41,13 +41,23 @@ export async function POST(request) {
    if(amenities && amenities.length > 0)
       query  +=  ` AND a.id in ( select idProperty from T_AMENITIES_PROPERTIES where idAmenity in (${amenities}) ) `
          
+      //CONTADOR
+      let query2 =  query.replace('SELECT a.id, mainImage, price, title,addres, featuredProperty, rooms, bedrooms, bathrooms,metersSurface, b.propertyType, c.category ', 'SELECT COUNT(1) as count ')
+      query2 = query2.concat(` AND enable =  1`);
 
-      console.log(query)
+      //BUSQUEDA PRINCIPAL
+   query = query.concat(` AND enable =  1 ORDER BY featuredProperty, updateOn desc LIMIT  ${limit} OFFSET  ${offset}`);
 
-   query.concat(` AND enable ORDER BY featuredProperty, updateOn desc LIMIT = ${limit} OFFSET = ${offset}`);
+   let reultCount =  await conn.query(query2);
+   let  lstHomsResponse = await conn.query(query);
 
-   results = await conn.query(query);
+    let result = {count:0, lstHoms:[]};
+    console.log(query2)
+    console.log(reultCount[0].count)
+    result.count =  reultCount[0].count;
+    result.lstHoms = [];
+    result.lstHoms= lstHomsResponse;
 
-   return NextResponse.json(results);
+   return NextResponse.json(result);
 
 }

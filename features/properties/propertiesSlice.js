@@ -24,6 +24,9 @@ const initialState = {
     neighborhood: 0,
     featuredId:1,
     lstProperties: [],
+    count:0,
+    skip:0,
+    currentPage:0
 };
 
 export const propertiesSlice = createSlice({
@@ -101,7 +104,17 @@ export const propertiesSlice = createSlice({
         },  
         addLoad : (state,action) => {
             state.load =  action.payload;
-        },       
+        },  
+        addCount : (state,action) => {
+            state.count =  action.payload;
+        },     
+        
+        addSkip : (state,action) => {
+            state.skip =  action.payload;
+        },    
+        addCurrentPage: (state,action) => {
+            state.currentPage =  action.payload;
+        },    
     },
 });
 
@@ -125,6 +138,9 @@ export const {
     addNeighborhood,
     addFeaturedId,
     addLstProperties,
-    addLoad
+    addLoad,
+    addCount,
+    addSkip,
+    addCurrentPage
 } = propertiesSlice.actions;
 export default propertiesSlice.reducer;
