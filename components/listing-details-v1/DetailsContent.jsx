@@ -32,12 +32,12 @@ const DetailsContent = ({property}) => {
       </div>
       {/* End .additional_details */}
 
-      <div className="additional_details">
+       <div className="additional_details">
         <div className="row">
           <div className="col-lg-12">
-            <h4 className="mb15">Additional details</h4>
+            <h4 className="mb15">Amenidades</h4>
           </div>
-          <AdditionalDetails property={property} />
+          <AdditionalDetails lstAmenities={property.lstAmenities} />
         </div>
       </div>
       {/* End .additional_details */} 
