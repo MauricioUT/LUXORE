@@ -4,7 +4,6 @@ import "photoswipe/dist/photoswipe.css";
 import Footer from "@/components/common/footer/Footer";
 import Header from "@/components/common/header/DefaultHeader";
 import MobileMenu from "@/components/common/header/MobileMenu";
-import properties from "@/data/properties";
 import DetailsContent from "@/components/listing-details-v1/DetailsContent";
 import Sidebar from "@/components/listing-details-v1/Sidebar";
 import ListingOne from "@/components/listing-single/ListingOne";

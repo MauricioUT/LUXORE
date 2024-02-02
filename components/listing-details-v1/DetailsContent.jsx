@@ -1,5 +1,4 @@
 import AdditionalDetails from "../common/listing-details/AdditionalDetails";
-import PropertyDescriptions from "../common/listing-details/PropertyDescriptions";
 import PropertyDetails from "../common/listing-details/PropertyDetails";
 import PropertyItem from "../common/listing-details/PropertyItem";
 // import Map from "../common/map/Map"

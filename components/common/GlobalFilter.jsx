@@ -20,9 +20,6 @@ import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import InputRange from "react-input-range";
-import { v4 as uuidv4 } from "uuid";
-import properties from "../../data/properties";
-
 
 const GlobalFilter = ({ className = "", testVar = "" }) => {
   const router = useRouter()
