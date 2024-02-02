@@ -55,32 +55,7 @@ const FilterTopBar = () => {
 
       <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div className="right_area text-end tac-xsd">
-          <ul>
-            <li className="list-inline-item">
-              <span className="stts">Status:</span>
-              <select
-                className="selectpicker show-tick"
-                onChange={(e) => setStatus(e.target.value)}
-                value={getStatus}
-              >
-                <option value="">All Status</option>
-                <option value="old">Old</option>
-                <option value="recent">Recent</option>
-              </select>
-            </li>
-            <li className="list-inline-item">
-              <span className="shrtby">Sort by:</span>
-              <select
-                className="selectpicker show-tick"
-                onChange={(e) => setFeatured(e.target.value)}
-                value={getFeatured}
-              >
-                <option value="">Featured All</option>
-                <option value="sale">Sale</option>
-                <option value="rent">Rent</option>
-              </select>
-            </li>
-          </ul>
+     
         </div>
       </div>
       {/* End .col */}
