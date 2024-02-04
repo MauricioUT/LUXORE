@@ -38,7 +38,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
 
 
   // input state
-  const [price, setPrice] = useState({ value: { min: 10, max: 100 } });
+  const [price, setPrice] = useState({ value: { min: 10, max: 100000000 } });
   const [getStatus, setStatus] = useState(status);
   const [getBathroom, setBathroom] = useState(bathrooms);
   const [getBedroom, setBedroom] = useState(bedrooms);
@@ -222,7 +222,7 @@ useEffect(() => {
          "idColony":0, 
          "bedrooms":0, 
          "bathrooms":0, 
-         "price":{ value: { min: 10, max: 100 }}, 
+         "price":{ value: { min: 10, max: 100000000 }}, 
          "amenities":[], 
          "limit":9, 
          "offset": 0 
@@ -543,7 +543,7 @@ const createColoniesSelectItems=  function() {
 
                 <InputRange
                   formatLabel={(value) => ``}
-                  maxValue={100}
+                  maxValue={100000000}
                   minValue={10}
                   value={price.value}
                   onChange={(value) => handleOnChange(value)}
