@@ -125,7 +125,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     setStatus("");
     setBathroom("");
     setBedroom("");
-    setPrice({ value: { min: 10, max: 100 }});
+    setPrice({ value: { min: 10, max: 100000000 }});
     dispath(resetAmenities());
 
     setState(0);
@@ -140,8 +140,6 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     dispath(addCurrentPage(0));
     dispath(addSkip(0));
     onSearchInitial();
-
-   
   };
 
 
