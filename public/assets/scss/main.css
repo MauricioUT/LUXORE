@@ -669,6 +669,7 @@ header.header-nav.menu_style_home_one.style2 .ace-responsive-menu li a {
   line-height: 1.2;
   height: 50px;
   width: 215px;
+  min-width: 150px;
 }
 
 .home1-advnc-search ul li:first-child input[type="text"].form-control::-webkit-input-placeholder {

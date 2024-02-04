@@ -38,7 +38,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
 
 
   // input state
-  const [price, setPrice] = useState({ value: { min: 10, max: 100000000 } });
+  const [price, setPrice] = useState({ value: { min: 10000, max: 100000000 } });
   const [getStatus, setStatus] = useState(status);
   const [getBathroom, setBathroom] = useState(bathrooms);
   const [getBedroom, setBedroom] = useState(bedrooms);
@@ -101,6 +101,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
   useEffect(() => {
     if(testVar == featuredId ){
       console.log('by feature')
+      setCount([]);
      onSearch();
     }
     },[featuredId]);
@@ -125,7 +126,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     setStatus("");
     setBathroom("");
     setBedroom("");
-    setPrice({ value: { min: 10, max: 100000000 }});
+    setPrice({ value: { min: 10000, max: 100000000 }});
     dispath(resetAmenities());
 
     setState(0);
@@ -185,7 +186,7 @@ useEffect(() => {
       },
         body: JSON.stringify({
           "idCategory":featuredId,
-          "idPropertyType":getPropertyTypes,
+          "idPropertyType":getStatus,
           "idState":getState,
           "idCity":getCity,
           "idColony":getNeighborhood, 
@@ -199,7 +200,10 @@ useEffect(() => {
       })
      
       const data = await response.json();
-      setCount(data.count)
+      //dispath(setCount(0));
+      console.log(getCount);
+      setCount(data.count);
+      addCount(getCount)
       setLstProperties(data.lstHoms);      
     })();
   }
@@ -220,7 +224,7 @@ useEffect(() => {
          "idColony":0, 
          "bedrooms":0, 
          "bathrooms":0, 
-         "price":{ value: { min: 10, max: 100000000 }}, 
+         "price":{ value: { min: 10000, max: 100000000 }}, 
          "amenities":[], 
          "limit":9, 
          "offset": 0 
@@ -542,7 +546,7 @@ const createColoniesSelectItems=  function() {
                 <InputRange
                   formatLabel={(value) => ``}
                   maxValue={100000000}
-                  minValue={10}
+                  minValue={10000}
                   value={price.value}
                   onChange={(value) => handleOnChange(value)}
                 />
