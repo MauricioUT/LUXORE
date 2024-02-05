@@ -51,8 +51,8 @@ export default function ListingOne({property}) {
               <div className="col-lg-12">
                 <div className="spls_style_two mb30-520">
                   <Item
-                    original={property?.mainImage}
-                    thumbnail={property?.mainImage}
+                    original={property?.imgList[0].imagePath}
+                    thumbnail={property?.imgList[0].imagePath}
                     width={752}
                     height={450}
                   >
@@ -62,7 +62,7 @@ export default function ListingOne({property}) {
                           width={752}
                           height={450}
                           className="img-fluid w100 cover lds-1"
-                          src={property.mainImage}
+                          src={property?.imgList[0].imagePath}
                           alt="1.jpg"
                         />
                       </div>
