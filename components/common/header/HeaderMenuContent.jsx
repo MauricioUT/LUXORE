@@ -25,22 +25,22 @@ const HeaderMenuContent = ({ float = "" }) => {
       data-menu-style="horizontal"
     >
       <li className="last">
-        <Link
+        <a
           href="/"
           className={pathname === "/" ? "ui-active" : undefined}
         >
           Inicio
-        </Link>
+        </a>
       </li>
     {/* End .Inicio */}
 
       <li className="last">
-        <Link
+        <a
           href="/quienes-somos"
           className={pathname === "/quienes-somos" ? "ui-active" : undefined}
         >
           Quienes somos
-        </Link>
+        </a>
       </li>
       {/* End Quienes somos */}
 
@@ -59,14 +59,14 @@ const HeaderMenuContent = ({ float = "" }) => {
         <ul className="sub-menu ">
           {services.map((item) => (
             <li key={item.id}>
-              <Link
+              <a
                 href={item.routerPath}
                 className={
                   pathname?.split('/')[1] === item.routerPath?.split('/')[1] ? "ui-active" : undefined
                 }
               >
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -89,14 +89,14 @@ const HeaderMenuContent = ({ float = "" }) => {
         <ul className="sub-menu ">
           {realState.map((item) => (
             <li key={item.id}>
-              <Link
+              <a
                 href={item.routerPath}
                 className={
                   pathname?.split('/')[1] === item.routerPath?.split('/')[1] ? "ui-active" : undefined
                 }
               >
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -104,22 +104,22 @@ const HeaderMenuContent = ({ float = "" }) => {
       {/* End .dropitem */}
 
       <li className="last">
-        <Link
+        <a
           href="/contacto"
           className={pathname === "/contacto" ? "ui-active" : undefined}
         >
           Contacto
-        </Link>
+        </a>
       </li>
       {/* End .dropitem */}
 
       <li className="last">
-        <Link
+        <a
           href="tel:5589883659"
         >
           <i className="fa fa-solid fa-phone"> 55 8988 3659</i>
          
-        </Link>
+        </a>
       </li>
     </ul>
   );

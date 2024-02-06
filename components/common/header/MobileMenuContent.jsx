@@ -52,7 +52,7 @@ const MobileMenuContent = () => {
     {/* <Sidebar> */}
     <div style={{maxHeight:'calc(100vh - 100px)', overflowY:'auto'}}>
         <Menu>
-        <MenuItem>
+        <MenuItem href="#">
             <div
             onClick={()=>router.push("/")}
              
@@ -66,7 +66,7 @@ const MobileMenuContent = () => {
         </MenuItem>
         {/* fin inicio */}
 
-        <MenuItem>
+        <MenuItem href="#">
             <div
             onClick={()=>router.push("/quienes-somos")}
              
@@ -80,6 +80,7 @@ const MobileMenuContent = () => {
            {/* fin quienes somos */}
          
          <SubMenu
+           href="#"
             label="Servicios"
             className={
               services.some((page) => page.routerPath?.split('/')[1] === pathname.split('/')[1])
@@ -103,6 +104,7 @@ const MobileMenuContent = () => {
           {/* End servicios */}
 
           <SubMenu
+          href="#"
             label="Bienes raíces"
             className={
               realState.some((page) => page.routerPath?.split('/')[1] === pathname.split('/')[1])

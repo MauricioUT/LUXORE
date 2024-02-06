@@ -67,7 +67,7 @@ const FilterTopBar = () => {
               className={`list-inline-item ${!isGridOrList ? "active" : ""}`}
               onClick={() => dispatch(toggleGridAndList(false))}
             >
-              <a>
+              <a href="#">
                 <span className="fa fa-th-large"></span>
               </a>
             </li>
@@ -76,7 +76,7 @@ const FilterTopBar = () => {
               className={`list-inline-item ${isGridOrList ? "active" : ""}`}
               onClick={() => dispatch(toggleGridAndList(true))}
             >
-              <a>
+              <a href="#">
                 <span className="fa fa-th-list"></span>
               </a>
             </li>

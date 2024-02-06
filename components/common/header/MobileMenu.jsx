@@ -26,7 +26,7 @@ const MobileMenu = () => {
               data-bs-target="#offcanvasMenu"
               aria-controls="offcanvasMenu"
             >
-              <a>
+              <a href="#">
                 <span></span>
               </a>
             </li>
