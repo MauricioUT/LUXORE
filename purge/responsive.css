@@ -24,13 +24,12 @@
 		background-image: none !important;
 		background: #000000 !important;
 	}
-
 	.how-work-header-img {
 		border-radius: 0px;
 		background-image: none !important;
 		background: #000000 !important;
 	}
-	.how-safe-header-img{
+	.how-safe-header-img {
 		border-radius: 0px;
 		background-image: none !important;
 		background: #000000 !important;
@@ -104,9 +103,6 @@
 	.why_chose_us.home7 {
 		padding: 25px 30px;
 	}
-	.home1-advnc-search.home10 ul li {
-		margin-right: auto !important;
-	}
 	.stylehome1 .nav_logo_img {
 		position: relative;
 	}
@@ -120,9 +116,6 @@
 	}
 	.footer_social_widget li {
 		margin-right: 0 !important;
-	}
-	.banner-style-one .slide {
-		padding: 165px 60px;
 	}
 	header.header-nav.menu_style_home_one a.navbar_brand {
 		margin-top: 10px;
@@ -144,9 +137,6 @@
 	}
 	.stylehome1.home3:before {
 		background-color: transparent !important;
-	}
-	.inner_page_breadcrumb {
-		margin-top: -95px;
 	}
 }
 /* Medium devices (min-width:768px) (max-width: 991.98px) // (tablets, less than 992px) */
@@ -179,10 +169,6 @@
 	.home1-advnc-search ul li .search_option_button button {
 		width: 170px;
 	}
-	.small_dropdown2.home10 .dd_content2 {
-		top: 150px;
-		z-index: 9;
-	}
 	.dd_content2 {
 		right: auto;
 		top: 200px;
@@ -204,8 +190,7 @@
 	.home_content.listing {
 		padding: 40px 0 !important;
 	}
-	.form_grid,
-	.terms_condition_grid {
+	.form_grid {
 		margin-bottom: 30px;
 	}
 	.home3_home_content {
@@ -231,15 +216,8 @@
 	.footer_contact_widget {
 		margin-bottom: 30px;
 	}
-	.listing_single_row {
-		margin-bottom: 42px;
-		margin-top: -150px;
-	}
 }
 @media only screen and (max-width: 768px) {
-	.nav_logo_img.mt10 {
-		margin-top: 5px;
-	}
 	.menu_style_home_one.stricky-fixed {
 		background-color: transparent;
 	}
@@ -253,12 +231,6 @@
 	.dn-smd {
 		display: none !important;
 	}
-	.sticky-nav-tab {
-		padding: 20px 10px 0;
-	}
-	.sticky-nav-tab {
-		padding: 20px 10px 10px;
-	}
 
 	.container-fluid.style2 {
 		width: 100%;
@@ -267,10 +239,6 @@
 /* Small devices (min-width: 576px) (max-width: 767.98px) // (landscape phones, less than 768px) */
 @media only screen and (max-width: 767.98px) {
 	/* ExTra Class Start*/
-	
-	.tal-767 {
-		text-align: left !important;
-	}
 	.tac-xsd {
 		text-align: center !important;
 	}
@@ -280,10 +248,6 @@
 	
 	.mt30-767 {
 		margin-top: 30px !important;
-	}
-	
-	.mb30-767 {
-		margin-bottom: 30px !important;
 	}
 	/* ExTra Class End*/
 	/* Home Content*/
@@ -341,39 +305,17 @@
 	.lsd_list li {
 		margin-bottom: 10px;
 	}
-	.listing_single_description2 {
-		display: block;
-	}
 	.single_property_social_share.style2 {
 		position: relative;
 		right: auto;
 	}
-	.listing_single_row.style2 {
-		position: absolute;
-		top: -400px;
-	}
 	.faq_according {
 		margin-bottom: 30px;
 	}
-
-	.sticky-nav-tab {
-		padding: 5px 10px 15px;
-	}
-	.candidate_revew_select.mt50 {
-		margin-top: auto;
-	}
 }
 @media only screen and (max-width: 630px) {
-	.banner-style-one .slide {
-		padding: 165px 15px;
-	}
 	.menu_bar_home2 li.list-inline-item:first-child:after {
 		right: 0;
-	}
-}
-@media only screen and (max-width: 580px) {
-	.sticky-nav-tabs-container {
-		padding-top: 13px;
 	}
 }
 /* Extra small devices (min-width:361px) (max-width: 575.98px) // (portrait phones, less than 576px) */
@@ -459,10 +401,6 @@
 	.mega-dropdown .dropbtn {
 		display: block;
 	}
-
-	.contact_form_social_area li {
-		margin-bottom: 10px;
-	}
 	.error_page.footer_apps_widget .mailchimp_form .form-control {
 		width: 375px;
 	}
@@ -475,18 +413,8 @@
 	.home_content.home7 {
 		padding: 200px 0 !important;
 	}
-	.small_dropdown2.home10 .dd_content2 {
-		left: 15px;
-		top: 250px;
-	}
 	.home_adv_srch_opt.listing {
 		margin-top: 0;
-	}
-	.listing_single_row {
-		margin-bottom: 15px;
-	}
-	.sticky-nav-tab {
-		padding: 5px 2px 15px;
 	}
 	.error_page.footer_apps_widget .form-inline {
 		display: -webkit-inline-box;
@@ -540,12 +468,6 @@
 	}
 	/*.sidebar_switch{display: none;}*/
 	/*.sidebar_content_details{display: block;position: relative !important;padding-top: 0;margin: 0 auto 30px !important;width: auto;}*/
-	.sticky-nav-tab {
-		padding: 10px 0px 15px;
-	}
-	.sticky-nav-tabs-container li a {
-		font-size: 13px;
-	}
 
 	.main-title a {
 		display: inline-block;
@@ -604,9 +526,6 @@
 	}
 }
 @media only screen and (max-width: 320px) {
-	.feat_property .details .tc_content .prop_details li {
-		margin-right: 20px;
-	}
 	.header.stylehome1 .main_logo_home2.home7 span {
 		font-size: 12px;
 	}

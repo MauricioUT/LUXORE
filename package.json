@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cleanCSS": "purgecss --css public/assets/scss/ace-responsive-menu.css --content components/404/*.jsx components/home-3/*.jsx components/bout-us/*.jsx components/common/*.jsx components/common/footer/*.jsx components/common/header/*.jsx components/common/listing/*.jsx components/common/listing-details/*.jsx components/contact/*.jsx  components/faq/*.jsx  components/layout/*.jsx  components/contact/*.jsx  components/listing-details-v1/*.jsx components/listing-details-v2/*.jsx components/listing-details-v4/*.jsx components/terms-conditions/*.jsx --output purge"
+    "cleanCSS": "purgecss --css public/assets/scss/responsive.css --content components/404/*.jsx components/about-us/*.jsx components/common/*.jsx components/common/footer/*.jsx components/common/header/*.jsx components/common/listing/*.jsx components/common/listing-details/*.jsx components/contact/*.jsx  components/faq/*.jsx  components/home-3/*.jsx components/how-safe/*.jsx components/how-work/*.jsx components/layout/*.jsx components/listing-details-v1/*.jsx components/home3/*.jsx components/listing-single/*.jsx components/services/goal-attempt/*.jsx components/services/real-state/*.jsx components/what-are/*.jsx --output purge"
   },
   "dependencies": {
     "@faker-js/faker": "^8.1.0",
