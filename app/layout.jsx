@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,400i,500,600,700&display=swap" /> */}
+        <meta name="google-site-verification" content="sKdtPF8a1KsZr1GKPyxbLh3PNWsxnwbBbo3mVY_EZGc" />
         <link  type="image/x-icon" rel="icon" href="./favicon.ico" />
       </head>
       <body >
