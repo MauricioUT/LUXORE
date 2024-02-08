@@ -4,7 +4,7 @@ const Creaator = () => {
   return (
     <div className="media ">
       <Image
-        width={350}
+        width={300}
         height={200}
         className="me-3"
         src="/assets/images/luxore/fondoContacto.jpg"
@@ -25,6 +25,10 @@ const Creaator = () => {
         <div>
           <a href="mailto:contacto@luxore.mx"> <i className="fa fa-solid fa-bookmark"> contacto@luxore.mx</i></a>
         </div>  
+
+        <div>
+          <a href="/contacto"> <i className="fa fa-solid fa-envelope" > Envíanos un e-mail</i></a>
+        </div> 
       </div>
     </div>
   );
