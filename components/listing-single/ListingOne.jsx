@@ -9,6 +9,9 @@ export default function ListingOne({property}) {
     
     <section className="listing-title-area mt85 md-mt0">
     <div className="container">
+      <a href="/">
+        <button className="btn btn-thm" >Regresar a inicio</button>
+      </a> 
       <Gallery>
         <div className="row mb30">
           <div className="col-lg-7 col-xl-8">
