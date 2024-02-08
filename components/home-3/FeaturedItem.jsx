@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addLength,addSkip,addCurrentPage } from "../../features/properties/propertiesSlice";
 import Image from "next/image";
 import ReactPaginate from 'react-paginate';
+import { NumericFormat } from 'react-number-format';
 
 const FeaturedItem = () => {
   const {
@@ -69,8 +70,8 @@ const FeaturedItem = () => {
                 href={`/detalle/${item.id}`}
                 className="fp_price"
               >
-                ${item.price}
-                <small>/MX</small>
+                  <NumericFormat value={item?.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />       
+                  <small>/mx</small>
               </Link>
             </div>
           </div>

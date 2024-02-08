@@ -2,6 +2,7 @@
 
 import { Gallery, Item } from "react-photoswipe-gallery";
 import Image from "next/image";
+import { NumericFormat } from 'react-number-format';
 
 export default function ListingOne({property}) {
   return (
@@ -20,7 +21,7 @@ export default function ListingOne({property}) {
             <div className="single_property_social_share position-static transform-none">
               <div className="price float-start fn-400">
                 <h2>
-                  ${property?.price}
+                  <NumericFormat value={property?.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />       
                   <small>/mx</small>
                 </h2>
               </div>
