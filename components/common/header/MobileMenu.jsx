@@ -13,7 +13,7 @@ const MobileMenu = () => {
               width={100}
               height={100}
               className="nav_logo_img contain"
-              src="/assets/images/logoBlanco1.webp"
+              src="/assets/images/luxore/logoDorado1.webp"
               alt="header-logo2.png"
             />
           </div>
