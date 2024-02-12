@@ -10,7 +10,7 @@ const Map = dynamic(() => import("../common/map/Map"), { ssr: false });
 const DetailsContent = ({property}) => {
   return (
     <>
-      <div className="listing_single_description">
+      <div id="div1Detail" className="listing_single_description ">
         <div className="lsd_list">
           <PropertyItem  property={property}  />
         </div>
@@ -36,15 +36,18 @@ const DetailsContent = ({property}) => {
           <div className="col-lg-12">
             <h4 className="mb15">Amenidades</h4>
           </div>
-          <AdditionalDetails lstAmenities={property.lstAmenities} />
+          <AdditionalDetails property={property} lstAmenities={property.lstAmenities} />
         </div>
       </div>
       {/* End .additional_details */} 
 
-      <div className="application_statics mt30">
+      <div  id="div2Detail" className="application_statics mt30">
         <h4 className="mb30">
           MAPA
         </h4>
+        <h5>
+          {property.pageAddress}
+        </h5>
         <div id="map" className="row">
                 <Map property={property} lat={property.latitude} long={property.longitude} />
          </div>

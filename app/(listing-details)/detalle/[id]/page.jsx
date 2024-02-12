@@ -62,7 +62,7 @@ const ListingDynamicDetailsV1 = ({params}) => {
       </section>
 
       {/* <!-- Our Footer --> */}
-      <section className="footer_one">
+      <section id="footeDetail" className="footer_one">
         <div className="container">
           <div className="row">
             <Footer />

@@ -1,4 +1,4 @@
-const AdditionalDetails = ({lstAmenities}) => {
+const AdditionalDetails = ({property,lstAmenities}) => {
 
 //crate options
 const createLIAmenities=  function() {
@@ -18,10 +18,13 @@ const createLIAmenities=  function() {
 
   return (
     <>
-      <div className="col-md-6 col-lg-6">
-        <ul className="list-inline-item">
+      <div className="col-md-12 col-lg-12">
+        {/* <ul className="list-inline-item">
         {createLIAmenities()}
-        </ul>
+        </ul> */}
+        <p>
+          {property.features}
+        </p>
       </div>
 
     </>

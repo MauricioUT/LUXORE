@@ -2748,3 +2748,22 @@ margin-top: -20px;
 .what-are-content h4 {
   margin-top: 30px;
 }
+
+.share{
+  font-weight: bold;
+  color: black;
+}
+
+
+/* print */
+.displayPrint{
+  display: none !important;
+}
+
+.mt100{
+  margin-top: 90px;
+}
+
+.mt300{
+  margin-top: 300px;
+}

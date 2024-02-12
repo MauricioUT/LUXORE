@@ -64,7 +64,7 @@ const Footer = () => {
 
       <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3">
         <div className="footer_social_widget">
-          <h4>Follow us</h4>
+          <h4>Siguenos en</h4>
           <ul className="mb30">
             <Social />
           </ul>
