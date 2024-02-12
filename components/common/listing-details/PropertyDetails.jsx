@@ -31,12 +31,7 @@ const PropertyDetails = ({property}) => {
         <ul className="list-inline-item">
           <li>
             <p>
-              Habitaciones: <span>{property.rooms}</span>
-            </p>
-          </li>
-          <li>
-            <p>
-              Cuartos: <span>{property.bedrooms}</span>
+              Recamaras: <span>{property.bedrooms}</span>
             </p>
           </li>
           <li>

@@ -85,15 +85,12 @@ const FeaturedItem = () => {
               </h4>
               <p>
                 <span className="flaticon-placeholder"></span>
-                {item.addres}
+                {item.pageAddress}
               </p>
 
               <div className="row">
-                <div className="col-4">
-                <p>Habitaciones:{item.rooms} </p>
-                </div>
                 <div className="col-3">
-                <p>Cuartos:{item.bedrooms} </p>
+                <p>Recamaras:{item.bedrooms} </p>
                 </div>
                 <div className="col-3">
                 <p>Baños:{item.bathrooms} </p>

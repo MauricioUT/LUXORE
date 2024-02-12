@@ -496,7 +496,7 @@ const createColoniesSelectItems=  function() {
         <li className="list-inline-item">
           <div className="candidate_revew_select">
             <select className="selectpicker w100 show-tick form-select" onChange={(e) => setBedroom(e.target.value)} value={getBedroom}>
-              <option value="">Cuartos</option>
+              <option value="">Recamaras</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>

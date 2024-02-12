@@ -5,6 +5,10 @@ import Image from "next/image";
 import { NumericFormat } from 'react-number-format';
 
 export default function ListingOne({property}) {
+
+ let onclickPrint = () => {
+    window.print()
+  }
   return (
     
     <section className="listing-title-area mt85 md-mt0">
@@ -17,7 +21,7 @@ export default function ListingOne({property}) {
           <div className="col-lg-7 col-xl-8">
             <div className="single_property_title mt30-767">
               <h2>{property?.title}</h2>
-              <p>{property?.addres}</p>
+              <p>{property?.pageAddress}</p>
             </div>
           </div>
           <div className="col-lg-5 col-xl-4">
@@ -37,7 +41,7 @@ export default function ListingOne({property}) {
                     </a>
                   </li>
                   <li className="list-inline-item">
-                    <a href="#">
+                    <a href="#" onClick={onclickPrint}>
                       <span className="flaticon-printer"></span>
                     </a>
                   </li>

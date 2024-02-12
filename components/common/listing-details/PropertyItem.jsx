@@ -8,7 +8,7 @@ const PropertyItem = ({property}) => {
         <a href="#">{property.propertyType}</a>
       </li>
       <li className="list-inline-item">
-        <a href="#">Cuartos: {property.bedrooms}</a>
+        <a href="#">Recamaras: {property.bedrooms}</a>
       </li>
       <li className="list-inline-item">
         <a href="#">Baños: {property.bathrooms}</a>

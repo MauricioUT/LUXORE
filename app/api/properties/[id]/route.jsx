@@ -8,7 +8,7 @@ export async function GET(request, { params }) {
    let lstAmenities = [];
    let query ="";
    if (!isNaN(params.id))
-       query = "select a.id, mainImage, price, title,description,addres,  rooms, bedrooms, bathrooms,metersSurface,metersBuilded, b.propertyType,carsNumber, c.category, floors, latitude,longitude from T_PROPERTIES a "+
+       query = "select a.id, mainImage, price, title,description,pageAddress,  rooms, bedrooms, bathrooms,metersSurface,metersBuilded, b.propertyType,carsNumber, c.category, floors, latitude,longitude from T_PROPERTIES a "+
                " inner join C_PROPERTY_TYPES b on a.idPropertyType = b.id "+
                " inner join C_CATEGORIES as c on a.idCategory =  c.id " +
                " where a.id = ?"
