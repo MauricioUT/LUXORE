@@ -9,6 +9,15 @@ import Sidebar from "@/components/listing-details-v1/Sidebar";
 import ListingOne from "@/components/listing-single/ListingOne";
 import { useState, useEffect } from "react";
 
+/*export const metadata = {
+  title: 'Detalle',
+  description:
+    'Luxore - detalla del inmueble',
+  robots: {
+    index: true,
+    follow: true
+  }
+}*/
 
 const ListingDynamicDetailsV1 = ({params}) => {
  
@@ -73,5 +82,6 @@ const ListingDynamicDetailsV1 = ({params}) => {
     </>
   );
 };
+
 
 export default ListingDynamicDetailsV1;

@@ -4,7 +4,11 @@ import RealState from "@/components/services/real-state";
 export const metadata = {
   title: 'Agencia inmobiliaria',
   description:
-  'LUXORE te brinda la solución a tus necesidades y maximisa tu inversión',
+    'LUXORE te brinda la solución a tus necesidades y maximisa tu inversión',
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 const index = () => {

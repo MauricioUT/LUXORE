@@ -4,7 +4,11 @@ import HowSafe from "@/components/how-safe";
 export const metadata = {
   title: '¿Qué tan seguros son?',
   description:
-  'informacion de que son tan seguras son las bienes raices',
+    'informacion de que son tan seguras son las bienes raices',
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 const index = () => {

@@ -5,6 +5,10 @@ export const metadata = {
   title: 'Contacto',
   description:
     'Déjanos tus datos y te asesoramos',
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 const index = () => {

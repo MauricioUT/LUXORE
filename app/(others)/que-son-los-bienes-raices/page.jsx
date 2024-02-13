@@ -4,7 +4,11 @@ import WhatAre from "@/components/what-are";
 export const metadata = {
   title: 'Qué son los bienes raíces',
   description:
-  'informacion de que son las bienes raices',
+    'informacion de que son las bienes raices',
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 const index = () => {

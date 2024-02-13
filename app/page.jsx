@@ -5,6 +5,10 @@ export const metadata = {
   title: 'Luxore - Capital                      ',
   description:
   'Desarrollador inmobiliario especializado en la venta de bienes raíces. ',
+  robots:{
+    index: true,
+    follow: true
+  }
 }
 
 export default function Home() {

@@ -5,6 +5,10 @@ export const metadata = {
   title: '¿Cómo funcionan?',
   description:
     'Cómo funciona la compra y venta de bienes raíces',
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 const index = () => {

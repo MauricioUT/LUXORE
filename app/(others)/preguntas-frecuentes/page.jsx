@@ -5,6 +5,10 @@ export const metadata = {
   title: 'preguntas frecuentes',
   description:
     'preguntas-frecuentes',
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 const index = () => {

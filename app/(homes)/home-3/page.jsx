@@ -5,12 +5,16 @@ export const metadata = {
   title: 'Inicio',
   description:
     'Inicio - Bienes raices',
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 const index = () => {
   return (
     <>
-     
+
       <HomeMain />
     </>
   );
