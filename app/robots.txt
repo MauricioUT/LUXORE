@@ -3,4 +3,4 @@ User-Agent: *
 Allow: /*.js
 Allow: /*.css
 Allow: /
-Sitemap: https://luxore-q6zbb5beda-uc.a.run.app/sitemap.xml
+Sitemap: https://luxore.mx/sitemap.xml
