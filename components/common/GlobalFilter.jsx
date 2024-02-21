@@ -12,7 +12,6 @@ import {
   addAmenities,
   addLstProperties,
   addCount,
-  getCurrentPage,
   addCurrentPage,
   addSkip
 } from "../../features/properties/propertiesSlice";
@@ -20,6 +19,7 @@ import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import InputRange from "react-input-range";
+import { NumericFormat } from 'react-number-format';
 
 const GlobalFilter = ({ className = "", testVar = "" }) => {
   const router = useRouter()
@@ -531,14 +531,13 @@ const createColoniesSelectItems=  function() {
                 <div className="nft__filter-price-inner d-flex align-items-center justify-content-between">
                   <div className="nft__filter-price-box">
                     <div className="d-flex align-items-center">
-                      <span>$ </span>
-                      <span>{price.value.min}</span>
+                      <NumericFormat value={price.value.min} displayType={'text'} thousandSeparator={true} prefix={'$'} />       
+
                     </div>
                   </div>
                   <div className="nft__filter-price-box">
                     <div className="d-flex align-items-center">
-                      <span>$ </span>
-                      <span>{price.value.max}</span>
+                      <NumericFormat value={price.value.max} displayType={'text'} thousandSeparator={true} prefix={'$'} />       
                     </div>
                   </div>
                 </div>

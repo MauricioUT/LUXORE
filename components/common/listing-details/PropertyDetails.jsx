@@ -1,3 +1,5 @@
+import { NumericFormat } from 'react-number-format';
+
 const PropertyDetails = ({property}) => {
   return (
     <>
@@ -10,7 +12,8 @@ const PropertyDetails = ({property}) => {
           </li>
           <li>
             <p>
-              Precio: <span>{property.price}</span>
+              Precio: <NumericFormat value={property.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />       
+
             </p>
           </li>
           <li>
