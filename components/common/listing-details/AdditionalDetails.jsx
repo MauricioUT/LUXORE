@@ -8,7 +8,7 @@ const createLIAmenities=  function() {
     console.log(lstAmenities)
     for (let i = 0; i <= lstAmenities.length; i++) {    
       if(lstAmenities[i]?.amenity !==  undefined){           
-         items.push(<li key={lstAmenities[i]?.id} value={lstAmenities[i]?.id}><p>{lstAmenities[i]?.amenity}</p></li>);   
+         items.push(<div className="col-xxs-6 col-sm-6 col-lg-4 col-xl-3 "><li key={lstAmenities[i]?.id} value={lstAmenities[i]?.id}><p>{lstAmenities[i]?.amenity}</p></li></div>);   
       }
     }
   }
@@ -19,12 +19,13 @@ const createLIAmenities=  function() {
   return (
     <>
       <div className="col-md-12 col-lg-12">
-        {/* <ul className="list-inline-item">
-        {createLIAmenities()}
-        </ul> */}
-        <p>
-          {property.features}
-        </p>
+        <ul className="ui_kit_checkbox selectable-list row">
+            
+            {createLIAmenities()}
+            
+      
+        </ul>
+       
       </div>
 
     </>
