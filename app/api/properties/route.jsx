@@ -46,7 +46,7 @@ export async function POST(request) {
       query2 = query2.concat(` AND enable =  1`);
 
       //BUSQUEDA PRINCIPAL
-   query = query.concat(` AND enable =  1 ORDER BY featuredProperty, updateOn desc LIMIT  ${limit} OFFSET  ${offset}`);
+   query = query.concat(` AND enable =  1 ORDER BY featuredProperty DESC, updateOn DESC LIMIT  ${limit} OFFSET  ${offset}`);
 
    let reultCount =  await conn.query(query2);
    let  lstHomsResponse = await conn.query(query);
