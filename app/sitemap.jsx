@@ -38,7 +38,27 @@ export default async function Sitemap() {
     changefreq: weekly,
     priority: 0.8
   }, {
+    url: `${HOST_PROD}/como-funcionan`,
+    lastModified: new Date(),
+    changefreq: weekly,
+    priority: 0.8
+  }, {
+    url: `${HOST_PROD}/que-tan-seguros-son`,
+    lastModified: new Date(),
+    changefreq: weekly,
+    priority: 0.8
+  }, {
+    url: `${HOST_PROD}/preguntas-frecuentes`,
+    lastModified: new Date(),
+    changefreq: weekly,
+    priority: 0.8
+  }, {
     url: `${HOST_PROD}/contacto`,
+    lastModified: new Date(),
+    changefreq: weekly,
+    priority: 0.8
+  }, {
+    url: `${HOST_PROD}/agradecimientos`,
     lastModified: new Date(),
     changefreq: weekly,
     priority: 0.8
