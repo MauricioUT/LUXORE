@@ -58,6 +58,8 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
 
   const [getCurrentPage, setCurrentPage] = useState(0);
 
+  const [getShowFilter, setShowFilter] = useState(false);
+ 
 
 
   const dispath = useDispatch();
@@ -419,232 +421,237 @@ const createColoniesSelectItems=  function() {
 
   return (
     <div className={`home1-advnc-search ${className}`}>
+      <div className="row">
+        <a href="#" onClick={() => setShowFilter(!getShowFilter)}>Filtrar propiedades <i className={`fa fa-chevron-circle-right indicator ${getShowFilter ? "fa-rotate-90" : ""}`}></i></a>
+      </div>
+      <div style={{display : `${getShowFilter ? "block" : "none"}`}}>
       <ul className="h1ads_1st_list mb0">
 
-        {/* property type */}
-        <li className="list-inline-item">
-          <div className="search_option_two">
+          {/* property type*/}
+          <li className="list-inline-item">
+            <div className="search_option_two">
+              <div className="candidate_revew_select">
+                <select
+                  onChange={(e) => setStatus(e.target.value)}
+                  className="selectpicker w100 show-tick form-select"
+                  value={getStatus}
+                >        
+                  <option value="">Tipo de propiedad</option>
+                  {createPropertyTypesSelectItems()}
+                </select>
+              </div>
+            </div>
+          </li>
+          {/* End li */}
+
+
+            {/* Estado */}
+            <li className="list-inline-item">
             <div className="candidate_revew_select">
-              <select
-                onChange={(e) => setStatus(e.target.value)}
-                className="selectpicker w100 show-tick form-select"
-                value={getStatus}
-              >        
-                <option value="">Tipo de propiedad</option>
-                {createPropertyTypesSelectItems()}
+              <select className="selectpicker w100 show-tick form-select" onChange={(e) => changeState(e.target.value)} value={getState}>
+                <option value={0}>Estado</option>
+                {createStatesSelectItems()}
               </select>
             </div>
-          </div>
-        </li>
-        {/* End li */}
+            </li>
+          {/* End li */}
 
+            {/* Ciudad */}
+            <li className="list-inline-item">
+            <div className="candidate_revew_select">
+              <select className="selectpicker w100 show-tick form-select" onChange={(e) => changeCity(e.target.value)} value={getCity}>
+                <option value={0}>Ciudad</option>
+                {createCitiesSelectItems()}
+              </select>
+            </div>
+            </li>
+            {/* End li */}
 
-          {/* Estado */}
+            {/* Colonia */}
+            <li className="list-inline-item">
+            <div className="candidate_revew_select">
+              <select className="selectpicker w100 show-tick form-select" onChange={(e) => setNeighborhood(e.target.value)} value={getNeighborhood}>
+                <option value={0}>Colonia</option>
+              {createColoniesSelectItems()}
+              </select>
+            </div>
+            </li>
+            {/* End li */}
+
+          {/* bathrooms */}
           <li className="list-inline-item">
-          <div className="candidate_revew_select">
-            <select className="selectpicker w100 show-tick form-select" onChange={(e) => changeState(e.target.value)} value={getState}>
-              <option value={0}>Estado</option>
-              {createStatesSelectItems()}
-            </select>
-          </div>
+            <div className="candidate_revew_select">
+              <select className="selectpicker w100 show-tick form-select"
+                onChange={(e) => setBathroom(e.target.value)}
+                value={getBathroom}>
+                <option value="">Baños</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+              </select>
+            </div>
           </li>
-        {/* End li */}
-
-          {/* Ciudad */}
+          {/* End li */}
+          
+            {/* rooms*/}
           <li className="list-inline-item">
-          <div className="candidate_revew_select">
-            <select className="selectpicker w100 show-tick form-select" onChange={(e) => changeCity(e.target.value)} value={getCity}>
-              <option value={0}>Ciudad</option>
-              {createCitiesSelectItems()}
-            </select>
-          </div>
+            <div className="candidate_revew_select">
+              <select className="selectpicker w100 show-tick form-select" onChange={(e) => setBedroom(e.target.value)} value={getBedroom}>
+                <option value="">Recamaras</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+              </select>
+            </div>
           </li>
           {/* End li */}
 
-           {/* Colonia */}
-           <li className="list-inline-item">
-          <div className="candidate_revew_select">
-            <select className="selectpicker w100 show-tick form-select" onChange={(e) => setNeighborhood(e.target.value)} value={getNeighborhood}>
-              <option value={0}>Colonia</option>
-             {createColoniesSelectItems()}
-            </select>
-          </div>
-          </li>
-          {/* End li */}
-
-         {/* bathrooms */}
-        <li className="list-inline-item">
-          <div className="candidate_revew_select">
-            <select className="selectpicker w100 show-tick form-select"
-              onChange={(e) => setBathroom(e.target.value)}
-              value={getBathroom}>
-              <option value="">Baños</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-            </select>
-          </div>
-        </li>
-        {/* End li */}
-         
-          {/* rooms*/}
-        <li className="list-inline-item">
-          <div className="candidate_revew_select">
-            <select className="selectpicker w100 show-tick form-select" onChange={(e) => setBedroom(e.target.value)} value={getBedroom}>
-              <option value="">Recamaras</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-            </select>
-          </div>
-        </li>
-        {/* End li */}
-
-          {/* price */}
-        <li className="list-inline-item">
-          <div className="small_dropdown2">
-            <div
-              id="prncgs"
-              className="btn dd_btn"
-              data-bs-toggle="dropdown"
-              data-bs-auto-close="outside"
-              aria-expanded="false"
-            >
-              <span>Rango de precio</span>
-              <label htmlFor="InputEmail2">
-                <span className="fa fa-angle-down"></span>
-              </label>
-            </div>
-            <div className="dd_content2 dropdown-menu">
-              <div className="pricing_acontent">
-              <div className="nft__filter-price tp-range-slider tp-range-slider-dark mb-20">
-                <div className="nft__filter-price-inner d-flex align-items-center justify-content-between">
-                  <div className="nft__filter-price-box">
-                    <div className="d-flex align-items-center">
-                      <NumericFormat value={price.value.min} displayType={'text'} thousandSeparator={true} prefix={'$'} />       
-
-                    </div>
-                  </div>
-                  <div className="nft__filter-price-box">
-                    <div className="d-flex align-items-center">
-                      <NumericFormat value={price.value.max} displayType={'text'} thousandSeparator={true} prefix={'$'} />       
-                    </div>
-                  </div>
-                </div>
-
-                <InputRange
-                  formatLabel={(value) => ``}
-                  maxValue={150000000}
-                  minValue={10000}
-                  value={price.value}
-                  onChange={(value) => handleOnChange(value)}
-                />
-
-                <div className="slider-styled inside-slider" id="nft-slider"></div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        {/* End li */}
-
-          {/* advanced */}
-        <li className="custome_fields_520 list-inline-item">
-          <div className="navbered">
-            <div className="mega-dropdown ">
-              <span
-                className="dropbtn"
+            {/* price */}
+          <li className="list-inline-item">
+            <div className="small_dropdown2">
+              <div
+                id="prncgs"
+                className="btn dd_btn"
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
                 aria-expanded="false"
               >
-                Amenidades <i className="flaticon-more pl10 flr-520"></i>
-              </span>
+                <span>Rango de precio</span>
+                <label htmlFor="InputEmail2">
+                  <span className="fa fa-angle-down"></span>
+                </label>
+              </div>
+              <div className="dd_content2 dropdown-menu">
+                <div className="pricing_acontent">
+                <div className="nft__filter-price tp-range-slider tp-range-slider-dark mb-20">
+                  <div className="nft__filter-price-inner d-flex align-items-center justify-content-between">
+                    <div className="nft__filter-price-box">
+                      <div className="d-flex align-items-center">
+                        <NumericFormat value={price.value.min} displayType={'text'} thousandSeparator={true} prefix={'$'} />       
 
-              <div className="dropdown-content dropdown-menu ">
-                <div className="row p15">
-                  <div className="col-lg-12">
-                    <h4 className="text-thm3 mb-4">Amenidades</h4>
+                      </div>
+                    </div>
+                    <div className="nft__filter-price-box">
+                      <div className="d-flex align-items-center">
+                        <NumericFormat value={price.value.max} displayType={'text'} thousandSeparator={true} prefix={'$'} />       
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="row">
-                <ul className="ui_kit_checkbox selectable-list row">
-                    {getAdvanced?.map((feature) => (
-                      <div className="col-xxs-6 col-sm-6 col-lg-4 col-xl-3 ">
-                            <li key={feature.id}>
-                                <div className="form-check custom-checkbox">
-                                  <input
-                                    type="checkbox"
-                                    className="form-check-input"
-                                    id={feature.id}
-                                    value={feature.amenity}
-                                    checked={feature.isChecked || false}
-                                    onChange={(e) =>
-                                      dispath(addAmenities(e.target.value))
-                                    }
-                                    onClick={() => advancedHandler(feature.id)}
-                                  />
-                                  <label
-                                    className="form-check-label"
-                                    htmlFor={feature.id}
-                                  >
-                                    {feature.amenity}
-                                  </label>
-                                </div>
-                            </li>
-                      </div>
-                    
-                    ))}
-                  </ul>
-           </div>
+                  <InputRange
+                    formatLabel={(value) => ``}
+                    maxValue={150000000}
+                    minValue={10000}
+                    value={price.value}
+                    onChange={(value) => handleOnChange(value)}
+                  />
+
+                  <div className="slider-styled inside-slider" id="nft-slider"></div>
                 </div>
-                {/* End .row */}
+                </div>
               </div>
-              {/* End .dropdown-menu */}
             </div>
-          </div>
-        </li>
-        {/* End li */}
+          </li>
+          {/* End li */}
 
-          {/* clear filter */}
-        <li className="list-inline-item">
-          <div className="search_option_button">
-            <button
-              onClick={clearHandler}
-              type="button"
-              className="btn btn-thm"
-            >
-              Borrar filtros
-            </button>
-          </div>
-        </li>
-        {/* End li */}
+            {/* advanced */}
+          <li className="custome_fields_520 list-inline-item">
+            <div className="navbered">
+              <div className="mega-dropdown ">
+                <span
+                  className="dropbtn"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  Amenidades <i className="flaticon-more pl10 flr-520"></i>
+                </span>
+
+                <div className="dropdown-content dropdown-menu ">
+                  <div className="row p15">
+                    <div className="col-lg-12">
+                      <h4 className="text-thm3 mb-4">Amenidades</h4>
+                    </div>
+
+                    <div className="row">
+                  <ul className="ui_kit_checkbox selectable-list row">
+                      {getAdvanced?.map((feature) => (
+                        <div className="col-xxs-6 col-sm-6 col-lg-4 col-xl-3 ">
+                              <li key={feature.id}>
+                                  <div className="form-check custom-checkbox">
+                                    <input
+                                      type="checkbox"
+                                      className="form-check-input"
+                                      id={feature.id}
+                                      value={feature.amenity}
+                                      checked={feature.isChecked || false}
+                                      onChange={(e) =>
+                                        dispath(addAmenities(e.target.value))
+                                      }
+                                      onClick={() => advancedHandler(feature.id)}
+                                    />
+                                    <label
+                                      className="form-check-label"
+                                      htmlFor={feature.id}
+                                    >
+                                      {feature.amenity}
+                                    </label>
+                                  </div>
+                              </li>
+                        </div>
+                      
+                      ))}
+                    </ul>
+            </div>
+                  </div>
+                  {/* End .row */}
+                </div>
+                {/* End .dropdown-menu */}
+              </div>
+            </div>
+          </li>
+          {/* End li */}
+
+            {/* clear filter */}
+          <li className="list-inline-item">
+            <div className="search_option_button">
+              <button
+                onClick={clearHandler}
+                type="button"
+                className="btn btn-thm"
+              >
+                Borrar filtros
+              </button>
+            </div>
+          </li>
+          {/* End li */}
 
 
-                  {/* clear filter */}
-                  <li className="list-inline-item">
-          <div className="search_option_button">
-            <button
-              onClick={onClickSearch}
-              type="button"
-              className="btn btn-thm"
-            >
-              Buscar
-            </button>
-          </div>
-        </li>
-        {/* End li */}
-      </ul>
+                    {/* clear filter */}
+                    <li className="list-inline-item">
+            <div className="search_option_button">
+              <button
+                onClick={onClickSearch}
+                type="button"
+                className="btn btn-thm"
+              >
+                Buscar
+              </button>
+            </div>
+          </li>
+          {/* End li */}
+        </ul>
+      </div>
     </div>
   );
 };
