@@ -33,7 +33,7 @@ const Form = () => {
     })
      const messageR = await response.json();
 
-    window.location.href="/"
+     window.location.href="/agradecimientos"
     //  console.log(messageR)
   }
 
