@@ -63,7 +63,7 @@ const GlobalHeroFilter = ({ className = "" }) => {
 
       <div className="tab-content home1_adsrchfrm" id="pills-tabContent">
         <div
-          className="tab-pane fade show active"
+          className="tab-pane fade show active col-12"
           id="venta-directa"
           role="tabpanel"
           aria-labelledby="venta-directa"
@@ -71,7 +71,7 @@ const GlobalHeroFilter = ({ className = "" }) => {
           <GlobalFilter   testVar="1" />
         </div>
         <div
-          className="tab-pane fade"
+          className="tab-pane fade col-12"
           id="rh"
           role="tabpanel"
           aria-labelledby="rh"
@@ -79,7 +79,7 @@ const GlobalHeroFilter = ({ className = "" }) => {
           <GlobalFilter   testVar="2" />
         </div>
         <div
-          className="tab-pane fade"
+          className="tab-pane fade col-12"
           id="renta"
           role="tabpanel"
           aria-labelledby="renta"
