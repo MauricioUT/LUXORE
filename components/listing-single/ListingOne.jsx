@@ -3,6 +3,9 @@
 import { Gallery, Item } from "react-photoswipe-gallery";
 import Image from "next/image";
 import { NumericFormat } from 'react-number-format';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 
 export default function ListingOne({property}) {
 
@@ -101,66 +104,16 @@ export default function ListingOne({property}) {
           </div>
         </div>
         {/* End .row */}
+      {/* images */}
 
-        <div className="row">
-          <div className="col-sm-7 col-lg-8">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="spls_style_two mb30-520">
-                  <Item
-                    original={property?.imgList[0].imagePath}
-                    thumbnail={property?.imgList[0].imagePath}
-                    width={752}
-                    height={450}
-                  >
-                    {({ ref, open }) => (
-                      <div role="button" ref={ref} onClick={open}>
-                        <Image
-                          width={752}
-                          height={450}
-                          className="img-fluid w100 cover lds-1"
-                          src={property?.imgList[0].imagePath}
-                          alt="1.jpg"
-                        />
-                      </div>
-                    )}
-                  </Item>
+     
+       <Carousel>
+            {property?.imgList?.map((val) => (
+                <div>
+                    <img src={val.imagePath} alt={val.imagePath}/>
                 </div>
-              </div>
-            </div>
-          </div>
-          {/* End .col-sm-7 .col-lg-8 */}
-
-          <div className="col-sm-5 col-lg-4">
-            <div className="row">
-              {property?.imgList?.map((val, i) => (
-                <div className="col-6" key={i}>
-                  <div className="spls_style_two img-gallery-box mb24">
-                    <Item
-                      original={val.imagePath}
-                      thumbnail={val.imagePath}
-                      width={752}
-                      height={450}
-                    >
-                      {({ ref, open }) => (
-                        <div role="button" ref={ref} onClick={open}>
-                          <Image
-                            width={170}
-                            height={133}
-                            className="img-fluid w100 cover"
-                            src={val.imagePath}
-                            alt="2.jpg"
-                          />
-                        </div>
-                      )}
-                    </Item>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* End  col-sm-5 col-lg-4 */}
-        </div>
+            ))}
+        </Carousel>
         {/* End .row */}
       </Gallery>
     </div>
