@@ -19,6 +19,9 @@ const index = () => {
             <div className="home3_home_content">
               <h1>¡Gracias por visitarnos!</h1>
               <h2>En breve uno de nuestros asesores se pondrá en contacto contigo</h2>
+              <a href="/" id="btnBack">
+                  <button className="btn btn-thm" >Ver más propiedades</button>
+              </a> 
             </div>
           </div>
         </div>
