@@ -74,15 +74,6 @@
     }
 }
 
-//
-.slide {
-    height: 700px;
-}
-@media (max-width: 767px) {
-    .slide{
-        height: 400px !important;
-    }
-}
 
 
 
@@ -157,3 +148,25 @@
         padding: 4px;
     }
 }
+
+
+
+// slider 
+//
+.slide {
+    max-height: 700px;
+ }
+ .carousel .slide img {
+     max-height: 700px;  /* change this to whatever you want */
+     width: auto;
+ }
+ @media (max-width: 767px) {
+     .slide{
+         height: 500px !important;
+     }
+     .carousel .slide img {
+         max-height: 500px;  /* change this to whatever you want */
+         width: auto;
+     }
+ }
+ 
