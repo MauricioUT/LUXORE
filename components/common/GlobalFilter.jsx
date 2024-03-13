@@ -421,10 +421,11 @@ const createColoniesSelectItems=  function() {
 
   return (
     <div className={`home1-advnc-search row  ${className}`}>
-      <div className="row col-12 mb-2">
+      {/* <div className="row col-12 mb-2">
         <a href="#" onClick={() => setShowFilter(!getShowFilter)}>Filtrar propiedades <i className={`fa fa-chevron-circle-right indicator ${getShowFilter ? "fa-rotate-90" : ""}`}></i></a>
       </div>
-      <div className="col-12" style={{display : `${getShowFilter ? "block" : "none"}`}}>
+      <div className="col-12" style={{display : `${getShowFilter ? "block" : "none"}`}}> */}
+      <div className="col-12" >
       <ul className="h1ads_1st_list mb0">
 
           {/* property type*/}
