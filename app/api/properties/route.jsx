@@ -7,7 +7,7 @@ export async function POST(request) {
 
    let results = { message: "No se encontro el catalogo" };
 
-   let query = 'SELECT a.id, mainImage, price, title,pageAddress, featuredProperty, rooms, bedrooms, bathrooms,metersSurface, b.propertyType, c.category FROM T_PROPERTIES as a ';
+   let query = 'SELECT a.id, mainImage, price, title,pageAddress, featuredProperty, rooms, bedrooms, bathrooms,metersSurface, b.propertyType, c.category, comercialValue, a.idCategory FROM T_PROPERTIES as a ';
    query = query.concat(` inner join C_PROPERTY_TYPES as b on a.idPropertyType = b.id `);
    query = query.concat(` inner join C_CATEGORIES as c on a.idCategory =  c.id `);
 
@@ -42,7 +42,7 @@ export async function POST(request) {
       query  +=  ` AND a.id in ( select idProperty from T_AMENITIES_PROPERTIES where idAmenity in (${amenities}) ) `
          
       //CONTADOR
-      let query2 =  query.replace('SELECT a.id, mainImage, price, title,pageAddress, featuredProperty, rooms, bedrooms, bathrooms,metersSurface, b.propertyType, c.category ', 'SELECT COUNT(1) as count ')
+      let query2 =  query.replace('SELECT a.id, mainImage, price, title,pageAddress, featuredProperty, rooms, bedrooms, bathrooms,metersSurface, b.propertyType, c.category, comercialValue, a.idCategory ', 'SELECT COUNT(1) as count ')
       query2 = query2.concat(` AND enable =  1`);
 
       //BUSQUEDA PRINCIPAL
