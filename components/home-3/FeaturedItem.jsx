@@ -66,19 +66,49 @@ const FeaturedItem = () => {
                     </a>
                   </li>
                 </ul>
-                <Link
-                  href={`/detalle/${item.id}`}
-                  className="fp_price"
-                >
-                  <NumericFormat value={item?.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
-                  <small>/mx</small>
-                </Link>
               </div>
             </div>
           </Link>
           <div className="details">
             <div className="tc_content">
               <p className="text-thm">{item.propertyType}</p>
+              { item?.comercialValue > 0 ? <Link
+                  href={`/detalle/${item.id}`}
+                  className="fp_price"
+                >
+                      <div>
+                          <strong>
+                            {'Precio Comercial: '} 
+                        <NumericFormat  value={item?.comercialValue} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                          <small>/mx</small>
+                          </strong> 
+                      </div>
+                    <div> 
+                      <strong className="text-thm">
+                          { item?.idCategory == 1  ? 'Precio oferta: ' : 'Precio remate: ' }
+                          <NumericFormat  value={item?.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                            <small>/mx</small>
+                      </strong> 
+
+                    </div> 
+               
+                
+                  
+                </Link>:
+                <Link
+                href={`/detalle/${item.id}`}
+                className="fp_price"
+              >
+                  <div> 
+                    <strong className="text-thm">
+                    {'Precio Comercial: '} 
+                        <NumericFormat  value={item?.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                          <small>/mx</small>
+                    </strong> 
+
+                  </div> 
+              </Link>
+                         }
               <h4>
                 <Link href={`/detalle/${item.id}`}>
                   {item.title}

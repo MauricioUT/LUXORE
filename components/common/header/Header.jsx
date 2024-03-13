@@ -34,14 +34,14 @@ const Header = () => {
             width={100}
             height={100}
             className="logo1 img-fluid"
-            src="/assets/images/luxore/logoDorado1.webp"
+            src="/assets/images/luxore/logoDorado100.webp"
             alt="header-logo2.png"
           />
           <Image
             width={100}
             height={100}
             className="logo2 img-fluid"
-            src="/assets/images/luxore/logoDorado1.webp"
+            src="/assets/images/luxore/logoDorado100.webp"
             alt="header-logo2.png"
           />
         </Link>

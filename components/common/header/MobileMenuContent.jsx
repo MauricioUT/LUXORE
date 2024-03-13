@@ -32,7 +32,7 @@ const MobileMenuContent = () => {
               width={100}
               height={100}
               className="nav_logo_img img-fluid mt20"
-              src="/assets/images/logoDorado1.png"
+              src="/assets/images/logoDorado100.png"
               alt="header-logo.png"
             /> */}
           </Link>
