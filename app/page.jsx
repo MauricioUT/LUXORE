@@ -1,5 +1,6 @@
 import Wrapper from "@/components/layout/Wrapper";
 import HomeMain from './(homes)/home-3/page'
+import Contact from "@/components/contact";
 
 export const metadata = {
   title: 'Luxore - Capital                      ',
@@ -13,9 +14,17 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <Wrapper>
-      <HomeMain/>
-    </Wrapper>
+    <>
+     <HomeMain/>
+     <Contact/>
+     {/* <Wrapper>
+        <HomeMain/>
+        </Wrapper>
+            */}
+    </>
+
+
+  
     
   )
 }
