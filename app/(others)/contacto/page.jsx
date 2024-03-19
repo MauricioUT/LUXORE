@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Contact from "@/components/contact";
+import Wrapper from "@/components/layout/Wrapper";
 
 export const metadata = {
   title: 'Contacto',
@@ -13,9 +14,9 @@ export const metadata = {
 
 const index = () => {
   return (
-    <>
+    <Wrapper>
       <Contact />
-    </>
+    </Wrapper>
   );
 };
 
