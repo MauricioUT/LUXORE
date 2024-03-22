@@ -78,14 +78,14 @@ const FeaturedItem = () => {
                 >
                       <div>
                           <strong>
-                            {'Precio Comercial: '} 
+                            {'Valor Comercial: '} 
                         <NumericFormat  value={item?.comercialValue} displayType={'text'} thousandSeparator={true} prefix={'$'} />
                           <small>/mx</small>
                           </strong> 
                       </div>
                     <div> 
                       <strong className="text-thm">
-                          { item?.idCategory == 1  ? 'Precio oferta: ' : 'Precio remate: ' }
+                          { item?.idCategory == 1  ? 'Precio oferta: ' : 'Precio de remate: ' }
                           <NumericFormat  value={item?.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
                             <small>/mx</small>
                       </strong> 
@@ -101,7 +101,7 @@ const FeaturedItem = () => {
               >
                   <div> 
                     <strong className="text-thm">
-                    {'Precio Comercial: '} 
+                    {'Precio: '} 
                         <NumericFormat  value={item?.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
                           <small>/mx</small>
                     </strong> 
