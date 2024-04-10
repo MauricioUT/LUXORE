@@ -32,12 +32,12 @@ class GoogleTagManager extends React.Component {
     }
 }
  
-GoogleTagManager.propTypes = {
+/*GoogleTagManager.propTypes = {
     gtmId: React.PropTypes.string.isRequired,
     dataLayerName: React.PropTypes.string,
     additionalEvents: React.PropTypes.object,
     previewVariables: React.PropTypes.string,
     scriptId: React.PropTypes.string
 };
- 
+ */
 export default GoogleTagManager;

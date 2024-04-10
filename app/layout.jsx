@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { store } from "../store/store";
 import ScrollToTop from "@/components/common/ScrollTop";
 import "../public/assets/scss/index.scss";
+import GoogleTagManager from "@/components/services/googleTag/googleTag"
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         {/* <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,400i,500,600,700&display=swap" /> */}
         <meta name="google-site-verification" content="sKdtPF8a1KsZr1GKPyxbLh3PNWsxnwbBbo3mVY_EZGc" />
         <link  type="image/x-icon" rel="icon" href="./favicon.ico" />
+        <GoogleTagManager gtmId='GTM-12345' />
       </head>
       <body >
       
