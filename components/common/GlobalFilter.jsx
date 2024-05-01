@@ -12,8 +12,10 @@ import {
   addAmenities,
   addLstProperties,
   addCount,
-  addCurrentPage,
-  addSkip
+  addCurrentPageV, addCurrentPageRH,addCurrentPageR,
+  addSkipV,
+  addSkipRH,
+  addSkipR,
 } from "../../features/properties/propertiesSlice";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
@@ -32,8 +34,9 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     city,
     neighborhood,
     featuredId,
-    skip,
-    currentPage
+    skipV,
+    skipRH,
+    skipR,
     } = useSelector((state) => state.properties);
 
 
@@ -94,11 +97,22 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
         dispath(addNeighborhood(getNeighborhood));
       }, [dispath, getNeighborhood]);
 
-    // currentPage
+    // currentPageV
     useEffect(() => {
 
-    dispath(addCurrentPage(getCurrentPage));
+    dispath(addCurrentPageV(getCurrentPage));
   }, [dispath, getCurrentPage]);
+// currentPageRH
+  useEffect(() => {
+
+    dispath(addCurrentPageRH(getCurrentPage));
+  }, [dispath, getCurrentPage]);
+
+// currentPageR
+  useEffect(() => {
+    dispath(addCurrentPageR(getCurrentPage));
+  }, [dispath, getCurrentPage]);
+  
 
   useEffect(() => {
     if(testVar == featuredId ){
@@ -114,7 +128,21 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
         console.log('by skip')
          onSearch();
       }
-    },[skip])
+    },[skipV])
+
+    useEffect( () =>{
+      if(testVar == featuredId ){
+        console.log('by skip')
+         onSearch();
+      }
+    },[skipRH])
+
+    useEffect( () =>{
+      if(testVar == featuredId ){
+        console.log('by skip')
+         onSearch();
+      }
+    },[skipR])
      
 
   // clear filter
@@ -140,8 +168,12 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
 
     clearAdvanced();
 
-    dispath(addCurrentPage(0));
-    dispath(addSkip(0));
+    dispath(addCurrentPageV(0));
+    dispath(addCurrentPageRH(0));
+    dispath(addCurrentPageR(0));
+    dispath(addSkipV(0));
+    dispath(addSkipRH(0));
+    dispath(addSkipR(0));
     onSearchInitial();
   };
 
@@ -197,7 +229,7 @@ useEffect(() => {
           "price":price, 
           "amenities":getAdvanced.filter(bathroomHandler).map((obj) => obj.id), 
           "limit":9, 
-          "offset": skip 
+          "offset": featuredId == 1 ?  skipV : featuredId == 3 ?  skipR : skipRH 
         })
       })
      
@@ -240,8 +272,12 @@ useEffect(() => {
  }
 
  const onClickSearch =() =>  {
-    dispath(addCurrentPage(0));
-    dispath(addSkip(0));
+    dispath(addCurrentPageV(0));
+    dispath(addCurrentPageRH(0));
+    dispath(addCurrentPageR(0));
+    dispath(addSkipV(0));
+    dispath(addSkipRH(0));
+    dispath(addSkipR(0));
       onSearch();
   }
 

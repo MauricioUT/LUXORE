@@ -32,7 +32,7 @@ const Home3 = ({ urlCategory = "" }) => {
               {/* End .row */}
 
               <div className="row">
-                <FeaturedItem />
+                <FeaturedItem urlCategory= {urlCategory} />
               </div>
               {/* End .row */}
 

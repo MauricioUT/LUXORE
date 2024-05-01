@@ -22,11 +22,15 @@ const initialState = {
     state:0,
     city:0,
     neighborhood: 0,
-    featuredId:1,
+    featuredId:0,
     lstProperties: [],
     count:0,
-    skip:0,
-    currentPage:0
+    skipV:0,
+    skipRH:0,
+    skipR:0,
+    currentPageV:0,
+    currentPageRH:0,
+    currentPageR:0
 };
 
 export const propertiesSlice = createSlice({
@@ -109,12 +113,24 @@ export const propertiesSlice = createSlice({
             state.count =  action.payload;
         },     
         
-        addSkip : (state,action) => {
-            state.skip =  action.payload;
+        addSkipV : (state,action) => {
+            state.skipV =  action.payload;
+        }, 
+        addSkipRH : (state,action) => {
+            state.skipRH =  action.payload;
+        }, 
+        addSkipR : (state,action) => {
+            state.skipV =  action.payload;
         },    
-        addCurrentPage: (state,action) => {
-            state.currentPage =  action.payload;
+        addCurrentPageV: (state,action) => {
+            state.currentPageV =  action.payload;
         },    
+        addCurrentPageRH: (state,action) => {
+            state.currentPageRH =  action.payload;
+        },
+        addCurrentPageR: (state,action) => {
+            state.currentPageR =  action.payload;
+        },
     },
 });
 
@@ -140,7 +156,11 @@ export const {
     addLstProperties,
     addLoad,
     addCount,
-    addSkip,
-    addCurrentPage
+    addSkipV,
+    addSkipRH,
+    addSkipR,
+    addCurrentPageV,
+    addCurrentPageRH,
+    addCurrentPageR
 } = propertiesSlice.actions;
 export default propertiesSlice.reducer;

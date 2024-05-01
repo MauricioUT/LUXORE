@@ -4,17 +4,24 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addLength, addSkip, addCurrentPage } from "../../features/properties/propertiesSlice";
+import { addLength, addCurrentPageV, addCurrentPageRH,addCurrentPageR, addSkipV,
+  addSkipRH,
+  addSkipR,} from "../../features/properties/propertiesSlice";
 import Image from "next/image";
 import ReactPaginate from 'react-paginate';
 import { NumericFormat } from 'react-number-format';
 
-const FeaturedItem = () => {
+const FeaturedItem = ({urlCategory= ""}) => {
   const {
     lstProperties,
     count,
-    currentPage,
-    skip
+    currentPageV,
+    currentPageRH,
+    currentPageR,
+    featuredId,
+    skipV,
+    skipRH,
+    skipR
   } = useSelector((state) => state.properties);
 
 
@@ -25,7 +32,9 @@ const FeaturedItem = () => {
 
 
   //paginator constants
-  const [getSkip, setSkip] = useState(skip);
+  const [getSkipV, setSkipV] = useState(  skipV );
+  const [getSkipRH, setSkipRH] = useState(skipRH );
+  const [getSkipR, setSkipR] = useState( skipR );
   const pageCount = Math.ceil(count / 9);
 
 
@@ -150,14 +159,30 @@ const FeaturedItem = () => {
 
 
   //paginador 
+  useEffect(() => {
+    dispatch(addSkipV(getSkipV))
+}, [getSkipV]);
+
+useEffect(() => {
+  dispatch(addSkipRH(getSkipRH))
+}, [getSkipRH]);
 
   useEffect(() => {
-    dispatch(addSkip(getSkip))
-  }, [getSkip]);
+      dispatch(addSkipR(getSkipR))
+  }, [getSkipR]);
 
-  useEffect(() => {
-    setSkip(skip)
-  }, [skip]);
+
+  useEffect( () =>{
+    setSkipV(skipV)
+  },[skipV])
+
+  useEffect( () =>{
+    setSkipRH(skipRH)
+  },[skipRH])
+
+  useEffect( () =>{
+    setSkipR(skipR)
+  },[skipR])
 
   const handlePageClick = (event) => {
     const itemsPerPage = 9;
@@ -173,10 +198,21 @@ const FeaturedItem = () => {
       `Skipt ${_skipt}, take ${_take}  currentPage ${_CurrenPage}  `
     );
 
-    dispatch(addCurrentPage(_CurrenPage));
-    console.log(skip);
-    console.log(getSkip);
-    setSkip(_skipt);
+
+    if(featuredId == "1"){
+      dispatch(addCurrentPageV(_CurrenPage));   
+      setSkipV(_skipt);  
+    }else if(featuredId == "3"){
+      dispatch(addCurrentPageR(_CurrenPage));  
+      setSkipR(_skipt);
+    }else {
+      dispatch(addCurrentPageRH(_CurrenPage));
+      setSkipRH(_skipt);
+    }
+   
+ 
+   
+
   };
 
 
@@ -203,7 +239,7 @@ const FeaturedItem = () => {
             pageCount={pageCount}
             previousLabel="< Anterior"
             renderOnZeroPageCount={null}
-            forcePage={currentPage}
+            forcePage={featuredId == "1" ? currentPageV : featuredId == "3" ? currentPageR : currentPageRH }
           />
         </div>
       </div>

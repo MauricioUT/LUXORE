@@ -14,13 +14,13 @@ const GlobalHeroFilter = ({ className = "",  urlCategory = "" }) => {
   console.log("soy urlCategory: "+urlCategory)
     const dispath = useDispatch();
 
-    const [geteaturedId, setFeaturedId] = useState(1);
+    const [getFeaturedId, setFeaturedId] = useState(urlCategory);
     const [getCategories, setCategories]=  useState([]);
 
       // City
       useEffect(() => {
-        dispath(addFeaturedId(geteaturedId));
-      }, [dispath, geteaturedId]);
+        dispath(addFeaturedId(getFeaturedId));
+      }, [dispath, getFeaturedId]);
 
 
       useEffect(() => {
@@ -44,7 +44,7 @@ const GlobalHeroFilter = ({ className = "",  urlCategory = "" }) => {
           {getCategories.map((item) => (
                   <li className="nav-item">
                   <a
-                    className={`${["nav-link"]} ${[item.tag == urlCategory  ? "active":'']}`}
+                    className={`${["nav-link"]} ${[item.id == urlCategory  ? "active":'']}`}
                     id={item.tag+"-tab"}
                     data-bs-toggle="pill"
                     href={"#"+item.tag}

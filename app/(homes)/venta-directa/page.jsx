@@ -15,7 +15,7 @@ const index = () => {
   return (
     <>
 
-      <HomeMain  urlCategory="venta-directa"/>
+      <HomeMain  urlCategory="1"/>
     </>
   );
 };

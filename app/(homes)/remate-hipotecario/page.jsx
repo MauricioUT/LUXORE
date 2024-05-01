@@ -15,7 +15,7 @@ const index = () => {
   return (
     <>
 
-      <HomeMain urlCategory="remate-hipotecario" />
+      <HomeMain urlCategory="2" />
     </>
   );
 };

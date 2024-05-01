@@ -15,7 +15,7 @@ const index = () => {
   return (
     <>
 
-      <HomeMain urlCategory="renta" />
+      <HomeMain urlCategory="3" />
     </>
   );
 };
