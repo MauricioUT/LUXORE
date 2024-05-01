@@ -66,14 +66,16 @@ const FeaturedItem = ({urlCategory= ""}) => {
               />
               <div className="thmb_cntnt">
                 <ul className="tag mb0">
+                {item.sold == 1 && <li className="list-inline-item">
+                    <a href="#" className="text-capitalize">
+                      Vendida
+                    </a>
+                  </li>}
                   {item.featuredProperty == 1 && <li className="list-inline-item">
                     <a href="#">Propiedad destacada</a>
                   </li>}
-                  <li className="list-inline-item">
-                    <a href="#" className="text-capitalize">
-                      {item.category}
-                    </a>
-                  </li>
+                
+                  
                 </ul>
               </div>
             </div>
