@@ -29,7 +29,8 @@ const FeaturedItem = ({urlCategory= ""}) => {
     (state) => state.filter
   );
 
-
+//slug
+let  slug = featuredId == 1 ? 'venta-directa' : featuredId == 3 ? 'renta' : 'remate-hipotecario';
 
   //paginator constants
   const [getSkipV, setSkipV] = useState(  skipV );
@@ -53,7 +54,7 @@ const FeaturedItem = ({urlCategory= ""}) => {
           className={`feat_property home7 style4 ${isGridOrList ? "d-flex align-items-center" : undefined
             }`}
         >
-          <Link href={`/detalle/${item.id}`}>
+          <Link href={`/${slug}/detalle/${item.id}/${item.slugTitle}`}>
 
             <div className="thumb">
 
@@ -84,7 +85,7 @@ const FeaturedItem = ({urlCategory= ""}) => {
             <div className="tc_content">
               <p className="text-thm">{item.propertyType}</p>
               { item?.comercialValue > 0 ? <Link
-                  href={`/detalle/${item.id}`}
+                  href={`/${slug}/detalle/${item.id}/${item.slugTitle}`}
                   className="fp_price"
                 >
                       <div>
@@ -107,7 +108,7 @@ const FeaturedItem = ({urlCategory= ""}) => {
                   
                 </Link>:
                 <Link
-                href={`/detalle/${item.id}`}
+                href={`/${slug}/detalle/${item.id}/${item.slugTitle}`}
                 className="fp_price"
               >
                   <div> 
@@ -121,7 +122,7 @@ const FeaturedItem = ({urlCategory= ""}) => {
               </Link>
                          }
               <h4>
-                <Link href={`/detalle/${item.id}`}>
+                <Link href={`/${slug}/detalle/${item.id}/${item.slugTitle}`}>
                   {item.title}
                 </Link>
               </h4>

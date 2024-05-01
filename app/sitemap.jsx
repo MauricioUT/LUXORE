@@ -62,6 +62,24 @@ export default async function Sitemap() {
     lastModified: new Date(),
     changefreq: weekly,
     priority: 0.8
+  }
+  , {
+    url: `${HOST_PROD}/venta-directa`,
+    lastModified: new Date(),
+    changefreq: weekly,
+    priority: 0.8
+  }
+  , {
+    url: `${HOST_PROD}/remate-hipotecario`,
+    lastModified: new Date(),
+    changefreq: weekly,
+    priority: 0.8
+  }
+  , {
+    url: `${HOST_PROD}/renta`,
+    lastModified: new Date(),
+    changefreq: weekly,
+    priority: 0.8
   }];
   allPages = allPages.concat(posts);
   return allPages;
