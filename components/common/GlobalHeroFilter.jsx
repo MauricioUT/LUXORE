@@ -43,7 +43,7 @@ const GlobalHeroFilter = ({ className = "" }) => {
           {getCategories.map((item) => (
                   <li className="nav-item">
                   <a
-                    className={`${["nav-link"]} ${[item.tag == 'venta-directa' ? "active":'']}`}
+                    className={`${["nav-link"]} ${[item.tag == 'remate-hipotecario' ? "active":'']}`}
                     id={item.tag+"-tab"}
                     data-bs-toggle="pill"
                     href={"#"+item.tag}
@@ -72,9 +72,9 @@ const GlobalHeroFilter = ({ className = "" }) => {
         </div>
         <div
           className="tab-pane fade col-12"
-          id="rh"
+          id="remate-hipotecario"
           role="tabpanel"
-          aria-labelledby="rh"
+          aria-labelledby="remate-hipotecario"
         >
           <GlobalFilter   testVar="2" />
         </div>

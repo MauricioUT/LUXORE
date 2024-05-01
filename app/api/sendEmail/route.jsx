@@ -3,6 +3,7 @@ import nodemailer from 'nodemailer'
 
 export async function POST(request) {
     try {
+        debugger
         const { name,lastName,email, phone,money,message } = await request.json();
 
         const transporter = nodemailer.createTransport({
@@ -32,9 +33,10 @@ export async function POST(request) {
         }
 
         await transporter.sendMail(mailOption)
-
+        console.log("mail ok");
         return NextResponse.json({ message: "Mensaje enviado con éxito" }, { status: 200 })
     } catch (error) {
+        console.log(error);
         return NextResponse.json({ message: "Failed to Send Email" + error}, { status: 500 })
     }
 }
