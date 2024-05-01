@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import FilterTopBar from "../common/listing/FilterTopBar";
 import FeaturedItem from "./FeaturedItem";
 
-const Home3 = () => {
+const Home3 = ({ urlCategory = "" }) => {
   return (
     <>
       {/* <!-- Main Header Nav --> */}
@@ -15,7 +15,7 @@ const Home3 = () => {
       <MobileMenu />
 
       {/* <!-- Home Design --> */}
-      <Hero />
+      <Hero urlCategory= {urlCategory} />
 
     {/* <!-- Listing Grid View --> */}
      <section className="our-listing bgc-f7 pb30-991 mt85 md-mt0 ">

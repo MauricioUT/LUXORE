@@ -1,6 +1,6 @@
 import GlobalHeroFilter from "../common/GlobalHeroFilter";
 
-const HeroFilter = () => {
+const HeroFilter = ({ urlCategory = "" }) => {
     return (
         <div className="home_content">
             <div className="home-text text-center">
@@ -12,7 +12,7 @@ const HeroFilter = () => {
             </div>
             {/* End .home-text */}
 
-            <GlobalHeroFilter />
+            <GlobalHeroFilter urlCategory= {urlCategory} />
         </div>
     );
 };

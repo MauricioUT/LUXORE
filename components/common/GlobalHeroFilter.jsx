@@ -9,8 +9,9 @@ import { useState, useEffect } from "react";
 
 
 
-const GlobalHeroFilter = ({ className = "" }) => {
+const GlobalHeroFilter = ({ className = "",  urlCategory = "" }) => {
 
+  console.log("soy urlCategory: "+urlCategory)
     const dispath = useDispatch();
 
     const [geteaturedId, setFeaturedId] = useState(1);
@@ -43,7 +44,7 @@ const GlobalHeroFilter = ({ className = "" }) => {
           {getCategories.map((item) => (
                   <li className="nav-item">
                   <a
-                    className={`${["nav-link"]} ${[item.tag == 'remate-hipotecario' ? "active":'']}`}
+                    className={`${["nav-link"]} ${[item.tag == urlCategory  ? "active":'']}`}
                     id={item.tag+"-tab"}
                     data-bs-toggle="pill"
                     href={"#"+item.tag}

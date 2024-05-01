@@ -15,7 +15,7 @@ export const metadata = {
 export default function Home() {
   return (
     <Wrapper>
-      <Home3/>
+      <Home3 urlCategory="remate-hipotecario"/>
     </Wrapper>    
   )
 }
