@@ -10,8 +10,8 @@ const initialState = {
     },
     amenities: [],
     status: "",
-    bathrooms: "",
-    bedrooms: "",
+    bathrooms: "0",
+    bedrooms: "0",
     garages: "",
     yearBuilt: "",
     area: {
@@ -30,7 +30,8 @@ const initialState = {
     skipR:0,
     currentPageV:0,
     currentPageRH:0,
-    currentPageR:0
+    currentPageR:0,
+    queryParams:""
 };
 
 export const propertiesSlice = createSlice({
@@ -131,6 +132,9 @@ export const propertiesSlice = createSlice({
         addCurrentPageR: (state,action) => {
             state.currentPageR =  action.payload;
         },
+        addQueryParams: (state,action) => {
+            state.queryParams =  action.payload;
+        },
     },
 });
 
@@ -161,6 +165,7 @@ export const {
     addSkipR,
     addCurrentPageV,
     addCurrentPageRH,
-    addCurrentPageR
+    addCurrentPageR,
+    addQueryParams
 } = propertiesSlice.actions;
 export default propertiesSlice.reducer;

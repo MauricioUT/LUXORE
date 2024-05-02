@@ -16,6 +16,7 @@ import {
   addSkipV,
   addSkipRH,
   addSkipR,
+  addQueryParams
 } from "../../features/properties/propertiesSlice";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,6 +38,10 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
     skipV,
     skipRH,
     skipR,
+    queryParams,
+    currentPageV,
+    currentPageRH,
+    currentPageR
     } = useSelector((state) => state.properties);
 
 
@@ -63,6 +68,7 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
 
   const [getShowFilter, setShowFilter] = useState(false);
  
+  const [getQueryParams, setQueryParams] = useState(queryParams);
 
 
   const dispath = useDispatch();
@@ -112,8 +118,12 @@ const GlobalFilter = ({ className = "", testVar = "" }) => {
   useEffect(() => {
     dispath(addCurrentPageR(getCurrentPage));
   }, [dispath, getCurrentPage]);
-  
 
+  // QueryParams
+  useEffect(() => {
+    dispath(addQueryParams(getQueryParams));
+  }, [dispath, getQueryParams]);
+  
   useEffect(() => {
     if(testVar == featuredId ){
       console.log('by feature')
@@ -239,6 +249,8 @@ useEffect(() => {
       setCount(data.count);
       addCount(getCount)
       setLstProperties(data.lstHoms);      
+      console.log(getBedroom+ " " +getNeighborhood+ " " +getBathroom)
+      setQueryParams(`?idCategory=${featuredId}&idPropertyType=${getStatus}&idState=${getState}&idCity=${getCity}&idColony=${getNeighborhood}&bedrooms=${getBedroom.trim()}&bathrooms=${getBathroom.trim()}&priceMax=${price.value.max}&priceMin=${price.value.min}&offset=${featuredId == 1 ?  skipV : featuredId == 3 ?  skipR : skipRH}&currentPage=${featuredId == "1" ? currentPageV : featuredId == "3" ? currentPageR : currentPageRH}`);
     })();
   }
 
@@ -521,7 +533,7 @@ const createColoniesSelectItems=  function() {
               <select className="selectpicker w100 show-tick form-select"
                 onChange={(e) => setBathroom(e.target.value)}
                 value={getBathroom}>
-                <option value="">Baños</option>
+                <option value="0">Baños</option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -539,7 +551,7 @@ const createColoniesSelectItems=  function() {
           <li className="list-inline-item">
             <div className="candidate_revew_select">
               <select className="selectpicker w100 show-tick form-select" onChange={(e) => setBedroom(e.target.value)} value={getBedroom}>
-                <option value="">Recamaras</option>
+                <option value="0">Recamaras</option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
