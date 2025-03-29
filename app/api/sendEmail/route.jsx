@@ -14,7 +14,7 @@ export async function POST(request) {
             auth: {
                 user: 'gguillen@luxore.mx',
                 //  pass: process.env.NEXT_PUBLIC_PASSWORD
-                pass: '|d~|f3@2l75#'
+                pass: '|D~|f3@2l75#'
             }
         })
 
