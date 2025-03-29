@@ -3,7 +3,7 @@ import mysql from 'serverless-mysql'
 export const conn = mysql({
     library: require('mysql2'), // better performance and support for promises
     config:{
-        host:'35.239.208.155',
+        host:'34.60.224.127',
         database:'luxore',
         port:3306,
         user:'root',
