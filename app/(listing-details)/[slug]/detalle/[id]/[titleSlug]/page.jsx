@@ -22,6 +22,9 @@ import { useState, useEffect } from "react";
 const ListingDynamicDetailsV1 = ({params}) => {
  
   const id = params.id;
+  const titleSlug = params.titleSlug;
+  const slug = params.slug;
+
   const [getProperty, setProperty]=  useState([]);
 
   useEffect(() => {
@@ -49,7 +52,7 @@ const ListingDynamicDetailsV1 = ({params}) => {
       <MobileMenu />
 
       {/* <!-- Listing Single Property --> */}
-      <ListingOne property={getProperty} />
+      <ListingOne property={getProperty} slug={slug} titleSlug={titleSlug}/>
     
 
       {/* <!-- Agent Single Grid View --> */}

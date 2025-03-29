@@ -21,7 +21,8 @@ const FeaturedItem = ({urlCategory= ""}) => {
     featuredId,
     skipV,
     skipRH,
-    skipR
+    skipR,
+    queryParams
   } = useSelector((state) => state.properties);
 
 
@@ -37,9 +38,14 @@ let  slug = featuredId == 1 ? 'venta-directa' : featuredId == 3 ? 'renta' : 'rem
   const [getSkipRH, setSkipRH] = useState(skipRH );
   const [getSkipR, setSkipR] = useState( skipR );
   const pageCount = Math.ceil(count / 9);
+  const [getQueryParams, setQueryParams] = useState(queryParams);
 
 
   const dispatch = useDispatch();
+
+  useEffect( () =>{
+    setQueryParams(queryParams);
+  },[queryParams])
 
   // status handler
   let content = lstProperties
@@ -54,7 +60,7 @@ let  slug = featuredId == 1 ? 'venta-directa' : featuredId == 3 ? 'renta' : 'rem
           className={`feat_property home7 style4 ${isGridOrList ? "d-flex align-items-center" : undefined
             }`}
         >
-          <Link href={`/${slug}/detalle/${item.id}/${item.slugTitle}`}>
+          <Link href={`/${slug}/detalle/${item.id}/${item.slugTitle}${getQueryParams}`}>
 
             <div className="thumb">
 
@@ -85,7 +91,7 @@ let  slug = featuredId == 1 ? 'venta-directa' : featuredId == 3 ? 'renta' : 'rem
             <div className="tc_content">
               <p className="text-thm">{item.propertyType}</p>
               { item?.comercialValue > 0 ? <Link
-                  href={`/${slug}/detalle/${item.id}/${item.slugTitle}`}
+                  href={`/${slug}/detalle/${item.id}/${item.slugTitle}${getQueryParams}`}
                   className="fp_price"
                 >
                       <div>
@@ -108,7 +114,7 @@ let  slug = featuredId == 1 ? 'venta-directa' : featuredId == 3 ? 'renta' : 'rem
                   
                 </Link>:
                 <Link
-                href={`/${slug}/detalle/${item.id}/${item.slugTitle}`}
+                href={`/${slug}/detalle/${item.id}/${item.slugTitle}${getQueryParams}`}
                 className="fp_price"
               >
                   <div> 
@@ -122,7 +128,7 @@ let  slug = featuredId == 1 ? 'venta-directa' : featuredId == 3 ? 'renta' : 'rem
               </Link>
                          }
               <h4>
-                <Link href={`/${slug}/detalle/${item.id}/${item.slugTitle}`}>
+                <Link href={`/${slug}/detalle/${item.id}/${item.slugTitle}${getQueryParams}`}>
                   {item.title}
                 </Link>
               </h4>
