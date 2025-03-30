@@ -8,7 +8,7 @@ export async function POST(request) {
 
         const transporter = nodemailer.createTransport({
             service: 'luxore',
-            host: 'mail.luxore.mx',
+            host: 'smtp.hostinger.com',
             port: 465,
             secure: true,
             auth: {
